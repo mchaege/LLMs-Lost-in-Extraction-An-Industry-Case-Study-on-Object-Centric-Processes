@@ -1,0 +1,175 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed information object in the paperless system that can be created, edited, released, and distributed. Documents are organized by type and level (Policy, Guideline, Procedural Instruction, Work Instruction) and go through versioning and approval workflows.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document identifier composed of abbreviation, consecutive number, and title"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Classification of document such as Policy, Guideline, Procedural Instruction, Work Instruction"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document in its lifecycle such as Draft, Released, Out of Force"
+                },
+                {
+                    "name": "version",
+                    "description": "Sequential version number of the document"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date when the document becomes effective"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date when the document validity expires"
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Duration period for which document remains valid before review is required"
+                },
+                {
+                    "name": "content",
+                    "description": "The actual text and information contained in the document"
+                },
+                {
+                    "name": "template",
+                    "description": "Pre-defined structure or format that can be applied when creating a new document"
+                },
+                {
+                    "name": "source_format",
+                    "description": "Original file format such as Word, Excel, PowerPoint"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or master data relevant to this document"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Information systems or applications referenced by the document"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Organizations or corporate entities to which the document applies"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Geographic, organizational, or functional areas where the document is valid"
+                },
+                {
+                    "name": "author",
+                    "description": "Primary person responsible for creating and initially signing the document"
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional person with change rights on the document"
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person responsible for checking document content for technical and formal aspects"
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person authorized to approve and release the document for distribution"
+                },
+                {
+                    "name": "translator",
+                    "description": "Person authorized to translate the document into other languages"
+                },
+                {
+                    "name": "reader_group",
+                    "description": "User group assigned permission to view the document"
+                },
+                {
+                    "name": "created_date",
+                    "description": "Date when the document object was created in the system"
+                },
+                {
+                    "name": "language",
+                    "description": "Language in which the document is written"
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Period of time the document is retained after being declared out of force"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document supplement that is automatically released with the main document, has its own versioning, and triggers a new version of the main document when modified or archived.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "A document supplement that is not subject to the release cycle of the main document, does not require dual control approval, and can be deleted without affecting the main document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A request for modifying an existing document that does not affect the content or version history until it is scheduled for implementation.",
+            "attributes": []
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A system-generated workflow request to review and potentially extend the validity of a document nearing expiration.",
+            "attributes": []
+        },
+        {
+            "name": "override_request",
+            "description": "A workflow request to invalidate and archive a document that no longer has valid content or has expired.",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A workflow request to re-validate and restore a previously archived or invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A person who interacts with the system in one or more defined roles and permissions.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "A collection of users assigned together for permission and distribution management purposes.",
+            "attributes": []
+        },
+        {
+            "name": "archive_group",
+            "description": "A special user group that retains read access to archived documents after all other authorizations are revoked.",
+            "attributes": []
+        },
+        {
+            "name": "business_admin_group",
+            "description": "A user group with permission to create reactivation requests for archived documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "A maintained list of users and user groups assigned to receive document notifications and acknowledgement requests.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "A digital signature applied by workflow participants to document the approval process and maintain audit trail.",
+            "attributes": []
+        },
+        {
+            "name": "workflow_task",
+            "description": "An assigned activity in the approval or acknowledgement process that must be completed by a designated participant.",
+            "attributes": []
+        },
+        {
+            "name": "audit_trail",
+            "description": "System-maintained record of all changes, signatures, and actions performed on a document.",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

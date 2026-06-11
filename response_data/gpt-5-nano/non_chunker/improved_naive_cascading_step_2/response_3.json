@@ -1,0 +1,302 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central object representing documents managed in DHC VISION, including properties, content editing, versioning, release, distribution and archiving.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "document_type_abbreviation",
+                    "description": "Abbreviation for the document type"
+                },
+                {
+                    "name": "type_number",
+                    "description": "Cross-client consecutive 4-digit number per document type included in the document name"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version"
+                },
+                {
+                    "name": "status",
+                    "description": "Document status (e.g., Draft, Released)"
+                },
+                {
+                    "name": "language",
+                    "description": "Language of the document"
+                },
+                {
+                    "name": "original_language",
+                    "description": "Original language version before translation"
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) of the document"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Areas where the document is valid"
+                },
+                {
+                    "name": "references",
+                    "description": "References linked to the document"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "IT applications related to the document (Master data)"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies relevant to the document"
+                },
+                {
+                    "name": "distribution_list",
+                    "description": "Distribution groups or persons informed about release or acknowledgement"
+                },
+                {
+                    "name": "reader",
+                    "description": "Assigned readers with view permissions"
+                },
+                {
+                    "name": "author",
+                    "description": "Document author or creator"
+                },
+                {
+                    "name": "co_author",
+                    "description": "Co-authors of the document"
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Reviewers of the document"
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person responsible for releasing the document to readers"
+                },
+                {
+                    "name": "translator",
+                    "description": "Translator for released content"
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "description": "Level 1 document type: Policies contain company-wide regulations and processes at a strategic level.",
+            "attributes": []
+        },
+        {
+            "name": "guidelines",
+            "description": "Level 2 document type: Guidelines document regulations and instructions, describing locally defined regulations or process-related regulations.",
+            "attributes": []
+        },
+        {
+            "name": "procedural_instructions",
+            "description": "Level 3 document type: Procedural Instructions describe the specific procedures within a framework or processes and their details.",
+            "attributes": []
+        },
+        {
+            "name": "work_instructions",
+            "description": "Level 4 document type: Work Instructions document detailed steps, often relevant to specific departments, sometimes including forms/checklists.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "An information object that can be attached to a document to provide additional content or metadata.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled documents attached to the main document; attachments have their own versioning and may affect the main document version.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "An additional information attachment that is not subject to the release cycle of the main document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment_of_new_information_object",
+            "description": "Attach a new information object to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment_of_new_document_object",
+            "description": "Attach a new document object to the system (document creation).",
+            "attributes": []
+        },
+        {
+            "name": "define_document_template",
+            "description": "Define one or more templates for a document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Edit the content of a document.",
+            "attributes": []
+        },
+        {
+            "name": "save_document",
+            "description": "Save document changes; the document is saved.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Convert the saved document to PDF for web display.",
+            "attributes": []
+        },
+        {
+            "name": "create_new_version",
+            "description": "Create a new editing version when content or properties change.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Initiate and complete the release process for a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Assign authorizations and release participants.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposals",
+            "description": "Create change proposals for documents.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) a document by declaring it invalid and archiving.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Reactivate archived or invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a document to distribution lists or individuals.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Request acknowledgement from distribution recipients.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language with separate workflow.",
+            "attributes": []
+        },
+        {
+            "name": "link_documents",
+            "description": "Link a document to other documents by references.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_information",
+            "description": "Attach additional information not subject to the main release.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attach equipment or attachments to the document; attachments are controlled and may affect the main document version.",
+            "attributes": []
+        },
+        {
+            "name": "set_client_visibility",
+            "description": "Specify in which clients the document is visible in a multi-client system.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Document linked to another document."
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document references information objects."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachments linked to document."
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document includes additional information."
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Attachment of information object to document."
+        },
+        {
+            "a": "attachment",
+            "b": "attach_equipment",
+            "description": "Attachment used as equipment for document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "attachment_of_new_information_object",
+            "description": "Document is affected by attachments of information object."
+        },
+        {
+            "a": "information_object",
+            "b": "attachment_of_new_information_object",
+            "description": "New information object is attached to a document."
+        },
+        {
+            "a": "document",
+            "b": "attachment_of_new_document_object",
+            "description": "New document object attachment in system."
+        },
+        {
+            "a": "document",
+            "b": "attach_additional_information",
+            "description": "Document has additional information attached."
+        },
+        {
+            "a": "additional_information",
+            "b": "attach_additional_information",
+            "description": "Additional information attached to document."
+        },
+        {
+            "a": "document",
+            "b": "attach_equipment",
+            "description": "Equipment attached to document."
+        },
+        {
+            "a": "attachment",
+            "b": "attach_equipment",
+            "description": "Equipment attachment on document."
+        },
+        {
+            "a": "document",
+            "b": "link_documents",
+            "description": "Document linked to another document."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translation activity affecting document."
+        }
+    ]
+}

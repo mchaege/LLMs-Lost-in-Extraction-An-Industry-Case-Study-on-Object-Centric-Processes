@@ -1,0 +1,242 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central managed information object representing policies, guidelines, procedural instructions, work instructions, and other controlled documents in the system.",
+            "attributes": [
+                {
+                    "name": "document_abbreviation",
+                    "description": "Type-based abbreviation prefix assigned to the document (e.g., RL for guideline)."
+                },
+                {
+                    "name": "consecutive_number",
+                    "description": "System-assigned sequential number for the document."
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document, incremented on each revision or edit cycle."
+                },
+                {
+                    "name": "status",
+                    "description": "Current lifecycle status of the document within the status network (e.g., editing, released, out of force, archived)."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope designation printed in the document via TAG technology."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the released version of the document is considered valid."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document remains valid, calculated from Valid From plus the validity period."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Configurable time period (default 3 years) after which the document must be reviewed for continued validity."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Configurable retention period (default 10 years) for archived documents before physical deletion."
+                },
+                {
+                    "name": "source_format",
+                    "description": "Original file format of the document content (e.g., Excel, Word, PowerPoint)."
+                },
+                {
+                    "name": "references",
+                    "description": "Attribute linking the document to other documents or master data."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Attribute linking the document to relevant IT applications."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Attribute specifying relevant companies the document applies to."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Attribute specifying organizational or geographic areas where the document is valid."
+                },
+                {
+                    "name": "author",
+                    "description": "Person registered as the primary author responsible for the document."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional persons assigned write permissions on the document alongside the author."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person(s) assigned to technically and formally review the document content."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person(s) responsible for approving and releasing the document for distribution."
+                },
+                {
+                    "name": "reader",
+                    "description": "User group assignment controlling which readers may view the released document."
+                },
+                {
+                    "name": "distribution_by_info",
+                    "description": "Attribute controlling email notification distribution upon release of a new version."
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "Attribute controlling acknowledgement-based distribution upon release of a new version."
+                },
+                {
+                    "name": "original_language",
+                    "description": "The language in which the document was originally created."
+                },
+                {
+                    "name": "client_visibility",
+                    "description": "Specification of which clients in a multi-client system may view the document."
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Classification category that determines the level and type of a document (e.g., policy, guideline, procedural instruction, work instruction).",
+            "attributes": [
+                {
+                    "name": "type_abbreviation",
+                    "description": "Language-independent abbreviation code for the document type (e.g., RL for guideline)."
+                },
+                {
+                    "name": "validity_period",
+                    "description": "Default period for validity extension checks, configurable per document type."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Default archival retention period, configurable per document type."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Predefined template associated with a document type, selectable when creating new document objects, supporting TAG technology for automatic metadata printing.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled document appended to a main document, subject to its own versioning and released together with the main document's release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Supplementary information object appended to a document that is not subject to the release cycle of the main document and can be published directly.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A formal proposal for changing an existing released document, managed in the document cockpit and tracked through to implementation.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_validity_extension",
+            "description": "System-generated request created 30 days before a document's validity expires, triggering a workflow to extend, revise, or invalidate the document.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_override",
+            "description": "Request to invalidate a released document and initiate the archiving process, created by users with write access.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_reactivation",
+            "description": "Request to re-validate a previously invalidated and archived document, restricted to the Business Admin group.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "An individual person who interacts with the system in various roles such as author, reviewer, releaser, reader, or translator.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "A named group of users used for assigning authorizations, distribution, and role-based access to documents.",
+            "attributes": []
+        },
+        {
+            "name": "workflow",
+            "description": "System-supported process that manages approval steps including creation, review, and release with electronic signatures.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "Digital signature applied by workflow participants to confirm completion of their workflow task, documented per released version.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of user groups and persons assigned to a document for email notification or acknowledgement distribution upon release.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Active confirmation by a recipient on the distribution list that they have read and noted a released document version.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "An organizational entity within the company to which documents can be linked.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "A business process that can be linked to documents and used for process-specific document filing.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "A risk object that can be linked to documents via master data references.",
+            "attributes": []
+        },
+        {
+            "name": "it_application",
+            "description": "An IT application master data object that can be referenced by documents.",
+            "attributes": []
+        },
+        {
+            "name": "dashboard",
+            "description": "User and role-specific interface displaying relevant documents, tasks, and evaluation information based on distribution group assignments.",
+            "attributes": []
+        },
+        {
+            "name": "report",
+            "description": "Role-specific evaluation providing filtered results lists of documents based on selection parameters and criteria.",
+            "attributes": [
+                {
+                    "name": "report_type",
+                    "description": "Classification of the report such as Status Report, Document Monitoring, or Acknowledgement Report."
+                },
+                {
+                    "name": "selection_parameters",
+                    "description": "Configurable filter criteria influencing evaluation results."
+                }
+            ]
+        },
+        {
+            "name": "client",
+            "description": "A tenant or organizational unit in a multi-client system where document visibility can be controlled.",
+            "attributes": []
+        },
+        {
+            "name": "translation",
+            "description": "A language-dependent version of a released document that must go through its own review and release workflow before becoming visible.",
+            "attributes": [
+                {
+                    "name": "target_language",
+                    "description": "The language into which the document content is translated."
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

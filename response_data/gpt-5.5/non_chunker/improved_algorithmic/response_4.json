@@ -1,0 +1,1366 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed artifact created, edited, released, distributed, archived, revised, invalidated, reactivated, translated, and displayed in DHC VISION.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Default name includes document type abbreviation, consecutive 4-digit number per type, and title."
+                },
+                {
+                    "name": "title",
+                    "description": "Title component of the document name."
+                },
+                {
+                    "name": "status",
+                    "description": "Document workflow or lifecycle status, including editing, released, and out of force."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the document validity count starts."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date calculated from valid from date and period of extended validity."
+                },
+                {
+                    "name": "original_language_version",
+                    "description": "Original language version used before translation is released."
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Classification selected when creating a new document object and used for templates, validity periods, archive duration, and structuring documents.",
+            "attributes": [
+                {
+                    "name": "level",
+                    "description": "Level in the document pyramid."
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation included in document names by default."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Period after which validity must be checked for the document type."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Duration for which archived documents of the document type are kept before physical deletion."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template defined for a document type and selectable when creating new document objects.",
+            "attributes": []
+        },
+        {
+            "name": "document_version",
+            "description": "Version of a document created for editing, release, revision, invalidation, or reactivation.",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Version metadata that can be printed in the document."
+                },
+                {
+                    "name": "status",
+                    "description": "Status metadata that can be printed in the document."
+                }
+            ]
+        },
+        {
+            "name": "metadata",
+            "description": "Standardized or customer-specific metadata maintained in document properties and grouped into categories.",
+            "attributes": []
+        },
+        {
+            "name": "category",
+            "description": "Grouping of attributes and metadata according to purpose in document properties.",
+            "attributes": []
+        },
+        {
+            "name": "attribute",
+            "description": "Maintainable metadata field in document properties used for references, IT applications, relevant companies, areas of validity, participants, authorizations, and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person using DHC VISION who can create, edit, review, release, translate, acknowledge, or receive notifications depending on assignments and rights.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users used for reader assignment, authorization, distribution, archive access, and role-specific selection lists.",
+            "attributes": []
+        },
+        {
+            "name": "authorization",
+            "description": "Read or change right assigned to user groups or persons for each document.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "Signature completed by workflow participants and documented for each released version.",
+            "attributes": []
+        },
+        {
+            "name": "workflow_task",
+            "description": "Task assigned to workflow participants during release, validity extension, override, reactivation, translation, or acknowledgement workflows.",
+            "attributes": []
+        },
+        {
+            "name": "email_notification",
+            "description": "Email used to inform involved users of workflow tasks, document release, validity extension, override, change proposals, and acknowledgement requests.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Document attachment not subject to the main document release cycle and without its own release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled document added to a main document and automatically released, archived, or reactivated with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changing a document created and managed without affecting document content or version history until scheduled for implementation.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_validity_extension",
+            "description": "System-created request linked to a document before validity expires and processed with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_override",
+            "description": "Request created to invalidate a released document and archive it.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_reactivation",
+            "description": "Request created to reactivate an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List maintained for each document assigning user groups or persons for e-mail distribution or acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Confirmation of acknowledgement of a document version by persons on the distribution list.",
+            "attributes": []
+        },
+        {
+            "name": "dashboard",
+            "description": "Role-specific dashboard listing documents relevant to users based on distribution groups.",
+            "attributes": []
+        },
+        {
+            "name": "report",
+            "description": "Role-specific evaluation report or search available for documents in the system.",
+            "attributes": []
+        },
+        {
+            "name": "client",
+            "description": "Client in a multi-client system where a document can be specified as visible or not.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "Process with which documents already in the system can be automatically linked.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "Organizational unit with which documents already in the system can be automatically linked.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "Risk with which documents already in the system can be automatically linked.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data, such as IT applications, with which documents can be automatically linked.",
+            "attributes": []
+        },
+        {
+            "name": "reference",
+            "description": "Reference maintained in document properties to link documents to master data or other documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document in DHC VISION by attachment of a new information object and selection of document type.",
+            "attributes": []
+        },
+        {
+            "name": "select_document_type",
+            "description": "Select the corresponding document type when creating a new document object.",
+            "attributes": []
+        },
+        {
+            "name": "select_document_template",
+            "description": "Select one of the templates defined for a document type when creating a new object.",
+            "attributes": []
+        },
+        {
+            "name": "create_object_cover",
+            "description": "Create a pure object cover to which external files or documents can be uploaded.",
+            "attributes": []
+        },
+        {
+            "name": "upload_file",
+            "description": "Upload external files or documents to an object cover.",
+            "attributes": []
+        },
+        {
+            "name": "generate_document",
+            "description": "Generate new documents based on standard MS Office formats.",
+            "attributes": []
+        },
+        {
+            "name": "maintain_metadata",
+            "description": "Maintain standardized or customer-specific document metadata in property editing.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Edit document content using the implemented editing client in the corresponding local Office component.",
+            "attributes": []
+        },
+        {
+            "name": "print_metadata",
+            "description": "Automatically print certain metadata in the document using integrated TAG technology.",
+            "attributes": []
+        },
+        {
+            "name": "save_document",
+            "description": "Save the document after content editing.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Automatically and system-supported convert a saved document to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "display_document",
+            "description": "Display the current document version on the web or in a dashboard.",
+            "attributes": []
+        },
+        {
+            "name": "change_document",
+            "description": "Make subsequent changes to document content or properties.",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorization",
+            "description": "Assign group-related or person-related authorizations in document properties.",
+            "attributes": []
+        },
+        {
+            "name": "assign_workflow_participant",
+            "description": "Assign author, co-author, reviewer, releaser, or translation participants in document properties.",
+            "attributes": []
+        },
+        {
+            "name": "add_additional_info",
+            "description": "Add additional information to a document by attaching a new information object.",
+            "attributes": []
+        },
+        {
+            "name": "release_additional_info",
+            "description": "Release and publish additional information directly via switches in properties.",
+            "attributes": []
+        },
+        {
+            "name": "delete_additional_info",
+            "description": "Delete additional information directly.",
+            "attributes": []
+        },
+        {
+            "name": "add_attachment",
+            "description": "Add an attachment to a document by attaching a new information object.",
+            "attributes": []
+        },
+        {
+            "name": "archive_attachment",
+            "description": "Mark an attachment for archiving and archive it with release of the next main document version.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a change proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "schedule_change_proposal",
+            "description": "Schedule a change proposal for implementation, creating a new version of the document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_change_proposal",
+            "description": "Document the editing of assigned change proposals directly in the change proposal.",
+            "attributes": []
+        },
+        {
+            "name": "complete_change_proposal",
+            "description": "Complete a change proposal so that it is no longer displayed in the document.",
+            "attributes": []
+        },
+        {
+            "name": "start_release_workflow",
+            "description": "Initiate the workflow-supported approval process after document creation, maintenance, and control definition.",
+            "attributes": []
+        },
+        {
+            "name": "sign_creator_step",
+            "description": "Registered author signs the Creator workflow step.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Reviewers check document content according to technical and formal aspects.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Releaser approves release so the document is automatically published and visible to addressed readers.",
+            "attributes": []
+        },
+        {
+            "name": "reject_document",
+            "description": "Reject during review or release, canceling the workflow for subsequent participants after the first rejection.",
+            "attributes": []
+        },
+        {
+            "name": "create_document_version",
+            "description": "Automatically create a new editing version when a valid released document is revised or specified changes occur.",
+            "attributes": []
+        },
+        {
+            "name": "create_request_for_validity_extension",
+            "description": "System creates a request for validity extension 30 days before the valid until date.",
+            "attributes": []
+        },
+        {
+            "name": "process_request_for_validity_extension",
+            "description": "Process the request for validity extension with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "declare_additional_validity",
+            "description": "Declare additional validity, delete the request, keep the current version valid, and update valid until.",
+            "attributes": []
+        },
+        {
+            "name": "terminate_validity_extension_process",
+            "description": "Automatically terminate the validity extension process when a revised version is released or when suspension is declared.",
+            "attributes": []
+        },
+        {
+            "name": "create_request_for_override",
+            "description": "Create a request for override for a selected released document.",
+            "attributes": []
+        },
+        {
+            "name": "process_request_for_override",
+            "description": "Process the override request with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "declare_out_of_force",
+            "description": "Declare the document and attachments invalid, archive them, and revoke rights except for the archive group.",
+            "attributes": []
+        },
+        {
+            "name": "physically_delete_document",
+            "description": "Physically delete archived documents after the archive period expires.",
+            "attributes": []
+        },
+        {
+            "name": "create_request_for_reactivation",
+            "description": "Create a request for reactivation and select the corresponding document.",
+            "attributes": []
+        },
+        {
+            "name": "process_request_for_reactivation",
+            "description": "Process the reactivation request with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Create a new version of an invalidated document, restore maintained properties, authorizations, distribution list, and archived attachments.",
+            "attributes": []
+        },
+        {
+            "name": "maintain_distribution_list",
+            "description": "Maintain a distribution list for a document by assigning user groups or persons.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Inform assigned users and users of assigned user groups by e-mail when a new document version is released.",
+            "attributes": []
+        },
+        {
+            "name": "request_acknowledgement",
+            "description": "Request persons and users of assigned user groups by e-mail to confirm acknowledgement upon release.",
+            "attributes": []
+        },
+        {
+            "name": "confirm_acknowledgement",
+            "description": "Recipient confirms acknowledgement of the relevant document.",
+            "attributes": []
+        },
+        {
+            "name": "evaluate_report",
+            "description": "Use a report or search with selection parameters and criteria to evaluate documents, instructions, acknowledgements, or workflow status.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content or documents into another language.",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Check and release the translated version with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "specify_client_visibility",
+            "description": "Specify in which clients a document is visible or not.",
+            "attributes": []
+        },
+        {
+            "name": "create_local_document",
+            "description": "Create a new document in a client for a local addition or extension and reference the original document.",
+            "attributes": []
+        },
+        {
+            "name": "link_document",
+            "description": "Automatically link documents in the system with processes, organizational units, risks, other documents, or master data.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "Document is created with selection of a corresponding document type."
+        },
+        {
+            "a": "document_type",
+            "b": "document_template",
+            "description": "One or more document templates can be defined for each document type."
+        },
+        {
+            "a": "document",
+            "b": "document_template",
+            "description": "A document can be created using a selected template."
+        },
+        {
+            "a": "document",
+            "b": "document_version",
+            "description": "A document has versions managed through editing, release, revision, invalidation, and reactivation."
+        },
+        {
+            "a": "document",
+            "b": "metadata",
+            "description": "Document properties contain standardized and customer-specific metadata."
+        },
+        {
+            "a": "metadata",
+            "b": "category",
+            "description": "Metadata and attributes are grouped in categories according to purpose."
+        },
+        {
+            "a": "metadata",
+            "b": "attribute",
+            "description": "Maintainable attributes are part of document metadata."
+        },
+        {
+            "a": "document",
+            "b": "attribute",
+            "description": "Document properties include attributes such as references, IT applications, relevant companies, areas of validity, reader, author, co-author, reviewer, releaser, translation, and distribution attributes."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Persons can be assigned to a document as author, co-author, reviewer, releaser, translator, reader, distribution recipient, or workflow participant."
+        },
+        {
+            "a": "document",
+            "b": "user_group",
+            "description": "User groups can be assigned to documents for reader authorization, roles, distribution, and archive access."
+        },
+        {
+            "a": "document",
+            "b": "authorization",
+            "description": "Authorizations are assigned for each document."
+        },
+        {
+            "a": "user",
+            "b": "user_group",
+            "description": "Users can be assigned to user groups."
+        },
+        {
+            "a": "user",
+            "b": "authorization",
+            "description": "Users receive read or write permissions when assigned in relevant document attributes."
+        },
+        {
+            "a": "user_group",
+            "b": "authorization",
+            "description": "Read and change rights can be assigned to a group of users for each document."
+        },
+        {
+            "a": "document_version",
+            "b": "electronic_signature",
+            "description": "Signatures are documented in the system for each released version."
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Additional information can be added to each document and is associated with the main document."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachments are associated with a main document and released, archived, and reactivated with it."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "A change proposal clearly belongs to a document and is displayed in the document."
+        },
+        {
+            "a": "document",
+            "b": "request_for_validity_extension",
+            "description": "A request for validity extension is linked to the document to be checked."
+        },
+        {
+            "a": "document",
+            "b": "request_for_override",
+            "description": "A request for override is created for a selected document."
+        },
+        {
+            "a": "document",
+            "b": "request_for_reactivation",
+            "description": "A request for reactivation selects the corresponding invalidated document."
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution lists can be maintained for each document."
+        },
+        {
+            "a": "distribution_list",
+            "b": "user",
+            "description": "Persons can be directly assigned to a distribution list."
+        },
+        {
+            "a": "distribution_list",
+            "b": "user_group",
+            "description": "User groups can be assigned to a distribution list."
+        },
+        {
+            "a": "acknowledgement",
+            "b": "document_version",
+            "description": "Acknowledgement concerns the current released document version."
+        },
+        {
+            "a": "user",
+            "b": "acknowledgement",
+            "description": "Recipients confirm acknowledgement."
+        },
+        {
+            "a": "dashboard",
+            "b": "document",
+            "description": "Dashboards list documents relevant to the user based on distribution assignments."
+        },
+        {
+            "a": "report",
+            "b": "document",
+            "description": "Reports evaluate documents stored in the system."
+        },
+        {
+            "a": "document",
+            "b": "client",
+            "description": "For each document in a multi-client system, visibility in clients can be specified."
+        },
+        {
+            "a": "document",
+            "b": "process",
+            "description": "Documents can be linked with processes."
+        },
+        {
+            "a": "document",
+            "b": "organizational_unit",
+            "description": "Documents can be linked with organizational units."
+        },
+        {
+            "a": "document",
+            "b": "risk",
+            "description": "Documents can be linked with risks."
+        },
+        {
+            "a": "document",
+            "b": "master_data",
+            "description": "Documents can be linked with master data."
+        },
+        {
+            "a": "document",
+            "b": "reference",
+            "description": "References are maintained to link documents to master data or other documents."
+        },
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Documents can reference other documents, including a local document referencing an original document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document is created."
+        },
+        {
+            "a": "user",
+            "b": "create_document",
+            "description": "User creates the document."
+        },
+        {
+            "a": "document_type",
+            "b": "create_document",
+            "description": "Document is created with a document type."
+        },
+        {
+            "a": "document_type",
+            "b": "select_document_type",
+            "description": "Document type is selected."
+        },
+        {
+            "a": "document",
+            "b": "select_document_type",
+            "description": "Selection applies to the new document."
+        },
+        {
+            "a": "document_template",
+            "b": "select_document_template",
+            "description": "Template is selected."
+        },
+        {
+            "a": "document",
+            "b": "select_document_template",
+            "description": "Selection applies to the new document."
+        },
+        {
+            "a": "document",
+            "b": "create_object_cover",
+            "description": "Object cover is created for the document."
+        },
+        {
+            "a": "user",
+            "b": "create_object_cover",
+            "description": "User creates the object cover."
+        },
+        {
+            "a": "document",
+            "b": "upload_file",
+            "description": "Uploaded file or document is added to the object cover."
+        },
+        {
+            "a": "user",
+            "b": "upload_file",
+            "description": "User uploads external files or documents."
+        },
+        {
+            "a": "document",
+            "b": "generate_document",
+            "description": "Document is generated based on standard MS Office formats."
+        },
+        {
+            "a": "user",
+            "b": "generate_document",
+            "description": "User generates the document."
+        },
+        {
+            "a": "document",
+            "b": "maintain_metadata",
+            "description": "Document metadata is maintained."
+        },
+        {
+            "a": "metadata",
+            "b": "maintain_metadata",
+            "description": "Metadata is maintained."
+        },
+        {
+            "a": "attribute",
+            "b": "maintain_metadata",
+            "description": "Maintainable attributes are maintained."
+        },
+        {
+            "a": "category",
+            "b": "maintain_metadata",
+            "description": "Metadata is maintained in categories."
+        },
+        {
+            "a": "user",
+            "b": "maintain_metadata",
+            "description": "User can maintain metadata."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_content",
+            "description": "Document content is edited."
+        },
+        {
+            "a": "user",
+            "b": "edit_document_content",
+            "description": "User edits content."
+        },
+        {
+            "a": "document",
+            "b": "print_metadata",
+            "description": "Metadata is printed in the document."
+        },
+        {
+            "a": "metadata",
+            "b": "print_metadata",
+            "description": "Metadata such as version, status, and scopes is printed."
+        },
+        {
+            "a": "document",
+            "b": "save_document",
+            "description": "Document is saved."
+        },
+        {
+            "a": "user",
+            "b": "save_document",
+            "description": "User saves the document."
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Saved document is converted to PDF."
+        },
+        {
+            "a": "document_version",
+            "b": "display_document",
+            "description": "Current version is displayed."
+        },
+        {
+            "a": "document",
+            "b": "display_document",
+            "description": "Document is displayed."
+        },
+        {
+            "a": "dashboard",
+            "b": "display_document",
+            "description": "Document can be displayed from the dashboard."
+        },
+        {
+            "a": "document",
+            "b": "change_document",
+            "description": "Document content or properties are changed."
+        },
+        {
+            "a": "user",
+            "b": "change_document",
+            "description": "User makes changes."
+        },
+        {
+            "a": "authorization",
+            "b": "assign_authorization",
+            "description": "Authorization is assigned."
+        },
+        {
+            "a": "document",
+            "b": "assign_authorization",
+            "description": "Authorization is assigned for the document."
+        },
+        {
+            "a": "user",
+            "b": "assign_authorization",
+            "description": "Person-related authorization can be assigned."
+        },
+        {
+            "a": "user_group",
+            "b": "assign_authorization",
+            "description": "Group-related authorization can be assigned."
+        },
+        {
+            "a": "document",
+            "b": "assign_workflow_participant",
+            "description": "Participants are assigned in document properties."
+        },
+        {
+            "a": "user",
+            "b": "assign_workflow_participant",
+            "description": "Users are assigned as workflow participants."
+        },
+        {
+            "a": "additional_info",
+            "b": "add_additional_info",
+            "description": "Additional info is added."
+        },
+        {
+            "a": "document",
+            "b": "add_additional_info",
+            "description": "Additional info is added to the document."
+        },
+        {
+            "a": "user",
+            "b": "add_additional_info",
+            "description": "Author decides and adds the additional info."
+        },
+        {
+            "a": "additional_info",
+            "b": "release_additional_info",
+            "description": "Additional info is released and published."
+        },
+        {
+            "a": "additional_info",
+            "b": "delete_additional_info",
+            "description": "Additional info is deleted."
+        },
+        {
+            "a": "attachment",
+            "b": "add_attachment",
+            "description": "Attachment is added."
+        },
+        {
+            "a": "document",
+            "b": "add_attachment",
+            "description": "Attachment is added to the document."
+        },
+        {
+            "a": "user",
+            "b": "add_attachment",
+            "description": "Author decides and adds the attachment."
+        },
+        {
+            "a": "attachment",
+            "b": "archive_attachment",
+            "description": "Attachment is marked for archiving and archived."
+        },
+        {
+            "a": "document",
+            "b": "archive_attachment",
+            "description": "Archiving occurs with release of the next main document version."
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Change proposal is created."
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change proposal is created for a document."
+        },
+        {
+            "a": "user",
+            "b": "create_change_proposal",
+            "description": "Employee with author rights creates the change proposal."
+        },
+        {
+            "a": "email_notification",
+            "b": "create_change_proposal",
+            "description": "Document author is informed by e-mail when the proposal is created."
+        },
+        {
+            "a": "change_proposal",
+            "b": "schedule_change_proposal",
+            "description": "Change proposal is scheduled for implementation."
+        },
+        {
+            "a": "document_version",
+            "b": "schedule_change_proposal",
+            "description": "Scheduling creates a new document version."
+        },
+        {
+            "a": "change_proposal",
+            "b": "edit_change_proposal",
+            "description": "Editing is documented in the change proposal."
+        },
+        {
+            "a": "user",
+            "b": "edit_change_proposal",
+            "description": "Author documents editing of assigned proposals."
+        },
+        {
+            "a": "email_notification",
+            "b": "edit_change_proposal",
+            "description": "Creator receives an e-mail notification as a result."
+        },
+        {
+            "a": "change_proposal",
+            "b": "complete_change_proposal",
+            "description": "Change proposal is completed."
+        },
+        {
+            "a": "document",
+            "b": "start_release_workflow",
+            "description": "Approval process is initiated for the document."
+        },
+        {
+            "a": "user",
+            "b": "start_release_workflow",
+            "description": "Author or co-author starts the process."
+        },
+        {
+            "a": "workflow_task",
+            "b": "start_release_workflow",
+            "description": "Workflow-supported processing is started."
+        },
+        {
+            "a": "user",
+            "b": "sign_creator_step",
+            "description": "Registered author signs the first workflow step."
+        },
+        {
+            "a": "electronic_signature",
+            "b": "sign_creator_step",
+            "description": "Electronic signature is completed."
+        },
+        {
+            "a": "workflow_task",
+            "b": "sign_creator_step",
+            "description": "Creator workflow task is completed."
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Document is reviewed."
+        },
+        {
+            "a": "user",
+            "b": "review_document",
+            "description": "Reviewer checks the document."
+        },
+        {
+            "a": "workflow_task",
+            "b": "review_document",
+            "description": "Review workflow task is completed."
+        },
+        {
+            "a": "electronic_signature",
+            "b": "review_document",
+            "description": "Reviewer completes task with electronic signature."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document is released and published."
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "Releaser completes release task."
+        },
+        {
+            "a": "workflow_task",
+            "b": "release_document",
+            "description": "Release workflow task is completed."
+        },
+        {
+            "a": "electronic_signature",
+            "b": "release_document",
+            "description": "Releaser completes task with electronic signature."
+        },
+        {
+            "a": "attachment",
+            "b": "release_document",
+            "description": "Attachments are automatically released with the main document."
+        },
+        {
+            "a": "document",
+            "b": "reject_document",
+            "description": "Document is rejected during review or release."
+        },
+        {
+            "a": "user",
+            "b": "reject_document",
+            "description": "Workflow participant rejects."
+        },
+        {
+            "a": "workflow_task",
+            "b": "reject_document",
+            "description": "Workflow is canceled for subsequent participants after first rejection."
+        },
+        {
+            "a": "document_version",
+            "b": "create_document_version",
+            "description": "New editing version is created."
+        },
+        {
+            "a": "document",
+            "b": "create_document_version",
+            "description": "A document receives a new version."
+        },
+        {
+            "a": "attachment",
+            "b": "create_document_version",
+            "description": "Changes or archiving of attachments can trigger a new version."
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_document_version",
+            "description": "Planned change proposals can trigger a new version."
+        },
+        {
+            "a": "request_for_validity_extension",
+            "b": "create_request_for_validity_extension",
+            "description": "Request is created."
+        },
+        {
+            "a": "document",
+            "b": "create_request_for_validity_extension",
+            "description": "Request is linked to document to be checked."
+        },
+        {
+            "a": "request_for_validity_extension",
+            "b": "process_request_for_validity_extension",
+            "description": "Request is processed."
+        },
+        {
+            "a": "workflow_task",
+            "b": "process_request_for_validity_extension",
+            "description": "Workflow support is used."
+        },
+        {
+            "a": "user",
+            "b": "process_request_for_validity_extension",
+            "description": "Releaser or users involved in release process perform the check."
+        },
+        {
+            "a": "document",
+            "b": "declare_additional_validity",
+            "description": "Document remains valid and valid until is updated."
+        },
+        {
+            "a": "request_for_validity_extension",
+            "b": "declare_additional_validity",
+            "description": "Request is deleted."
+        },
+        {
+            "a": "attachment",
+            "b": "declare_additional_validity",
+            "description": "Attachments are also released and have the same validity."
+        },
+        {
+            "a": "request_for_validity_extension",
+            "b": "terminate_validity_extension_process",
+            "description": "Validity extension process is terminated and request is deleted."
+        },
+        {
+            "a": "document_version",
+            "b": "terminate_validity_extension_process",
+            "description": "Release of revised version terminates the process."
+        },
+        {
+            "a": "request_for_override",
+            "b": "create_request_for_override",
+            "description": "Request for override is created."
+        },
+        {
+            "a": "document",
+            "b": "create_request_for_override",
+            "description": "Request is created for selected document."
+        },
+        {
+            "a": "user",
+            "b": "create_request_for_override",
+            "description": "User with write access creates request."
+        },
+        {
+            "a": "request_for_override",
+            "b": "process_request_for_override",
+            "description": "Override request is processed."
+        },
+        {
+            "a": "workflow_task",
+            "b": "process_request_for_override",
+            "description": "Workflow support is used."
+        },
+        {
+            "a": "user",
+            "b": "process_request_for_override",
+            "description": "Releaser, applicant, reviewer, or releaser checks and approves depending on process."
+        },
+        {
+            "a": "document",
+            "b": "declare_out_of_force",
+            "description": "Document is declared invalid and archived."
+        },
+        {
+            "a": "attachment",
+            "b": "declare_out_of_force",
+            "description": "Attachments are declared invalid and archived if any."
+        },
+        {
+            "a": "request_for_override",
+            "b": "declare_out_of_force",
+            "description": "Request is retained for documentation."
+        },
+        {
+            "a": "authorization",
+            "b": "declare_out_of_force",
+            "description": "All rights except archive group are revoked."
+        },
+        {
+            "a": "user_group",
+            "b": "declare_out_of_force",
+            "description": "Archive group retains read access."
+        },
+        {
+            "a": "document",
+            "b": "physically_delete_document",
+            "description": "Archived document is physically deleted after archive period."
+        },
+        {
+            "a": "request_for_reactivation",
+            "b": "create_request_for_reactivation",
+            "description": "Request is created."
+        },
+        {
+            "a": "document",
+            "b": "create_request_for_reactivation",
+            "description": "Corresponding document is selected for reactivation."
+        },
+        {
+            "a": "user_group",
+            "b": "create_request_for_reactivation",
+            "description": "Only Business Admin group may create requests."
+        },
+        {
+            "a": "request_for_reactivation",
+            "b": "process_request_for_reactivation",
+            "description": "Request is processed."
+        },
+        {
+            "a": "workflow_task",
+            "b": "process_request_for_reactivation",
+            "description": "Workflow is started automatically."
+        },
+        {
+            "a": "user",
+            "b": "process_request_for_reactivation",
+            "description": "Creator of the request is the editor of the workflow step."
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Invalidated document is reactivated."
+        },
+        {
+            "a": "document_version",
+            "b": "reactivate_document",
+            "description": "New version is created."
+        },
+        {
+            "a": "authorization",
+            "b": "reactivate_document",
+            "description": "Authorizations are set according to maintained attributes."
+        },
+        {
+            "a": "distribution_list",
+            "b": "reactivate_document",
+            "description": "Distribution list is confirmed from invalidated version."
+        },
+        {
+            "a": "attachment",
+            "b": "reactivate_document",
+            "description": "Archived attachments are reactivated."
+        },
+        {
+            "a": "distribution_list",
+            "b": "maintain_distribution_list",
+            "description": "Distribution list is maintained."
+        },
+        {
+            "a": "document",
+            "b": "maintain_distribution_list",
+            "description": "Distribution list is maintained for the document."
+        },
+        {
+            "a": "user",
+            "b": "maintain_distribution_list",
+            "description": "Persons are assigned to distribution."
+        },
+        {
+            "a": "user_group",
+            "b": "maintain_distribution_list",
+            "description": "User groups are assigned to distribution."
+        },
+        {
+            "a": "document_version",
+            "b": "distribute_by_email",
+            "description": "New document version release triggers email distribution."
+        },
+        {
+            "a": "user",
+            "b": "distribute_by_email",
+            "description": "Assigned users are informed."
+        },
+        {
+            "a": "user_group",
+            "b": "distribute_by_email",
+            "description": "Users of assigned user groups are informed."
+        },
+        {
+            "a": "email_notification",
+            "b": "distribute_by_email",
+            "description": "Notification is sent by e-mail."
+        },
+        {
+            "a": "document",
+            "b": "request_acknowledgement",
+            "description": "Acknowledgement is requested for released document."
+        },
+        {
+            "a": "user",
+            "b": "request_acknowledgement",
+            "description": "Persons receive request."
+        },
+        {
+            "a": "user_group",
+            "b": "request_acknowledgement",
+            "description": "Users of assigned groups receive request."
+        },
+        {
+            "a": "email_notification",
+            "b": "request_acknowledgement",
+            "description": "Request is sent by e-mail."
+        },
+        {
+            "a": "workflow_task",
+            "b": "request_acknowledgement",
+            "description": "Acknowledgement is workflow-supported without a signature."
+        },
+        {
+            "a": "acknowledgement",
+            "b": "confirm_acknowledgement",
+            "description": "Acknowledgement is confirmed."
+        },
+        {
+            "a": "user",
+            "b": "confirm_acknowledgement",
+            "description": "Recipient confirms acknowledgement."
+        },
+        {
+            "a": "workflow_task",
+            "b": "confirm_acknowledgement",
+            "description": "Acknowledgement workflow task is completed."
+        },
+        {
+            "a": "report",
+            "b": "evaluate_report",
+            "description": "Report is evaluated."
+        },
+        {
+            "a": "document",
+            "b": "evaluate_report",
+            "description": "Reports evaluate documents."
+        },
+        {
+            "a": "acknowledgement",
+            "b": "evaluate_report",
+            "description": "Acknowledgement report lists acknowledgements."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Released document is translated."
+        },
+        {
+            "a": "user",
+            "b": "translate_document",
+            "description": "Translator translates released content."
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Translated version is checked and released."
+        },
+        {
+            "a": "user",
+            "b": "release_translation",
+            "description": "Participants check and release translation."
+        },
+        {
+            "a": "workflow_task",
+            "b": "release_translation",
+            "description": "Workflow support is used for translation release."
+        },
+        {
+            "a": "document",
+            "b": "specify_client_visibility",
+            "description": "Visibility is specified for the document."
+        },
+        {
+            "a": "client",
+            "b": "specify_client_visibility",
+            "description": "Client visibility is specified."
+        },
+        {
+            "a": "document",
+            "b": "create_local_document",
+            "description": "New local document is created for addition or extension."
+        },
+        {
+            "a": "client",
+            "b": "create_local_document",
+            "description": "Local document is created in a client."
+        },
+        {
+            "a": "reference",
+            "b": "create_local_document",
+            "description": "Reference to original document is created."
+        },
+        {
+            "a": "document",
+            "b": "link_document",
+            "description": "Document is linked."
+        },
+        {
+            "a": "process",
+            "b": "link_document",
+            "description": "Document can be linked with process."
+        },
+        {
+            "a": "organizational_unit",
+            "b": "link_document",
+            "description": "Document can be linked with organizational unit."
+        },
+        {
+            "a": "risk",
+            "b": "link_document",
+            "description": "Document can be linked with risk."
+        },
+        {
+            "a": "master_data",
+            "b": "link_document",
+            "description": "Document can be linked with master data."
+        },
+        {
+            "a": "reference",
+            "b": "link_document",
+            "description": "References are maintained to support links."
+        }
+    ]
+}

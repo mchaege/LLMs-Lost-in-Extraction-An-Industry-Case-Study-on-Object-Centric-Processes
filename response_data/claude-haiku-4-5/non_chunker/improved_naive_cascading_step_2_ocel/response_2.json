@@ -1,0 +1,335 @@
+{
+    "objs": [
+        {
+            "name": "policy",
+            "description": "Company-wide regulations and processes at a strategic level such as code of conduct, travel expenses policy, or ICS policy",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "Company-wide or locally defined regulations and instructions for business processes",
+            "attributes": []
+        },
+        {
+            "name": "procedural_instruction",
+            "description": "Specific procedures within a framework describing process sequence, details, and responsible persons to achieve objectives",
+            "attributes": []
+        },
+        {
+            "name": "work_instruction",
+            "description": "Detailed work steps and special procedures such as test instructions with compliance criteria for sub-processes",
+            "attributes": []
+        },
+        {
+            "name": "document",
+            "description": "A managed information object in the system with properties, content, and versioning",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "A document attachment not subject to the release cycle of the main document that can be released directly via switches",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document automatically released with the main document and subject to its own versioning",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal to amend a document created by authors without affecting the content or version history of the original document",
+            "attributes": []
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A request created by the system to check and potentially extend the validity period of a document",
+            "attributes": []
+        },
+        {
+            "name": "override_request",
+            "description": "A request to declare a document invalid and archive it when it has no additional validity",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A request to re-validate and restore a previously invalidated document",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Attachment of a new document information object with selection of corresponding document type and template",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of document content and properties including metadata maintenance",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Assignment of authorizations and workflow participants in the Control (release) category",
+            "attributes": []
+        },
+        {
+            "name": "submit_for_review",
+            "description": "Initiation of the 3-step release process by author or co-authors",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Reviewer checks content according to technical and formal aspects",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Releaser approves and publishes the document to readers",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Author creates a change proposal for an existing document without affecting version history",
+            "attributes": []
+        },
+        {
+            "name": "process_change_proposal",
+            "description": "Author documents editing of assigned change proposal",
+            "attributes": []
+        },
+        {
+            "name": "create_validity_extension_request",
+            "description": "System automatically creates a validity extension request 30 days before document validity expires",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Releaser or author/reviewer/releaser team extends the validity period of a document",
+            "attributes": []
+        },
+        {
+            "name": "create_override_request",
+            "description": "User with write access creates a request to invalidate and archive a document",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Releaser or author/reviewer/releaser team declares document invalid and archives it",
+            "attributes": []
+        },
+        {
+            "name": "create_reactivation_request",
+            "description": "Business Admin group member creates a request to reactivate an archived document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Initiator confirms reactivation and document is restored to active status",
+            "attributes": []
+        },
+        {
+            "name": "add_additional_information",
+            "description": "Author adds additional information attachment to a document",
+            "attributes": []
+        },
+        {
+            "name": "add_attachment",
+            "description": "Author adds controlled attachment to a document",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translator translates released document content into another language",
+            "attributes": []
+        },
+        {
+            "name": "review_translation",
+            "description": "Reviewer checks translated document content",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Releaser approves and publishes translated document version",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "System sends email notifications to users about released document",
+            "attributes": []
+        },
+        {
+            "name": "request_acknowledgement",
+            "description": "System requests users to actively confirm acknowledgement of released document",
+            "attributes": []
+        },
+        {
+            "name": "confirm_acknowledgement",
+            "description": "Recipient confirms acknowledgement of document in workflow",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "policy",
+            "b": "guideline",
+            "description": "Policy provides strategic framework for guidelines"
+        },
+        {
+            "a": "guideline",
+            "b": "procedural_instruction",
+            "description": "Guideline defines framework for procedural instructions"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "work_instruction",
+            "description": "Procedural instruction references work instructions for detailed steps"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document has supplementary additional information attachments"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has controlled attachments subject to same versioning"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change proposal clearly belongs to and is displayed in document"
+        },
+        {
+            "a": "document",
+            "b": "validity_extension_request",
+            "description": "Validity extension request is linked to document to be checked"
+        },
+        {
+            "a": "document",
+            "b": "override_request",
+            "description": "Override request is created for a selected document"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment content affects the version of associated main document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document object is created in system"
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Document content and properties are edited"
+        },
+        {
+            "a": "document",
+            "b": "assign_authorizations",
+            "description": "Authorizations are assigned to document"
+        },
+        {
+            "a": "document",
+            "b": "submit_for_review",
+            "description": "Document is submitted for approval workflow"
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Document is reviewed for technical and formal aspects"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document is approved and published"
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Change proposal is created for document"
+        },
+        {
+            "a": "change_proposal",
+            "b": "process_change_proposal",
+            "description": "Change proposal editing is documented"
+        },
+        {
+            "a": "document",
+            "b": "create_validity_extension_request",
+            "description": "Validity extension request is created for document"
+        },
+        {
+            "a": "validity_extension_request",
+            "b": "extend_validity",
+            "description": "Validity extension request is processed"
+        },
+        {
+            "a": "document",
+            "b": "create_override_request",
+            "description": "Override request is created for document"
+        },
+        {
+            "a": "override_request",
+            "b": "override_document",
+            "description": "Override request is processed to invalidate document"
+        },
+        {
+            "a": "reactivation_request",
+            "b": "create_reactivation_request",
+            "description": "Reactivation request is created"
+        },
+        {
+            "a": "reactivation_request",
+            "b": "reactivate_document",
+            "description": "Reactivation request is processed"
+        },
+        {
+            "a": "document",
+            "b": "add_additional_information",
+            "description": "Additional information is added to document"
+        },
+        {
+            "a": "document",
+            "b": "add_attachment",
+            "description": "Attachment is added to document"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document content is translated"
+        },
+        {
+            "a": "document",
+            "b": "review_translation",
+            "description": "Translated document is reviewed"
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Translated document version is released"
+        },
+        {
+            "a": "document",
+            "b": "distribute_by_email",
+            "description": "Document is distributed via email notifications"
+        },
+        {
+            "a": "document",
+            "b": "request_acknowledgement",
+            "description": "Acknowledgement is requested for document"
+        },
+        {
+            "a": "document",
+            "b": "confirm_acknowledgement",
+            "description": "Document acknowledgement is confirmed by recipient"
+        },
+        {
+            "a": "attachment",
+            "b": "release_document",
+            "description": "Attachment is released with main document"
+        }
+    ]
+}

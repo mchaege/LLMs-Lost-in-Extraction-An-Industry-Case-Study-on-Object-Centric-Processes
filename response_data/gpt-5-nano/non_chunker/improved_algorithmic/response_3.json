@@ -1,0 +1,159 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in P&R Management system representing a policy, guideline, procedural instruction, or work instruction.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person who interacts with the system and can be assigned roles such as reader, author, reviewer, releaser, translator.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of Users with defined roles used for authorizations and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of Users or UserGroups automatically informed about document release and acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "informationobject",
+            "description": "Attachment content that can be added to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinformation",
+            "description": "Attachment type that is not subject to the release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Attachment type released with the main document and capable of affecting the main document version.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change or amend a Document; belongs to a Document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_information_object_to_document",
+            "description": "Attach a new InformationObject (AdditionalInformation or Equipment) to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is automatically converted to PDF after saving.",
+            "attributes": []
+        },
+        {
+            "name": "create_document_version",
+            "description": "A new version of a Document is created when content or attributes change or attachments are updated.",
+            "attributes": []
+        },
+        {
+            "name": "start_release_process",
+            "description": "Begin the 3-step release process: Creator, Review, Release.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document is released after the release workflow; signatures are collected.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants sign electronically; signatures are documented.",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Authorizations and release participants are assigned.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Employees with author rights can create Change Proposals for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Released content can be translated into another language and must be checked and released.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check and extend document validity; may trigger a validity extension workflow.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override process to invalidate and archive a document and its attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an invalidated document; creates a new version and restores metadata.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_by_email",
+            "description": "Distribute document by e-mail to assigned distribution lists.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Recipients are prompted to acknowledge distribution; acknowledgements are tracked.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document is created or modified by a User (performer)."
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document is distributed to a DistributionList."
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "Document distribution can involve a UserGroup."
+        },
+        {
+            "a": "document",
+            "b": "informationobject",
+            "description": "Attachment of InformationObject to Document."
+        },
+        {
+            "a": "informationobject",
+            "b": "document",
+            "description": "InformationObject is attached to a Document."
+        },
+        {
+            "a": "document",
+            "b": "additionalinformation",
+            "description": "Document has Additional Information attached."
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment attached."
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Change Proposals belong to a Document."
+        }
+    ],
+    "o2e": []
+}

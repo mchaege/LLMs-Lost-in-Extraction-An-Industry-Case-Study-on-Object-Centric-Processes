@@ -1,0 +1,432 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document in the DHC VISION system",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "The document abbreviation"
+                },
+                {
+                    "name": "consecutivenumber",
+                    "description": "Assignment of the consecutive number"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Type of document (e.g., Policies, Guidelines, Procedural Instructions, Work Instructions)"
+                },
+                {
+                    "name": "version",
+                    "description": "Current version"
+                },
+                {
+                    "name": "status",
+                    "description": "Release/versioning status"
+                },
+                {
+                    "name": "templates",
+                    "description": "Document templates defined for each document type"
+                },
+                {
+                    "name": "references",
+                    "description": "References to Master data or other documents"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "IT applications involved"
+                },
+                {
+                    "name": "relevantcompanies",
+                    "description": "Relevant companies or areas of validity"
+                },
+                {
+                    "name": "areasofvalidity",
+                    "description": "Areas of validity"
+                },
+                {
+                    "name": "languageversions",
+                    "description": "Language versions of the document"
+                },
+                {
+                    "name": "distributionlist",
+                    "description": "Distribution information (groups or individuals)"
+                },
+                {
+                    "name": "attachments",
+                    "description": "Attached objects such as Attachment, Additional Info, Equipment"
+                },
+                {
+                    "name": "language",
+                    "description": "Language variants (for translations)"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A document attachment",
+            "attributes": [
+                {
+                    "name": "attachmentcontent",
+                    "description": "Content or file attached"
+                },
+                {
+                    "name": "attachedtodocument",
+                    "description": "Document to which this attachment belongs"
+                },
+                {
+                    "name": "releasestatus",
+                    "description": "Release behavior with main document"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document",
+            "attributes": [
+                {
+                    "name": "infocontent",
+                    "description": "Text or data of the additional information"
+                },
+                {
+                    "name": "attachmentreference",
+                    "description": "Reference to related attachments"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a document",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Own versioning"
+                },
+                {
+                    "name": "status",
+                    "description": "Release status"
+                },
+                {
+                    "name": "attachmentreference",
+                    "description": "Linked to document"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document template",
+            "attributes": [
+                {
+                    "name": "templatename",
+                    "description": "Name of the template"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Document type the template applies to"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "System user",
+            "attributes": [
+                {
+                    "name": "username",
+                    "description": "User name or login"
+                },
+                {
+                    "name": "groups",
+                    "description": "Groups the user belongs to"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users",
+            "attributes": [
+                {
+                    "name": "groupname",
+                    "description": "Name of the group"
+                },
+                {
+                    "name": "members",
+                    "description": "Users in the group"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "Distribution list for documents",
+            "attributes": [
+                {
+                    "name": "members",
+                    "description": "Users and user groups in distribution"
+                },
+                {
+                    "name": "distributiontype",
+                    "description": "Distribution by email or acknowledgement"
+                }
+            ]
+        },
+        {
+            "name": "language",
+            "description": "Language version of a document",
+            "attributes": [
+                {
+                    "name": "languagecode",
+                    "description": "Language code (e.g., de, en)"
+                },
+                {
+                    "name": "isreleased",
+                    "description": "Released status for this language version"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document in the system",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object_to_document",
+            "description": "Attach an information object to a document",
+            "attributes": []
+        },
+        {
+            "name": "upload_external_file_to_document",
+            "description": "Upload external file to document",
+            "attributes": []
+        },
+        {
+            "name": "define_document_template",
+            "description": "Define a template for a document type",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release a document through the workflow",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit a document or template-based content",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a document",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Convert a document to PDF on publish",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a change proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity of a document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override document status or validity",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Invalidate a document and its attachments",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate a previously invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_by_email",
+            "description": "Distribute a document to recipients by email",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate content into another language",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Release translation for a document",
+            "attributes": []
+        },
+        {
+            "name": "assign_translators",
+            "description": "Assign translation participants",
+            "attributes": []
+        },
+        {
+            "name": "assign_reviewers",
+            "description": "Assign translation reviewers",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Electronic signature on workflow steps",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document linked to Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document linked to AdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document linked to Equipment"
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses Template"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Document has Language Versions"
+        },
+        {
+            "a": "distributionlist",
+            "b": "user",
+            "description": "DistributionList linked to Users"
+        },
+        {
+            "a": "distributionlist",
+            "b": "usergroup",
+            "description": "DistributionList linked to UserGroups"
+        },
+        {
+            "a": "usergroup",
+            "b": "user",
+            "description": "UserGroup includes Users"
+        },
+        {
+            "a": "template",
+            "b": "document",
+            "description": "Template assigned to Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Document creation triggers related object creation"
+        },
+        {
+            "a": "attach_information_object_to_document",
+            "b": "attachment",
+            "description": "Attaching an object to a Document creates an Attachment"
+        },
+        {
+            "a": "attach_information_object_to_document",
+            "b": "additionalinfo",
+            "description": "Attaching an object to a Document creates AdditionalInfo"
+        },
+        {
+            "a": "upload_external_file_to_document",
+            "b": "attachment",
+            "description": "Uploading file to Document creates an Attachment"
+        },
+        {
+            "a": "define_document_template",
+            "b": "template",
+            "description": "Template used for Document"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Release action on Document"
+        },
+        {
+            "a": "translate_document",
+            "b": "language",
+            "description": "Translation creates Language Version"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translation release affects Document visibility"
+        },
+        {
+            "a": "distribute_document_by_email",
+            "b": "distributionlist",
+            "description": "Document distribution via email"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Reactivation creates new version of Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extend document validity"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override action affecting Document"
+        },
+        {
+            "a": "invalidate_document",
+            "b": "document",
+            "description": "Invalidation of Document"
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Archiving Document"
+        },
+        {
+            "a": "create_version",
+            "b": "document",
+            "description": "Create a new version of Document"
+        },
+        {
+            "a": "sign_document",
+            "b": "document",
+            "description": "Electronic signature on documents"
+        },
+        {
+            "a": "define_document_template",
+            "b": "template",
+            "description": "Template defines Document"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Document language version"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distributed to DistributionList"
+        }
+    ]
+}

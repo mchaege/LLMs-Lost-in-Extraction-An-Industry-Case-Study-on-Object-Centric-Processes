@@ -1,0 +1,342 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central managed information object representing policies, guidelines, procedural instructions, work instructions and other controlled documents in DHC VISION, subject to creation, editing, release, distribution, versioning and archiving.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Classification of the document (e.g. policy, guideline, procedural instruction, work instruction) determining its level in the document pyramid."
+                },
+                {
+                    "name": "document_abbreviation",
+                    "description": "Type-based abbreviation prefix with consecutive number assigned to the document (e.g. RL_0001)."
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document, incremented upon revision or changes."
+                },
+                {
+                    "name": "status",
+                    "description": "Current lifecycle status of the document (e.g. editing, released, out of force, archived)."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope or area of applicability of the document."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the current released version of the document is valid."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document remains valid, calculated from Valid From plus the period of extended validity."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Configurable time period (default 3 years) after which the document must be checked for continued validity."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Configurable retention period (default 10 years) for archived documents before physical deletion."
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or master data referenced by this document."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "IT applications linked to the document via its properties."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies or entities for which the document is relevant."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Organizational or geographic areas where the document applies."
+                },
+                {
+                    "name": "author",
+                    "description": "Person registered as the primary author of the document, automatically set to the creator but changeable."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional persons assigned write permissions on the document alongside the author."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person(s) assigned to check the document content for technical and formal correctness."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person(s) responsible for approving and releasing the document for distribution."
+                },
+                {
+                    "name": "reader",
+                    "description": "User group assignment controlling which readers may view the released document."
+                },
+                {
+                    "name": "distribution_by_info",
+                    "description": "Attribute controlling email notification distribution when a new version is released."
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "Attribute controlling acknowledgement-based distribution requiring active confirmation from recipients."
+                },
+                {
+                    "name": "source_format",
+                    "description": "Original file format of the document content (e.g. Word, Excel, PowerPoint)."
+                },
+                {
+                    "name": "language",
+                    "description": "Language of the document content, relevant for translation management."
+                },
+                {
+                    "name": "client_visibility",
+                    "description": "In a multi-client system, specifies in which clients the document is visible."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Predefined template associated with a document type, selectable when creating new documents, supporting TAG technology for automatic metadata insertion.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled supplementary document attached to a main document, subject to its own versioning and released together with the main document's release cycle.",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Version number of the attachment, maintained independently but following the main document's release process."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the attachment within the release process of the main document."
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "Supplementary information object attached to a document that is not subject to the main document's release cycle and can be published directly via property switches.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal for changing an existing document, managed in the document's cockpit, trackable and printable in the document for information purposes.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Current processing status of the change proposal (e.g. created, scheduled, completed)."
+                }
+            ]
+        },
+        {
+            "name": "request_for_validity_extension",
+            "description": "System-generated request created 30 days before a document's validity expires, requiring workflow-supported processing to extend, revise, or invalidate the document.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_override",
+            "description": "Request to invalidate a document and archive it, triggering a workflow process for out-of-force declaration.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_reactivation",
+            "description": "Request to reactivate a previously invalidated and archived document, created by the Business Admin group in a designated folder.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Named group of users used for assigning read, change, and distribution authorizations to documents (e.g. Reader - Document Management, Authors, Reviewer, Releaser, Archive).",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual person in DHC VISION who can be assigned roles and authorizations for document management activities.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "System role assigned to the user determining available functions (e.g. Reader, Author, Co-Author, Reviewer, Releaser, Translator, Business Admin)."
+                },
+                {
+                    "name": "login_language",
+                    "description": "Language in which the user logs into the system, determining which language version of documents is displayed."
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of user groups and individual persons maintained per document that controls email notifications, acknowledgement requests, and dashboard assignments.",
+            "attributes": []
+        },
+        {
+            "name": "workflow",
+            "description": "System-supported process automating approval steps including creator sign-off, review, and release, with email notifications and electronic signatures.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "Digital signature applied by workflow participants to confirm completion of their workflow tasks, documented per released version.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "Organizational entity within the company structure to which documents and processes can be linked.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "Business process managed in DHC VISION that can be linked to documents for process-specific filing and navigation.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "Risk object in DHC VISION that can be linked to documents through database integration.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Reference data objects (e.g. IT applications) that can be linked to documents through the system's database integration.",
+            "attributes": []
+        },
+        {
+            "name": "dashboard",
+            "description": "Role-specific user interface view displaying relevant documents, tasks, and evaluation information based on the user's group assignments and distribution lists.",
+            "attributes": []
+        },
+        {
+            "name": "report",
+            "description": "Evaluation report providing filtered information about documents in the system based on selection parameters and criteria.",
+            "attributes": [
+                {
+                    "name": "report_type",
+                    "description": "Type of report such as Status Report: Documents & Instruction, Document Monitoring, Status Report for Acknowledgement."
+                },
+                {
+                    "name": "selection_parameters",
+                    "description": "Configurable filter criteria that influence the evaluation results and result lists."
+                },
+                {
+                    "name": "traffic_light_status",
+                    "description": "Visual indicator system (green, yellow, red) showing document validity or workflow progress status."
+                }
+            ]
+        },
+        {
+            "name": "client",
+            "description": "Tenant or organizational entity in a multi-client DHC VISION system where documents can be made visible but not changed.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Active confirmation by a user that they have taken note of a released document version, tracked and summarized for authors and key roles.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Whether the acknowledgement has been confirmed or is still pending."
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_template",
+            "description": "Each document type can have one or more document templates defined for selection when creating new documents."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "A document can have one or more controlled attachments that are versioned and released with the main document."
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "A document can be supplemented with additional information objects not subject to the main document's release cycle."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change proposals belong to a specific document and are managed in the document's cockpit."
+        },
+        {
+            "a": "document",
+            "b": "request_for_validity_extension",
+            "description": "A request for validity extension is linked to the document whose validity needs to be checked."
+        },
+        {
+            "a": "document",
+            "b": "request_for_override",
+            "description": "A request for override is created for a specific document to initiate its invalidation and archiving."
+        },
+        {
+            "a": "request_for_reactivation",
+            "b": "document",
+            "description": "A request for reactivation references the specific invalidated document selected for reactivation."
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Each document has a distribution list maintained in its cockpit controlling notification and acknowledgement distribution."
+        },
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Documents can reference other documents through the References attribute."
+        },
+        {
+            "a": "document",
+            "b": "process",
+            "description": "Documents can be linked to processes for process-specific filing and navigation."
+        },
+        {
+            "a": "document",
+            "b": "organizational_unit",
+            "description": "Documents can be linked to organizational units through database integration."
+        },
+        {
+            "a": "document",
+            "b": "risk",
+            "description": "Documents can be linked to risks through database integration."
+        },
+        {
+            "a": "document",
+            "b": "master_data",
+            "description": "Documents can be linked to master data objects such as IT applications."
+        },
+        {
+            "a": "distribution_list",
+            "b": "user_group",
+            "description": "Distribution lists contain user groups whose members receive notifications and dashboard assignments."
+        },
+        {
+            "a": "distribution_list",
+            "b": "user",
+            "description": "Distribution lists can contain individual persons in addition to user groups."
+        },
+        {
+            "a": "user_group",
+            "b": "user",
+            "description": "Users are assigned to user groups which determine their authorizations and role capabilities."
+        },
+        {
+            "a": "document",
+            "b": "workflow",
+            "description": "Document release, validity extension, override and reactivation processes are supported by workflows."
+        },
+        {
+            "a": "document",
+            "b": "acknowledgement",
+            "description": "Released documents trigger acknowledgement tasks for users on the distribution for acknowledgement list."
+        },
+        {
+            "a": "document",
+            "b": "client",
+            "description": "In a multi-client system, documents can be configured for visibility across specific clients."
+        }
+    ],
+    "o2e": []
+}

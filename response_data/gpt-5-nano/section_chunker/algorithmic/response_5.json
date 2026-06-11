@@ -1,0 +1,404 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing a managed item.",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Document abbreviation."
+                },
+                {
+                    "name": "title",
+                    "description": "Document title."
+                },
+                {
+                    "name": "version",
+                    "description": "Document version."
+                },
+                {
+                    "name": "status",
+                    "description": "Document release status."
+                },
+                {
+                    "name": "validfrom",
+                    "description": "Start of validity."
+                },
+                {
+                    "name": "validuntil",
+                    "description": "End of validity."
+                },
+                {
+                    "name": "language",
+                    "description": "Document language."
+                },
+                {
+                    "name": "originallanguage",
+                    "description": "Original language before translation."
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Document type."
+                },
+                {
+                    "name": "template",
+                    "description": "Document template used."
+                },
+                {
+                    "name": "authors",
+                    "description": "Authors of the document."
+                },
+                {
+                    "name": "coauthors",
+                    "description": "Co-authors of the document."
+                },
+                {
+                    "name": "reviewers",
+                    "description": "Reviewers of the document."
+                },
+                {
+                    "name": "releasers",
+                    "description": "Releasers for the document."
+                },
+                {
+                    "name": "readers",
+                    "description": "Individual readers."
+                },
+                {
+                    "name": "readergroups",
+                    "description": "Reader groups for distribution."
+                },
+                {
+                    "name": "masterdatareferences",
+                    "description": "Master data references."
+                },
+                {
+                    "name": "references",
+                    "description": "References to external information."
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to modify an existing document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Associated Document"
+                },
+                {
+                    "name": "author",
+                    "description": "Author of Change Proposal"
+                },
+                {
+                    "name": "status",
+                    "description": "Status of Change Proposal"
+                },
+                {
+                    "name": "createdat",
+                    "description": "Creation date"
+                },
+                {
+                    "name": "content",
+                    "description": "Proposed changes content"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attached file or information object.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent Document"
+                },
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "type",
+                    "description": "Attachment type"
+                },
+                {
+                    "name": "version",
+                    "description": "Attachment version"
+                },
+                {
+                    "name": "releasestatus",
+                    "description": "Release status of attachment"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information attached to a document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent Document"
+                },
+                {
+                    "name": "name",
+                    "description": "Information name"
+                },
+                {
+                    "name": "content",
+                    "description": "Information content"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment related to a document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent Document"
+                },
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "version",
+                    "description": "Equipment version"
+                },
+                {
+                    "name": "releasestatus",
+                    "description": "Release status"
+                }
+            ]
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template for documents.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                },
+                {
+                    "name": "format",
+                    "description": "Template format"
+                }
+            ]
+        },
+        {
+            "name": "masterdata",
+            "description": "Master data referenced by documents.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Master data name"
+                },
+                {
+                    "name": "type",
+                    "description": "Master data type"
+                }
+            ]
+        },
+        {
+            "name": "language",
+            "description": "Language in which a document is or can be available.",
+            "attributes": [
+                {
+                    "name": "code",
+                    "description": "Language code"
+                },
+                {
+                    "name": "name",
+                    "description": "Language name"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (Policy, Guideline, etc.).",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document type name"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Person interacting with the system.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "User name"
+                },
+                {
+                    "name": "groups",
+                    "description": "User groups user belongs to"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users for permissions.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Group name"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new document.",
+            "attributes": []
+        },
+        {
+            "name": "attachattachment",
+            "description": "Attach an attachment to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "Attach additional information to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attach equipment to a document.",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Edit document content.",
+            "attributes": []
+        },
+        {
+            "name": "converttopdf",
+            "description": "Convert document to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a change proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review document content.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release document after review.",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronic signature for document tasks.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate released content.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend document validity.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override document validity or status.",
+            "attributes": []
+        },
+        {
+            "name": "invalidatedocument",
+            "description": "Invalidate document.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate document.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute document via distribution list.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledge document by recipients.",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create new version on release.",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document created by User"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment added to Document"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment added to Document (alternative relation)"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo attached to Document (alternative relation)"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment attached to Document (alternative relation)"
+        },
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "DocumentTemplate used by Document"
+        },
+        {
+            "a": "document",
+            "b": "masterdata",
+            "description": "MasterData referenced by Document"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Document language"
+        }
+    ]
+}

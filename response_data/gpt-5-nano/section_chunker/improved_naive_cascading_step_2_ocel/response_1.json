@@ -1,0 +1,251 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Main information object representing policy and guideline documents",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "Attributes to link documents to other objects or data"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Linked IT applications"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies related to the document"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Business areas or scopes where the document is valid"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Type of document (e.g., Policy, Guideline, Process)"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Document attachment associated with a document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment related to a document",
+            "attributes": []
+        },
+        {
+            "name": "object_cover",
+            "description": "Pure object cover for a document",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information object that can be attached to a document",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new document in the system",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attachment of an information object to a document",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attachment of equipment to a document",
+            "attributes": []
+        },
+        {
+            "name": "release",
+            "description": "Release of a document through the 3-step process (Creator - Review - Release)",
+            "attributes": []
+        },
+        {
+            "name": "publish",
+            "description": "Publication of the released document",
+            "attributes": []
+        },
+        {
+            "name": "versioning",
+            "description": "Versioning of a document (new versions created upon edits)",
+            "attributes": []
+        },
+        {
+            "name": "archiving",
+            "description": "Archiving of a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation",
+            "description": "Reactivation of an invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override of a document (AKS) by applicant or releaser",
+            "attributes": []
+        },
+        {
+            "name": "translation",
+            "description": "Translation of a released document into another language",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Distribution of document (by email or distribution lists)",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Acknowledgement of documents by readers",
+            "attributes": []
+        },
+        {
+            "name": "signature",
+            "description": "Electronic signatures for workflow participants",
+            "attributes": []
+        },
+        {
+            "name": "review",
+            "description": "Review of a document in the release workflow",
+            "attributes": []
+        },
+        {
+            "name": "distributebyemail",
+            "description": "Distribution by email of a document to recipients",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document has Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document has Equipment"
+        },
+        {
+            "a": "document",
+            "b": "object_cover",
+            "description": "Document Has Object Cover"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document has Information Object"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Creates Document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "Attaches Information Object to Document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "information_object",
+            "description": "Information Object attached to Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "document",
+            "description": "Attaches Equipment to Document"
+        },
+        {
+            "a": "release",
+            "b": "document",
+            "description": "Release of Document"
+        },
+        {
+            "a": "publish",
+            "b": "document",
+            "description": "Publish Document"
+        },
+        {
+            "a": "versioning",
+            "b": "document",
+            "description": "Versioning of Document"
+        },
+        {
+            "a": "archiving",
+            "b": "document",
+            "description": "Archiving of Document"
+        },
+        {
+            "a": "reactivation",
+            "b": "document",
+            "description": "Reactivation of Document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extend Validity of Document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override of Document"
+        },
+        {
+            "a": "translation",
+            "b": "document",
+            "description": "Translate Document"
+        },
+        {
+            "a": "distribution",
+            "b": "document",
+            "description": "Distribute Document"
+        },
+        {
+            "a": "acknowledgement",
+            "b": "document",
+            "description": "Acknowledgement of Document"
+        },
+        {
+            "a": "signature",
+            "b": "document",
+            "description": "Electronic Signature on Document"
+        },
+        {
+            "a": "review",
+            "b": "document",
+            "description": "Review of Document"
+        },
+        {
+            "a": "distributebyemail",
+            "b": "document",
+            "description": "Distribute Document By Email"
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Main document artifact in DHC VISION; covers various document types and contains metadata and lifecycle information.",
+            "attributes": [
+                {
+                    "name": "document_type_abbreviation",
+                    "description": "Abbreviation for the document type; used in the document name."
+                },
+                {
+                    "name": "consecutive_number",
+                    "description": "Cross-client, 4-digit number assigned per document type; included in the document name."
+                },
+                {
+                    "name": "title",
+                    "description": "Document title used in the document name."
+                },
+                {
+                    "name": "version",
+                    "description": "Version of the document; used in versioning and display."
+                },
+                {
+                    "name": "status",
+                    "description": "Lifecycle status of the document."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) of the document."
+                },
+                {
+                    "name": "references",
+                    "description": "References attribute; part of the document properties."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "IT applications referenced by the document."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Relevant companies or areas of validity."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Areas of validity for the document."
+                },
+                {
+                    "name": "reader",
+                    "description": "Users or groups who are granted read access to the document."
+                },
+                {
+                    "name": "author",
+                    "description": "Author(s) of the document; default is the creator; can be changed."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional authors who may contribute; not part of the release workflow."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Users who review the content for technical and formal aspects."
+                },
+                {
+                    "name": "releaser",
+                    "description": "User who releases the document to readers."
+                },
+                {
+                    "name": "translator",
+                    "description": "Translator for language versions of released content."
+                },
+                {
+                    "name": "distribution_list",
+                    "description": "Distribution lists; groups or individuals informed about release and/or acknowledged."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the current version is valid."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Defined period for validity extension (default 3 years)."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the version remains valid."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document by attaching a new information object with a document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit the content or properties of a document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Start the release workflow of a document; enables distribution and publication.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Publish a released document so readers can access it.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a released document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override/AKS: declare a document invalid or override its validity.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Reactivate an archived or invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a document after override or invalidation.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language and release translation.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposals",
+            "description": "Create change proposals for a document within the release workflow.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Document signatures are created and stored for released versions.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a document to distribution lists or user groups.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information",
+            "description": "Attach additional information or attachments to a document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document creation event triggers creation of a new Document object."
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Document edit event triggers modification of the Document object."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document release event triggers the release workflow for the Document."
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Document publish event triggers visibility to readers."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Document validity extension event triggers updated Valid Until date."
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Override event triggers an AKS/invalidity action on the Document."
+        },
+        {
+            "a": "document",
+            "b": "reactivate",
+            "description": "Document reactivation event triggers new version creation."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document archiving event triggers archive status."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translation event triggers translation workflow."
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposals",
+            "description": "Event to create change proposals for the Document."
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Event for collecting signatures on released Document version."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Event for distributing the Document to distribution lists."
+        }
+    ]
+}

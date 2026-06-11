@@ -1,0 +1,264 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in P&R Management system",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version number"
+                },
+                {
+                    "name": "status",
+                    "description": "Document status (e.g. draft, released, archived)"
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope of document (e.g. Policy, Guideline, Procedure, Work Instruction)"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Validity start date"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Validity end date"
+                },
+                {
+                    "name": "language",
+                    "description": "Document language"
+                },
+                {
+                    "name": "doc_type",
+                    "description": "Document type (Policy, Guidelines, Procedural Instructions, Work Instructions)"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment to Document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "version",
+                    "description": "Attachment version"
+                },
+                {
+                    "name": "status",
+                    "description": "Attachment status"
+                },
+                {
+                    "name": "content_type",
+                    "description": "Attachment content type"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to Document",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Description of additional information"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposals for a Document",
+            "attributes": [
+                {
+                    "name": "note",
+                    "description": "Note text"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to Document",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Equipment description"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new document by attachment of a new object",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing of document content or properties",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release process step (Creator/Review/Release) with signatures",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Check/extend validity of a released document",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override / AKS process for invalidating documents",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of invalidated documents",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archiving of invalidated documents",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of released documents",
+            "attributes": []
+        },
+        {
+            "name": "createattachment",
+            "description": "Attach an attachment to a document; creates an Attachment",
+            "attributes": []
+        },
+        {
+            "name": "createadditionalinfo",
+            "description": "Attach Additional Info to a document",
+            "attributes": []
+        },
+        {
+            "name": "createequipment",
+            "description": "Attach Equipment to a document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a change proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create a new version of a document",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute document to distribution lists",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has AdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposal"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "CreateDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "editdocument",
+            "description": "EditDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "ReleaseDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "ExtendValidity operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "OverrideDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "ReactivateDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "ArchiveDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "TranslateDocument operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "createversion",
+            "description": "CreateVersion operates on Document"
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "DistributeDocument operates on Document"
+        },
+        {
+            "a": "attachment",
+            "b": "createattachment",
+            "description": "CreateAttachment creates Attachment for Document"
+        },
+        {
+            "a": "additionalinfo",
+            "b": "createadditionalinfo",
+            "description": "CreateAdditionalInfo creates AdditionalInfo for Document"
+        },
+        {
+            "a": "equipment",
+            "b": "createequipment",
+            "description": "CreateEquipment creates Equipment for Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "createchangeproposal",
+            "description": "CreateChangeProposal creates ChangeProposal for Document"
+        }
+    ]
+}

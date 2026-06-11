@@ -1,0 +1,224 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document managed in DHC VISION including policies, guidelines, work instructions.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment bound to a Document. Could be Additional Info, Information Object, or Equippment.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "An additional information object attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a Document; has its own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "An information object that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template used for document creation and metadata.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal for changes to a Document, managed in its own folder.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person participating in events.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users used for authorizations and distribution.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit an existing document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Automatically convert saved document to PDF and display on web.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release process for a document (Creator - Review - Release).",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete their tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language, and check/release the translation.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a change proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Manage Change proposals for a document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity by author, reviewer and releaser with information to authors, co-authors and reviewers.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process for AKS; override by applicant, reviewer and releaser.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Reactivate a previously invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Override of release; invalidate and archive documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute documents to readers or groups.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Notify distribution by email.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement of distribution.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version during editing or release.",
+            "attributes": []
+        },
+        {
+            "name": "link_document_to_master_data",
+            "description": "Link documents to Master data or other documents via metadata fields.",
+            "attributes": []
+        },
+        {
+            "name": "attach_object",
+            "description": "Attach an object to a document (Attachment).",
+            "attributes": []
+        },
+        {
+            "name": "assign_reader",
+            "description": "Assign readers to a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_author",
+            "description": "Assign authors to a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_co_author",
+            "description": "Assign co-authors to a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_reviewer",
+            "description": "Assign reviewers to a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_releaser",
+            "description": "Assign releasers to a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_translator",
+            "description": "Assign translator to a document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document can have Attachments."
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Document can have Additional Info."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document can have Equippment."
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document can have Information Object attachments."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses Template for creation and metadata."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document can have Change Proposals."
+        },
+        {
+            "a": "document",
+            "b": "user_group",
+            "description": "Document distribution/authorization involves User Groups."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document is created by or acted on by Users (authors, reviewers, etc.)."
+        },
+        {
+            "a": "change_proposal",
+            "b": "user",
+            "description": "Change Proposals are created/edited/reviewed by Users."
+        },
+        {
+            "a": "template",
+            "b": "document",
+            "description": "Template associated with Document."
+        }
+    ],
+    "o2e": []
+}

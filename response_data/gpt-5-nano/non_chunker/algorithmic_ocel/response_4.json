@@ -1,0 +1,289 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed policy or guideline document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "type",
+                    "description": "Document type (Policy, Guideline, Procedural Instruction, Work Instruction)"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version"
+                },
+                {
+                    "name": "status",
+                    "description": "Document status"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Start of validity"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "End of validity"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment attached to a Document",
+            "attributes": [
+                {
+                    "name": "filename",
+                    "description": "Attachment filename"
+                },
+                {
+                    "name": "content_type",
+                    "description": "Attachment content type"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a Document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Information title"
+                },
+                {
+                    "name": "description",
+                    "description": "Information description"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a Document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "description",
+                    "description": "Equipment description"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposal associated with a Document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Change proposal title"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                },
+                {
+                    "name": "created_by",
+                    "description": "Author of the proposal"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new Document by attaching information and selecting document type",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "type",
+                    "description": "Document type"
+                }
+            ]
+        },
+        {
+            "name": "editdocument",
+            "description": "Edit content or properties of a Document",
+            "attributes": [
+                {
+                    "name": "changed_fields",
+                    "description": "Fields changed in the document"
+                }
+            ]
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release a Document after the release process",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Released version number"
+                }
+            ]
+        },
+        {
+            "name": "attachobject",
+            "description": "Attach an InformationObject to a Document",
+            "attributes": [
+                {
+                    "name": "attachment_type",
+                    "description": "Type of information object attached (Attachment, AdditionalInfo, Equipment)"
+                }
+            ]
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a Change Proposal for a Document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Proposal title"
+                }
+            ]
+        },
+        {
+            "name": "applychangeproposal",
+            "description": "Apply a Change Proposal to create a new Document version",
+            "attributes": [
+                {
+                    "name": "applied_proposal",
+                    "description": "Title of applied change proposal"
+                }
+            ]
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend a Document's validity period",
+            "attributes": [
+                {
+                    "name": "new_validity_until",
+                    "description": "New validity end date"
+                }
+            ]
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override (invalidate) a Document's current release",
+            "attributes": [
+                {
+                    "name": "reason",
+                    "description": "Reason for override"
+                }
+            ]
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document",
+            "attributes": [
+                {
+                    "name": "reason",
+                    "description": "Reason for reactivation"
+                }
+            ]
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a Document",
+            "attributes": [
+                {
+                    "name": "archive_period",
+                    "description": "Archive duration"
+                }
+            ]
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document to another language",
+            "attributes": [
+                {
+                    "name": "target_language",
+                    "description": "Target language for translation"
+                }
+            ]
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document owns ChangeProposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "Document is target of CreateDocument"
+        },
+        {
+            "a": "document",
+            "b": "editdocument",
+            "description": "Document is target of EditDocument"
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "Document is target of ReleaseDocument"
+        },
+        {
+            "a": "document",
+            "b": "attachobject",
+            "description": "Document is affected by AttachObject"
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "Document is target of ExtendValidity"
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "Document is target of OverrideDocument"
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "Document is target of ReactivateDocument"
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "Document is target of ArchiveDocument"
+        },
+        {
+            "a": "document",
+            "b": "createchangeproposal",
+            "description": "Document is the parent of ChangeProposal creation"
+        },
+        {
+            "a": "document",
+            "b": "applychangeproposal",
+            "description": "Document is affected by applying a ChangeProposal"
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "Document is translated"
+        }
+    ]
+}

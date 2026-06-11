@@ -1,0 +1,205 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document in P&R Management system such as Policy, Guideline, Procedural Instruction, or Work Instruction.",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g., Policy, Guideline, Procedural Instruction, Work Instruction).",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Template used when creating new documents.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment (Equipment) linked to a Document; attachments may trigger versioning.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a Document that is not subject to the main release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposed changes linked to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Distribution list associated with a Document for notification and acknowledgement.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "A document is created in the system by attaching a new information object and selecting a document type.",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Document content or properties are edited, potentially creating a new version.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Document release process with a 3-step workflow and electronic signatures.",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "Attach AdditionalInfo to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attach Equipment to a Document (Attachment) and trigger versioning.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a ChangeProposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "applychangeproposal",
+            "description": "Apply a ChangeProposal to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a Document (and related attachments) via workflow.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override/AKS process to invalidate and archive a Document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document and restore its state.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a Document after invalidation or end of lifecycle.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a released Document to distribution lists or groups.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document and release the translation with workflow support.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses Template when creating new Document instances"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachment (Equipment) linked to it"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has AdditionalInfo attached"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposal(s) attached"
+        },
+        {
+            "a": "document",
+            "b": "distribution",
+            "description": "Document has Distribution list attached"
+        },
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has type (DocumentType)"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Creates a Document"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "Edits a Document"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Releases a Document"
+        },
+        {
+            "a": "attachadditionalinfo",
+            "b": "additionalinfo",
+            "description": "Attaches AdditionalInfo to a Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "attachment",
+            "description": "Attaches Equipment to a Document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "ChangeProposal created for Document"
+        },
+        {
+            "a": "applychangeproposal",
+            "b": "document",
+            "description": "ChangeProposal applied to Document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extends validity of Document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override/AKS for Document"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Reactivate Document"
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "Archive Document"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Distribute Document"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Translate Document"
+        }
+    ]
+}

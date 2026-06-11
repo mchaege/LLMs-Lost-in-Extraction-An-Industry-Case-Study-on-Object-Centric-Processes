@@ -1,0 +1,359 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A uniquely identifiable document in Policy & Guidelines Management with types and versions.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document (e.g., Draft, Released)"
+                },
+                {
+                    "name": "version",
+                    "description": "Current version of the document"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of a document such as Policy, Guidelines, Procedural Instruction, Work Instruction.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document type name"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Document type abbreviation"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document template for creating documents.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment as an information object attached to a document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "releasestatus",
+                    "description": "Release status of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document.",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Description of additional information"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal for changes to a document.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Proposal title"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of users or groups notified on release or distribution.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Distribution list name"
+                }
+            ]
+        },
+        {
+            "name": "languageversion",
+            "description": "Language dependent version of a released document.",
+            "attributes": [
+                {
+                    "name": "languagecode",
+                    "description": "Language code"
+                },
+                {
+                    "name": "status",
+                    "description": "Version status"
+                }
+            ]
+        },
+        {
+            "name": "masterdata",
+            "description": "Master data related to documents such as IT applications or areas of validity.",
+            "attributes": [
+                {
+                    "name": "source",
+                    "description": "Master data source"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachdocument",
+            "description": "Attachment of a new information object, with selection of the corresponding document type.",
+            "attributes": []
+        },
+        {
+            "name": "attachmentofnewdocument",
+            "description": "Attachment of a new document object with a selected document type.",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing the content or properties of a document.",
+            "attributes": []
+        },
+        {
+            "name": "converttopdf",
+            "description": "Automatic conversion of a saved document to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Initiation of the 3-step release process: Creator, Review, Release.",
+            "attributes": []
+        },
+        {
+            "name": "publishdocument",
+            "description": "Publication of a released document to readers.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Creation of a Change Proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "applychangeproposal",
+            "description": "Applying a Change Proposal to create a new document version.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Process for extending the validity of a document.",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Process for invalidating or overriding a document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Process for reactivating an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of a released document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "Attachment of additional information to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attachment of equipment to a document.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution to distribution lists or readers.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": " Archiving invalidated or expired documents.",
+            "attributes": []
+        },
+        {
+            "name": "linkmasterdata",
+            "description": "Linking documents to MasterData.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has Type."
+        },
+        {
+            "a": "documenttype",
+            "b": "template",
+            "description": "DocumentType defines Templates."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachments."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has AdditionalInfo."
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment."
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposals."
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document has DistributionList."
+        },
+        {
+            "a": "document",
+            "b": "languageversion",
+            "description": "Document has LanguageVersion."
+        },
+        {
+            "a": "document",
+            "b": "masterdata",
+            "description": "Document linked to MasterData."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses a Template."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "attachdocument",
+            "description": "Document touched by AttachDocument event."
+        },
+        {
+            "a": "document",
+            "b": "attachmentofnewdocument",
+            "description": "Document touched by AttachmentOfNewDocument event."
+        },
+        {
+            "a": "document",
+            "b": "editdocument",
+            "description": "Document touched by EditDocument event."
+        },
+        {
+            "a": "document",
+            "b": "converttopdf",
+            "description": "Document touched by ConvertToPDF event."
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "Document touched by ReleaseDocument event."
+        },
+        {
+            "a": "document",
+            "b": "publishdocument",
+            "description": "Document touched by PublishDocument event."
+        },
+        {
+            "a": "document",
+            "b": "createchangeproposal",
+            "description": "Document touched by CreateChangeProposal event."
+        },
+        {
+            "a": "document",
+            "b": "applychangeproposal",
+            "description": "Document touched by ApplyChangeProposal event."
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "Document touched by ExtendValidity event."
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "Document touched by OverrideDocument event."
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "Document touched by ReactivateDocument event."
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "Document touched by TranslateDocument event."
+        },
+        {
+            "a": "document",
+            "b": "attachadditionalinfo",
+            "description": "Document touched by AttachAdditionalInfo event."
+        },
+        {
+            "a": "document",
+            "b": "attachequipment",
+            "description": "Document touched by AttachEquipment event."
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "Document touched by DistributeDocument event."
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "Document touched by ArchiveDocument event."
+        },
+        {
+            "a": "document",
+            "b": "linkmasterdata",
+            "description": "Document touched by LinkMasterData event."
+        },
+        {
+            "a": "languageversion",
+            "b": "translatedocument",
+            "description": "LanguageVersion involved in TranslateDocument event."
+        }
+    ]
+}

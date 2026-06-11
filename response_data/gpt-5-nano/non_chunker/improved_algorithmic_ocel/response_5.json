@@ -1,0 +1,272 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A uniquely identifiable document in P&R Management; contains content and metadata; may have version and status; linked to Document Type.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version"
+                },
+                {
+                    "name": "status",
+                    "description": "Release/status of current version"
+                },
+                {
+                    "name": "type",
+                    "description": "Document Type"
+                },
+                {
+                    "name": "language",
+                    "description": "Language of the document"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Start of validity for this version"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "End of validity for this version"
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Category of a document (e.g., Policy, Guidelines, Procedural Instructions, Work Instruction)",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the document type"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation for the type"
+                },
+                {
+                    "name": "description",
+                    "description": "Description of the document type"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Template used when creating a new Document object",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                },
+                {
+                    "name": "applies_to_document_type",
+                    "description": "Document Type this template applies to"
+                }
+            ]
+        },
+        {
+            "name": "information_object",
+            "description": "Generic information object that can be attached to a document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the information object"
+                },
+                {
+                    "name": "related_document",
+                    "description": "Document this information object is related to"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Document attachment that is released directly via switches and does not have its own release cycle",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the additional information object"
+                },
+                {
+                    "name": "related_document",
+                    "description": "Document this information object relates to"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Attachment that is controlled and has its own versioning, and affects the main document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "related_document",
+                    "description": "Document this equipment is attached to"
+                },
+                {
+                    "name": "version",
+                    "description": "Version of the equipment"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to a document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Title of the change proposal"
+                },
+                {
+                    "name": "related_document",
+                    "description": "Document the proposal targets"
+                },
+                {
+                    "name": "created_by",
+                    "description": "Author of the change proposal"
+                },
+                {
+                    "name": "created_date",
+                    "description": "Date of creation"
+                }
+            ]
+        },
+        {
+            "name": "reader",
+            "description": "Document reader role",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the reader"
+                }
+            ]
+        },
+        {
+            "name": "author",
+            "description": "Document author role",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the author"
+                }
+            ]
+        },
+        {
+            "name": "reviewer",
+            "description": "Document reviewer role",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the reviewer"
+                }
+            ]
+        },
+        {
+            "name": "releaser",
+            "description": "Document releaser role",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the releaser"
+                }
+            ]
+        },
+        {
+            "name": "translator",
+            "description": "Document translator role",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the translator"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new document object with selection of a document type and optional template",
+            "attributes": []
+        },
+        {
+            "name": "attach_new_information_object",
+            "description": "Attachment of a new information object to a document",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attachment of equipment to a document",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Modification of document content or properties",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Initiation and completion of the release process with signatures",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Automatic publication after release",
+            "attributes": []
+        },
+        {
+            "name": "convert_to_pdf",
+            "description": "Automatic conversion of document content to PDF upon saving",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Creation of a new document version",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a change proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Process to extend the validity period of a document",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override (AKS) of a document, marking as invalid and archiving",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation of an invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Process to invalidate a document (AKS)",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation and release of a translated document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Distribution by email upon release",
+            "attributes": []
+        },
+        {
+            "name": "distribute_for_acknowledgement",
+            "description": "Distribution for acknowledgement upon release",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": []
+}

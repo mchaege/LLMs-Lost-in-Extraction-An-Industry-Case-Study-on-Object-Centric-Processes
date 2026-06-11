@@ -1,0 +1,240 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document represents core items such as policies, guidelines and procedures in the system.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment represents document attachments that can be linked to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information Object represents a new information item attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional Information is a type of information that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Equippments are items attached to a Document and may have their own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "User represents an individual with a system role.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "User Group represents a collection of Users used for authorization and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "Distribution List represents recipients for distribution and acknowledgement.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New documents are created in the system by attachment of a new information object.",
+            "attributes": []
+        },
+        {
+            "name": "attach_new_information_object",
+            "description": "Attachment of a new information object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "upload_external_file",
+            "description": "External files or documents can be uploaded to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is automatically converted to PDF after release.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Documents go through a three-step release process Creator-Review-Release.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document is automatically published after release.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Documents are archived to withdraw authorizations; archive duration applies.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Documents can be reactivated during distribution reactivation.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check documents for extended validity and update Valid Until date.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override or AKS process to invalidate or override a document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation function allows language-dependent display of released documents.",
+            "attributes": []
+        },
+        {
+            "name": "approve_translation",
+            "description": "Translated version must be checked and released with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute documents to assigned Users or User Groups.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Distributions require acknowledgement; acknowledgment is tracked.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "New versions are created in the editing process.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "To invalidate documents, a request for AKS is created; documents are archived.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document linked to Information Object(s) via attachments."
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document linked to Additional Information."
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "Document linked to Equippments."
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document distribution defined by Distribution List."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document is created in the system."
+        },
+        {
+            "a": "document",
+            "b": "attach_new_information_object",
+            "description": "Document receives Information Object."
+        },
+        {
+            "a": "document",
+            "b": "upload_external_file",
+            "description": "Document has External File uploaded."
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Document converted to PDF."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document undergoes Release workflow."
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Document is signed by workflow participants."
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Document is published."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document is archived."
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document is reactivated."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Document validity extended."
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Document is overridden/AKS."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translation."
+        },
+        {
+            "a": "document",
+            "b": "approve_translation",
+            "description": "Translation approved."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document distributed."
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_distribution",
+            "description": "Acknowledgement happens."
+        },
+        {
+            "a": "document",
+            "b": "create_version",
+            "description": "New version created."
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Document invalidation."
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in P&R management",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (Policy, Guidelines, Procedural Instructions, Work Instruction)",
+            "attributes": [
+                {
+                    "name": "type_name",
+                    "description": "Document type name"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation"
+                }
+            ]
+        },
+        {
+            "name": "informationobject",
+            "description": "Attachment, Additional Information or Equipment linked to a Document",
+            "attributes": [
+                {
+                    "name": "info_type",
+                    "description": "Type of information object"
+                },
+                {
+                    "name": "description",
+                    "description": "Description of information"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a Document",
+            "attributes": [
+                {
+                    "name": "summary",
+                    "description": "Summary of proposed change"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing of a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attach InformationObject to a Document",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create a new version of a Document",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release of a Document",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review of a Document",
+            "attributes": []
+        },
+        {
+            "name": "applychangeproposal",
+            "description": "Apply a ChangeProposal to a Document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a ChangeProposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend Validity of a Document",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Invalidate or Override a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document",
+            "attributes": []
+        },
+        {
+            "name": "releasetranslation",
+            "description": "Release of a translated Document",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a Document via email",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedistribution",
+            "description": "Acknowledge distribution of a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "documenttype",
+            "b": "document",
+            "description": "has type"
+        },
+        {
+            "a": "document",
+            "b": "informationobject",
+            "description": "has attachments"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "has proposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "creates document"
+        },
+        {
+            "a": "createdocument",
+            "b": "documenttype",
+            "description": "sets document type"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "edits document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "attaches information object to document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "informationobject",
+            "description": "information object attached"
+        },
+        {
+            "a": "createversion",
+            "b": "document",
+            "description": "new version"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "release"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "review"
+        },
+        {
+            "a": "applychangeproposal",
+            "b": "document",
+            "description": "apply proposal to document"
+        },
+        {
+            "a": "applychangeproposal",
+            "b": "changeproposal",
+            "description": "affects change proposal"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "create proposal for document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "changeproposal",
+            "description": "proposal instance"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "extend validity"
+        },
+        {
+            "a": "overridedocument",
+            "b": "document",
+            "description": "invalidate document"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "reactivate document"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "translate document"
+        },
+        {
+            "a": "releasetranslation",
+            "b": "document",
+            "description": "release translation"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "distribute document"
+        },
+        {
+            "a": "acknowledgedistribution",
+            "b": "document",
+            "description": "acknowledge distribution"
+        }
+    ]
+}

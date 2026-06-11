@@ -1,0 +1,315 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document managed in P&R Management, including policies, guidelines, procedural instructions, work instructions.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Actor who performs actions on documents.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "An information object attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "An attachment that is not subject to the release cycle of the main document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Attachments that are controlled documents; their content affects the associated version of the main document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal for modifications to a document, created and managed within the system.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_additional_info",
+            "description": "Attach Additional Info to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_equippments",
+            "description": "Attach Equippments to a Document",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Start the release process for a Document",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review the content and form of a Document during the release process",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Manage Change Proposals for a Document",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Record electronic signatures for a released version of a Document",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Automatically publish a released document to readers",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override a Document (AKS) process",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Maintain and apply distribution for a Document",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate a released document into another language and release translation",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a Document",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit content or properties of a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document is linked to Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Document includes Additional Info"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "Document includes Equippments"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document has Change Proposals"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document is associated with User actions (authors, reviewers, releasers)"
+        },
+        {
+            "a": "change_proposal",
+            "b": "document",
+            "description": "Change Proposal belongs to Document"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment references Document"
+        },
+        {
+            "a": "additional_info",
+            "b": "document",
+            "description": "Additional Info references Document"
+        },
+        {
+            "a": "equippments",
+            "b": "document",
+            "description": "Equippments reference Document"
+        },
+        {
+            "a": "user",
+            "b": "document",
+            "description": "User participates in Document processes"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document involves User in Release Team"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "attach_additional_info",
+            "b": "document",
+            "description": "Event attaches Additional Info to Document"
+        },
+        {
+            "a": "attach_additional_info",
+            "b": "additional_info",
+            "description": "Additional Info is attached to Document via event"
+        },
+        {
+            "a": "attach_equippments",
+            "b": "document",
+            "description": "Event attaches Equippments to Document"
+        },
+        {
+            "a": "attach_equippments",
+            "b": "equippments",
+            "description": "Equippments are attached to Document"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Document is released"
+        },
+        {
+            "a": "release_document",
+            "b": "user",
+            "description": "User signs release for Document"
+        },
+        {
+            "a": "review_document",
+            "b": "document",
+            "description": "Document is reviewed"
+        },
+        {
+            "a": "review_document",
+            "b": "user",
+            "description": "User performs review"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Change Proposal created for Document"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "change_proposal",
+            "description": "Document's Change Proposal created"
+        },
+        {
+            "a": "manage_change_proposals",
+            "b": "document",
+            "description": "Change Proposals managed for Document"
+        },
+        {
+            "a": "sign_document",
+            "b": "document",
+            "description": "Document signed"
+        },
+        {
+            "a": "sign_document",
+            "b": "user",
+            "description": "User provides signature"
+        },
+        {
+            "a": "publish_document",
+            "b": "document",
+            "description": "Document published"
+        },
+        {
+            "a": "publish_document",
+            "b": "user",
+            "description": "User publishes Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Validity extended for Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "user",
+            "description": "Users informed about validity extension"
+        },
+        {
+            "a": "override_document",
+            "b": "document",
+            "description": "Document overridden"
+        },
+        {
+            "a": "override_document",
+            "b": "user",
+            "description": "User initiates Override"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Document reactivated"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "user",
+            "description": "User initiates Reactivation"
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Document distribution executed"
+        },
+        {
+            "a": "distribute_document",
+            "b": "user",
+            "description": "User notified of distribution"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Document translation created"
+        },
+        {
+            "a": "translate_document",
+            "b": "user",
+            "description": "User checks translation"
+        },
+        {
+            "a": "create_version",
+            "b": "document",
+            "description": "New Version created for Document"
+        },
+        {
+            "a": "create_version",
+            "b": "user",
+            "description": "User involved in version creation"
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Document edited"
+        },
+        {
+            "a": "edit_document",
+            "b": "user",
+            "description": "User edits Document"
+        }
+    ]
+}

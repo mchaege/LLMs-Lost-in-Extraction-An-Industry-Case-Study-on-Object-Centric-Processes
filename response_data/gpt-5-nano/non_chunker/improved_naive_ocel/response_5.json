@@ -1,0 +1,189 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Represents a document in the P&R Management system.",
+            "attributes": [
+                {
+                    "name": "document_type_abbreviation",
+                    "description": "Abbreviation used in the name of the document."
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) of the document."
+                },
+                {
+                    "name": "references",
+                    "description": "References related to the document."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Related IT applications."
+                },
+                {
+                    "name": "relevant_companies_or_areas_of_validity",
+                    "description": "Relevant companies or areas of validity."
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document template.",
+            "attributes": []
+        },
+        {
+            "name": "document_type",
+            "description": "Document type classification and abbreviation.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Object used to attach information to a document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Attachment that is not subject to the release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachment that is a controlled document and can affect the main document's version.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Information object attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to a document.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of user groups or persons automatically informed about the release of a document.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users for authorization and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data related to documents.",
+            "attributes": []
+        },
+        {
+            "name": "it_application",
+            "description": "IT application related to documents.",
+            "attributes": []
+        },
+        {
+            "name": "multi_client_system",
+            "description": "System enabling per-client visibility of documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment",
+            "description": "Attachment of new information object to the document.",
+            "attributes": []
+        },
+        {
+            "name": "release",
+            "description": "Release process with signature.",
+            "attributes": []
+        },
+        {
+            "name": "review",
+            "description": "Review of document content for technical and formal aspects.",
+            "attributes": []
+        },
+        {
+            "name": "create_document",
+            "description": "Document creation by attaching a new information object and selecting a document type.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check and extension of document validity.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override process to invalidate or extend validity.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Reactivation process for previously invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "archive",
+            "description": "Archiving of documents.",
+            "attributes": []
+        },
+        {
+            "name": "translate",
+            "description": "Translation of released content into another language.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution maintained by assigning User Groups or persons for the document."
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Attachment of information object to the document."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document templates can be defined for each document type."
+        },
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "Document abbreviation and type associated with the document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment event relates to a Document."
+        },
+        {
+            "a": "document",
+            "b": "release",
+            "description": "Release event relates to a Document."
+        },
+        {
+            "a": "document",
+            "b": "review",
+            "description": "Review event relates to a Document."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Extend Validity event relates to a Document."
+        }
+    ]
+}

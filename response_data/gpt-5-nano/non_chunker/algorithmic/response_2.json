@@ -1,0 +1,85 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document in the P&R management system.",
+            "attributes": []
+        },
+        {
+            "name": "application",
+            "description": "A software application or system component.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A user who performs actions.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "Role of the user."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document.",
+            "attributes": []
+        },
+        {
+            "name": "approve_document",
+            "description": "Approve a document.",
+            "attributes": []
+        },
+        {
+            "name": "submit_application",
+            "description": "Submit an application.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document authored by User."
+        },
+        {
+            "a": "document",
+            "b": "application",
+            "description": "Document linked to Application."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Actor creates a Document."
+        },
+        {
+            "a": "create_document",
+            "b": "user",
+            "description": "User performs creation."
+        },
+        {
+            "a": "approve_document",
+            "b": "document",
+            "description": "Document is affected by approval."
+        },
+        {
+            "a": "approve_document",
+            "b": "user",
+            "description": "User performs approval."
+        },
+        {
+            "a": "submit_application",
+            "b": "application",
+            "description": "Application is submitted."
+        },
+        {
+            "a": "submit_application",
+            "b": "user",
+            "description": "User performs submission."
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Information container for policies and guidelines with versioning and release workflow.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "An object attached to a Document, representing additional information associated with the document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "An information object that is not subject to the release cycle and can be deleted.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled document attachment that is released with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachments that are controlled documents and pass through the release process of the main document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment_of_new_information_object",
+            "description": "Attachment of a new information object to a document.",
+            "attributes": []
+        },
+        {
+            "name": "document_properties_edited",
+            "description": "Properties of a Document are edited.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is converted to PDF after saving.",
+            "attributes": []
+        },
+        {
+            "name": "create_document_version",
+            "description": "A new version of a released document is created upon revisions.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release process for a document (Creator - Review - Release).",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete their tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document is automatically published after release.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extension of a document's validity period via a workflow.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override / AKS process to invalidate and archive a document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation process to re-validate invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of documents and their attachments.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution lists inform readers or acknowledgement recipients.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of released content into another language.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposals_for_documents",
+            "description": "Creation and management of change proposals for documents.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a Change Proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Content (and properties) of a document is edited.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document published after release.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document contains Information Object attachments."
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document contains Additional Information."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document contains Equippment."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains Attachment."
+        },
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Document linked to another Document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "attachment_of_new_information_object",
+            "b": "information_object",
+            "description": "Attaches Information Object to Document."
+        },
+        {
+            "a": "attachment_of_new_information_object",
+            "b": "document",
+            "description": "Document updated with new Information Object."
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Document is released."
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Document translated and released in target language."
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Document validity extended."
+        },
+        {
+            "a": "override_document",
+            "b": "document",
+            "description": "Document overridden/invalidated via AKS."
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Document reactivated."
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Document archived."
+        },
+        {
+            "a": "create_document_version",
+            "b": "document",
+            "description": "New Version Created."
+        },
+        {
+            "a": "change_proposals_for_documents",
+            "b": "document",
+            "description": "Change proposals linked to Document."
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Document distribution event."
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Creation of Change Proposal for a Document."
+        },
+        {
+            "a": "convert_document_to_pdf",
+            "b": "document",
+            "description": "Document converted to PDF."
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Document edited."
+        },
+        {
+            "a": "publish_document",
+            "b": "document",
+            "description": "Document published after release."
+        }
+    ]
+}

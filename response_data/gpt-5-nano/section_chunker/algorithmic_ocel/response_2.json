@@ -1,0 +1,547 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in P&R management system",
+            "attributes": [
+                {
+                    "name": "documentid",
+                    "description": "Unique identifier"
+                },
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "number",
+                    "description": "Document number"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Document abbreviation"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status"
+                },
+                {
+                    "name": "version",
+                    "description": "Current version"
+                },
+                {
+                    "name": "validfrom",
+                    "description": "Start of validity"
+                },
+                {
+                    "name": "validuntil",
+                    "description": "End of validity"
+                },
+                {
+                    "name": "originallanguage",
+                    "description": "Original language code"
+                },
+                {
+                    "name": "references",
+                    "description": "Master data references"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "Linked IT applications"
+                },
+                {
+                    "name": "areasofvalidity",
+                    "description": "Relevant companies or areas on which validity depends"
+                },
+                {
+                    "name": "distributionlist",
+                    "description": "Distribution recipients"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Link to DocumentType"
+                },
+                {
+                    "name": "documenttemplate",
+                    "description": "Link to DocumentTemplate"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g. Policy, Guideline, etc.)",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation"
+                },
+                {
+                    "name": "name",
+                    "description": "Type name"
+                },
+                {
+                    "name": "description",
+                    "description": "Type description"
+                }
+            ]
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template for documents",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                },
+                {
+                    "name": "description",
+                    "description": "Template description"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Document attachment",
+            "attributes": [
+                {
+                    "name": "attachmentid",
+                    "description": "Attachment identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "type",
+                    "description": "Attachment type"
+                },
+                {
+                    "name": "releasestatus",
+                    "description": "Release status"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information",
+            "attributes": [
+                {
+                    "name": "infoid",
+                    "description": "Information identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "Information name"
+                },
+                {
+                    "name": "description",
+                    "description": "Information description"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment related to a document",
+            "attributes": [
+                {
+                    "name": "equipmentid",
+                    "description": "Equipment identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "version",
+                    "description": "Equipment version"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a document",
+            "attributes": [
+                {
+                    "name": "proposalid",
+                    "description": "Proposal identifier"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                },
+                {
+                    "name": "proposer",
+                    "description": "Proposer user"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "System user",
+            "attributes": [
+                {
+                    "name": "userid",
+                    "description": "User identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "User name"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users for roles and permissions",
+            "attributes": [
+                {
+                    "name": "groupname",
+                    "description": "Group name"
+                },
+                {
+                    "name": "role",
+                    "description": "Role type"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of recipients for distribution",
+            "attributes": [
+                {
+                    "name": "listid",
+                    "description": "Distribution list identifier"
+                },
+                {
+                    "name": "recipients",
+                    "description": "Recipients (users/groups)"
+                }
+            ]
+        },
+        {
+            "name": "documentversion",
+            "description": "Version of a Document",
+            "attributes": [
+                {
+                    "name": "versionnumber",
+                    "description": "Version number"
+                },
+                {
+                    "name": "status",
+                    "description": "Version status"
+                },
+                {
+                    "name": "createddate",
+                    "description": "Creation date"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create new document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Document type assigned"
+                },
+                {
+                    "name": "template",
+                    "description": "Document template applied"
+                }
+            ]
+        },
+        {
+            "name": "attachobject",
+            "description": "Attach an object to a document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "object",
+                    "description": "Attached object"
+                }
+            ]
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release document after editing",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "version",
+                    "description": "Version released"
+                }
+            ]
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review document by assigned reviewers",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "reviewers",
+                    "description": "Reviewers assigned"
+                }
+            ]
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate released content",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "language",
+                    "description": "Target language"
+                },
+                {
+                    "name": "translator",
+                    "description": "Translator user"
+                }
+            ]
+        },
+        {
+            "name": "releasetranslation",
+            "description": "Publish translated version",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "language",
+                    "description": "Language"
+                }
+            ]
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend document validity",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "newvaliduntil",
+                    "description": "New validity end date"
+                }
+            ]
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override / AKS of a document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "reason",
+                    "description": "Reason for override"
+                }
+            ]
+        },
+        {
+            "name": "createreactivation",
+            "description": "Reactivation request for a document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                }
+            ]
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate and create new version",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                }
+            ]
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledge distribution/acknowledgement",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "recipient",
+                    "description": "Recipient user/group"
+                }
+            ]
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                },
+                {
+                    "name": "distributionlist",
+                    "description": "Distribution list used"
+                }
+            ]
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive document and attachments",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                }
+            ]
+        },
+        {
+            "name": "audit",
+            "description": "Audit trail event",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document involved"
+                }
+            ]
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has a type"
+        },
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "Document uses a template"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has additional info"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has equipment"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distribution"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has change proposals"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document has authors"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "Document has author groups"
+        },
+        {
+            "a": "document",
+            "b": "documentversion",
+            "description": "Document version"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document change proposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "Document created"
+        },
+        {
+            "a": "document",
+            "b": "attachobject",
+            "description": "Attachment added"
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "Document released"
+        },
+        {
+            "a": "document",
+            "b": "reviewdocument",
+            "description": "Document reviewed"
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "Document translation"
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "Extend validity"
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "AKS/Override"
+        },
+        {
+            "a": "document",
+            "b": "createreactivation",
+            "description": "Reactivation request"
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "Reactivation performed"
+        },
+        {
+            "a": "document",
+            "b": "acknowledgedocument",
+            "description": "Acknowledgement"
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "Distribution"
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "Archive"
+        }
+    ]
+}

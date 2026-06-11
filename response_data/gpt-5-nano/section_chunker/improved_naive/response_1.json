@@ -1,0 +1,260 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in the system that can be versioned, released, translated and distributed.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual user who can perform actions on Documents.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of Users that can be assigned to documents for authorization.",
+            "attributes": []
+        },
+        {
+            "name": "client",
+            "description": "Client in a multi-client system where a document visibility can be controlled.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information Object that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment belonging to a Document; can be an Information Object or other attachments.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Additional information object that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Equipments attached to a Document; have their own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of Users/Groups to receive distribution of a Document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document by a User.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of a new Information Object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_info",
+            "description": "Attachment of Additional Info to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equippments",
+            "description": "Attachment of Equippments to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document release step in the workflow.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review step in the workflow.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override/AKS of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate a previously invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Invalidate a Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a Document.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a Document (e.g., by email) to Distribution List or Users.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Sign the Document electronically as part of the workflow.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "complete_change_proposal",
+            "description": "Complete a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Publish a released Document to readers.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attach Information Object to a Document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "client",
+            "description": "Document visibility controlled per Client"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document linked to Distribution List for distribution handling"
+        },
+        {
+            "a": "document",
+            "b": "user_group",
+            "description": "Document assigned to a User Group for authorization"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document linked to Information Object as attachment source"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document linked to Attachment as an attached item"
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Document linked to Additional Info as an attached item"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "Document linked to Equippments as an attached item"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document created by a User"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document released in the workflow by a User"
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Document reviewed in the workflow by a User"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translated by a User"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Document overridden in the workflow by a User"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document reactivated by a User"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Document validity extended by a User"
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Document invalidated by a User"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document archived by a User"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document distributed by a User"
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Document signed by a User"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Create a Change Proposal by a User"
+        },
+        {
+            "a": "document",
+            "b": "complete_change_proposal",
+            "description": "Complete a Change Proposal by a User"
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Publish a Document by a User"
+        },
+        {
+            "a": "document",
+            "b": "create_version",
+            "description": "Create a new Version by a User"
+        }
+    ]
+}

@@ -1,0 +1,205 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central artifact representing a document in P&R Management and DHC VISION (e.g., Policy, Guideline, Procedural Instruction, Work Instruction).",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Document type abbreviation included by default in the document name."
+                },
+                {
+                    "name": "number",
+                    "description": "Cross-client consecutive 4-digit number for each type, included in the document name."
+                },
+                {
+                    "name": "title",
+                    "description": "Document title."
+                },
+                {
+                    "name": "name",
+                    "description": "Document name composed as Abbreviation_Number_Title."
+                },
+                {
+                    "name": "templates",
+                    "description": "One or more document templates can be defined for each document type."
+                },
+                {
+                    "name": "version",
+                    "description": "Current version of the document (versioning)."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) of the document."
+                },
+                {
+                    "name": "references",
+                    "description": "References maintained in the document properties."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Related IT applications mentioned in master data."
+                },
+                {
+                    "name": "relevant_companies_or_areas_of_validity",
+                    "description": "Relevant companies or areas of validity."
+                },
+                {
+                    "name": "original_language_version",
+                    "description": "Original language version used for translation workflows."
+                },
+                {
+                    "name": "languages",
+                    "description": "Language versions of the document."
+                },
+                {
+                    "name": "reader_groups",
+                    "description": "User Groups assigned as readers for access control."
+                },
+                {
+                    "name": "authors",
+                    "description": "Authors of the document; the creator is automatically set as an author."
+                },
+                {
+                    "name": "co_authors",
+                    "description": "Co-authors who contribute to the document."
+                },
+                {
+                    "name": "reviewers",
+                    "description": "Reviewers assigned to check technical and formal aspects."
+                },
+                {
+                    "name": "releasers",
+                    "description": "Releasers who decide distribution to readers."
+                },
+                {
+                    "name": "translators",
+                    "description": "Translators who translate released content."
+                },
+                {
+                    "name": "distribution",
+                    "description": "Distribution configuration for notifications and acknowledgements."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Start date from which the document validity is checked."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document is valid."
+                },
+                {
+                    "name": "attachments",
+                    "description": "Attachments associated with the document."
+                },
+                {
+                    "name": "additional_info",
+                    "description": "Additional information attached to the document."
+                },
+                {
+                    "name": "equipment",
+                    "description": "Equipments attached to the document; may have its own versioning."
+                },
+                {
+                    "name": "information_object",
+                    "description": "Information objects attached to the document."
+                },
+                {
+                    "name": "document_type",
+                    "description": "Document type designation (e.g., Policy, Guideline, Procedural Instruction, Work Instruction)."
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment artifacts associated with a document.",
+            "attributes": [
+                {
+                    "name": "linked_document",
+                    "description": "Attachment is released with the main document; related to the main document."
+                },
+                {
+                    "name": "versioning",
+                    "description": "Attachments have their own versioning and release statuses."
+                },
+                {
+                    "name": "release_status",
+                    "description": "Attachments share the release process with the main document."
+                },
+                {
+                    "name": "deletability",
+                    "description": "Released Attachments cannot be deleted."
+                },
+                {
+                    "name": "archiving",
+                    "description": "Attachments are archived with the release of the next version of the main document."
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "Additional information objects attached to a document.",
+            "attributes": [
+                {
+                    "name": "release_mechanism",
+                    "description": "Additional information is released directly via switches in properties."
+                },
+                {
+                    "name": "impact_on_main_document",
+                    "description": "Creation/modification/deletion of additional information has no effect on the main document."
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipments attached to a document (with its own versioning).",
+            "attributes": [
+                {
+                    "name": "linked_document",
+                    "description": "Equipment is attached to the document and released with the main document."
+                },
+                {
+                    "name": "versioning",
+                    "description": "Equipment has its own versioning."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template objects that can be defined for each document type.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Template applies to a specific document type."
+                }
+            ]
+        },
+        {
+            "name": "information_object",
+            "description": "Information objects that can be attached to a document.",
+            "attributes": [
+                {
+                    "name": "attachment_to_document",
+                    "description": "Information objects can be attached to documents."
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "Distribution lists maintained per document to inform recipients.",
+            "attributes": [
+                {
+                    "name": "recipients",
+                    "description": "Users or groups included in the distribution."
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

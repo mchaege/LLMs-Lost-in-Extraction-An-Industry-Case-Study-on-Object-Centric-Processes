@@ -1,0 +1,255 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central document artifact in P&R Management",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information object attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment document type that is released with the main document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional information object attached to a document and not subject to the release cycle",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachment that affects the version of the main document",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person participating in document management and authorization workflows",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of a new information object",
+            "attributes": []
+        },
+        {
+            "name": "create_document",
+            "description": "New documents are created in the system by attachment of a new information object",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is automatically converted to PDF",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document is published after release",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document release process with signer approvals",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete their tasks with an electronic signature",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Change proposals for documents can be created",
+            "attributes": []
+        },
+        {
+            "name": "create_new_version",
+            "description": "A new version is automatically created when revised",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Validity extension can be requested and processed",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Declare Document invalid and archiving occurs",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of documents with defined archive duration",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation of previously invalidated documents",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override of documents as part of AKS process",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution lists inform about the release",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement workflow for distribution",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation function for released documents",
+            "attributes": []
+        },
+        {
+            "name": "check_translation",
+            "description": "Check/validate translation via workflow",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Translation must be checked and released with workflow support",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Assignment of authorizations and participants in the release process",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document linked to Attachment"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document linked to Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document linked to Equippment"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document linked to Information Object"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document involved with User"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document Created"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Document has Information Object Attached"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document Released"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document Translated"
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Document Converted to PDF"
+        },
+        {
+            "a": "document",
+            "b": "create_new_version",
+            "description": "New Version Created"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Validity Extended"
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Document Invalidated"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document Archived"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document Reactivated"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Document Overridden"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document Distributed"
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_distribution",
+            "description": "Distribution Acknowledged"
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Document Signed"
+        },
+        {
+            "a": "user",
+            "b": "create_document",
+            "description": "User Creates Document"
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "User Releases Document"
+        },
+        {
+            "a": "user",
+            "b": "attach_information_object",
+            "description": "User Attaches Information Object"
+        },
+        {
+            "a": "user",
+            "b": "translate_document",
+            "description": "User Translates Document"
+        },
+        {
+            "a": "user",
+            "b": "check_translation",
+            "description": "User Checks Translation"
+        }
+    ]
+}

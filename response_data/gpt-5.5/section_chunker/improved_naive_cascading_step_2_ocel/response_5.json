@@ -1,0 +1,73 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed paperless document in DHC VISION, including creation, editing, release, distribution and archiving.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Corresponding document type selected when creating a new document."
+                },
+                {
+                    "name": "version",
+                    "description": "Metadata that can be printed automatically in the document."
+                },
+                {
+                    "name": "status",
+                    "description": "Metadata used in workflows/life cycle."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A new document is created in DHC VISION.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "The content or properties of a document are edited.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "A document is released after workflow-supported approval.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "A document is archived instead of physically deleted during invalidation.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Documents can reference other documents."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "The event creates a document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "The event edits a document."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "The event releases a document."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "The event archives a document."
+        }
+    ]
+}

@@ -1,0 +1,327 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document entity representing policies, guidelines, work instructions and other documents.",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "Comments or links to other documents, master data, or systems."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Interactions with IT applications relevant to the document."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies or areas where the document is applicable."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Business areas or scopes where the document is valid."
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Classification of documents by level or category such as Level 2 Guidelines, Level 4 Work Instructions.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "A file attached to a document that is part of the release process.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Non-release-critical information associated with a document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Equipment related to a document, treated as a separate object with its own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of user groups and individuals for distribution and acknowledgement.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "documentcreated",
+            "description": "Creation of a new document by attachment of a new information object with selection of the corresponding document type.",
+            "attributes": []
+        },
+        {
+            "name": "attachmentadded",
+            "description": "Attachment of a new information object to a document.",
+            "attributes": []
+        },
+        {
+            "name": "documentedited",
+            "description": "Editing of content and properties of a document.",
+            "attributes": []
+        },
+        {
+            "name": "documentpdfgenerated",
+            "description": "Automatic conversion of saved document to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "documentversioncreated",
+            "description": "New editing version created upon changes or release.",
+            "attributes": []
+        },
+        {
+            "name": "documentreleased",
+            "description": "Release of a document through the 3-step process Creator – Review – Release.",
+            "attributes": []
+        },
+        {
+            "name": "signaturerecorded",
+            "description": "Electronic signatures recorded for released versions.",
+            "attributes": []
+        },
+        {
+            "name": "documentpublished",
+            "description": "Document automatically published after release.",
+            "attributes": []
+        },
+        {
+            "name": "attachmentarchived",
+            "description": "Attachment archived when no longer relevant.",
+            "attributes": []
+        },
+        {
+            "name": "equipmentversioned",
+            "description": "Equippments have their own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "overriderequested",
+            "description": "Override (AKS) requested for a document.",
+            "attributes": []
+        },
+        {
+            "name": "overridechecked",
+            "description": "Override check performed.",
+            "attributes": []
+        },
+        {
+            "name": "overrideapproved",
+            "description": "Override approved.",
+            "attributes": []
+        },
+        {
+            "name": "overriderejected",
+            "description": "Override rejected.",
+            "attributes": []
+        },
+        {
+            "name": "reactivationrequested",
+            "description": "Reactivation requested for a previously invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivationcompleted",
+            "description": "Reactivation completed; new version created.",
+            "attributes": []
+        },
+        {
+            "name": "distributionnotified",
+            "description": "Distribution list or reader groups notified by email.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgementrequested",
+            "description": "Acknowledgement requested for distribution.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgementconfirmed",
+            "description": "Acknowledgement confirmed by recipients.",
+            "attributes": []
+        },
+        {
+            "name": "translationreleased",
+            "description": "Translation of released content released.",
+            "attributes": []
+        },
+        {
+            "name": "validityextensionrequested",
+            "description": "Request for validity extension created.",
+            "attributes": []
+        },
+        {
+            "name": "validityextensioncompleted",
+            "description": "Validity extension completed and updated.",
+            "attributes": []
+        },
+        {
+            "name": "translationreviewed",
+            "description": "Translation content reviewed for accuracy.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "has attachment"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "has equippments"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "has distribution list"
+        },
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "has type"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "documentcreated",
+            "b": "document",
+            "description": "emits a relationship to Document"
+        },
+        {
+            "a": "documentcreated",
+            "b": "document_type",
+            "description": "document has type"
+        },
+        {
+            "a": "attachmentadded",
+            "b": "document",
+            "description": "attachment added to document"
+        },
+        {
+            "a": "attachmentadded",
+            "b": "attachment",
+            "description": "attachment object"
+        },
+        {
+            "a": "documentedited",
+            "b": "document",
+            "description": "document edited"
+        },
+        {
+            "a": "documentpdfgenerated",
+            "b": "document",
+            "description": "document converted to PDF"
+        },
+        {
+            "a": "documentversioncreated",
+            "b": "document",
+            "description": "new version created"
+        },
+        {
+            "a": "documentreleased",
+            "b": "document",
+            "description": "document released"
+        },
+        {
+            "a": "documentreleased",
+            "b": "distribution_list",
+            "description": "distribution of release"
+        },
+        {
+            "a": "signaturerecorded",
+            "b": "document",
+            "description": "signatures recorded"
+        },
+        {
+            "a": "documentpublished",
+            "b": "document",
+            "description": "document published"
+        },
+        {
+            "a": "attachmentarchived",
+            "b": "attachment",
+            "description": "attachment archived"
+        },
+        {
+            "a": "equipmentversioned",
+            "b": "equippments",
+            "description": "equipments versioned"
+        },
+        {
+            "a": "overriderequested",
+            "b": "document",
+            "description": "AKS requested"
+        },
+        {
+            "a": "overridechecked",
+            "b": "document",
+            "description": "AKS checked"
+        },
+        {
+            "a": "overrideapproved",
+            "b": "document",
+            "description": "AKS approved"
+        },
+        {
+            "a": "overriderejected",
+            "b": "document",
+            "description": "AKS rejected"
+        },
+        {
+            "a": "reactivationrequested",
+            "b": "document",
+            "description": "reactivation requested"
+        },
+        {
+            "a": "reactivationcompleted",
+            "b": "document",
+            "description": "reactivation completed"
+        },
+        {
+            "a": "distributionnotified",
+            "b": "distribution_list",
+            "description": "distribution notified"
+        },
+        {
+            "a": "acknowledgementrequested",
+            "b": "distribution_list",
+            "description": "acknowledgement requested"
+        },
+        {
+            "a": "acknowledgementconfirmed",
+            "b": "distribution_list",
+            "description": "acknowledgement confirmed"
+        },
+        {
+            "a": "translationreleased",
+            "b": "document",
+            "description": "translation released"
+        },
+        {
+            "a": "validityextensionrequested",
+            "b": "document",
+            "description": "validity extension requested"
+        },
+        {
+            "a": "validityextensioncompleted",
+            "b": "document",
+            "description": "validity extension completed"
+        },
+        {
+            "a": "translationreviewed",
+            "b": "document",
+            "description": "translation reviewed"
+        }
+    ]
+}

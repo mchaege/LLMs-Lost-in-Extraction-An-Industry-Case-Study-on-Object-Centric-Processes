@@ -1,0 +1,104 @@
+{
+    "objs": [],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A new document is created in DHC VISION by attaching a new information object and selecting a document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_properties",
+            "description": "Document properties and metadata are maintained automatically or by the user.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "The content of a document is edited using the editing client and local Office component.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "A workflow-supported approval process releases a document.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution lists are used to inform assigned user groups or persons about released documents.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Invalid documents are archived by withdrawing authorizations except for the archive group.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "Documents are classified by selected document types."
+        },
+        {
+            "a": "document_type",
+            "b": "document_template",
+            "description": "One or more document templates can be defined for each document type."
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution lists can be maintained for each document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "The event creates a managed document."
+        },
+        {
+            "a": "information_object",
+            "b": "create_document",
+            "description": "New documents are created by attaching a new information object."
+        },
+        {
+            "a": "document_type",
+            "b": "create_document",
+            "description": "A corresponding document type is selected when creating a document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_properties",
+            "description": "The event maintains document properties and metadata."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_content",
+            "description": "The event edits document content."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "The event releases a document."
+        },
+        {
+            "a": "workflow_task",
+            "b": "release_document",
+            "description": "Release processing is workflow-supported through tasks."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Distribution concerns the corresponding released document."
+        },
+        {
+            "a": "distribution_list",
+            "b": "distribute_document",
+            "description": "Distribution is maintained through distribution lists."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "The event archives invalidated documents."
+        }
+    ]
+}

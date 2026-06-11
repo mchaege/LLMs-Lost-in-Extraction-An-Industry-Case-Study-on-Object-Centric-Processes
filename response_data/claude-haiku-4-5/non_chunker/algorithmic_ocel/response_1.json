@@ -1,0 +1,461 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed document that goes through creation, editing, review, release, and archival cycles with versioning and status tracking",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "Policy, Guideline, Procedural Instruction, or Work Instruction"
+                },
+                {
+                    "name": "status",
+                    "description": "Draft, Under Review, Released, Archived, or Out of Force"
+                },
+                {
+                    "name": "version",
+                    "description": "Numeric version identifier updated on content or property changes"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date after which document validity expires"
+                },
+                {
+                    "name": "content",
+                    "description": "Document text and structured information"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document automatically released with its parent document and subject to its own versioning",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "A supplementary document attachment not subject to the release cycle or versioning of the main document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposed modification to an existing document that can be created by authors without affecting the document version",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A person with roles and authorizations in the system",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "A collection of users assigned with shared authorizations and responsibilities",
+            "attributes": []
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A workflow-supported request to extend the validity period of a document before expiration",
+            "attributes": []
+        },
+        {
+            "name": "override_request",
+            "description": "A workflow-supported request to invalidate and archive a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A workflow-supported request to re-validate a previously invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "A collection of users and user groups designated to receive document notifications or acknowledgement requests",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Attach a new document object with selection of document type and optional template",
+            "attributes": []
+        },
+        {
+            "name": "edit_content",
+            "description": "Modify the text and structured information of a document",
+            "attributes": []
+        },
+        {
+            "name": "edit_properties",
+            "description": "Modify document metadata, attributes, and categorized properties",
+            "attributes": []
+        },
+        {
+            "name": "convert_to_pdf",
+            "description": "Automatically convert edited document to PDF format for web display",
+            "attributes": []
+        },
+        {
+            "name": "request_review",
+            "description": "Initiate the 3-step approval workflow consisting of Creator, Review, and Release steps",
+            "attributes": []
+        },
+        {
+            "name": "sign_creator",
+            "description": "Author electronically signs to confirm document creation in the first workflow step",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Reviewer checks document content for technical and formal aspects",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Releaser approves and electronically signs to publish the document to readers",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Automatically make document visible to addressed readers following successful release",
+            "attributes": []
+        },
+        {
+            "name": "create_attachment",
+            "description": "Attach a controlled document that requires release with the parent document",
+            "attributes": []
+        },
+        {
+            "name": "archive_attachment",
+            "description": "Mark an attachment for archival, triggering a new version of the parent document",
+            "attributes": []
+        },
+        {
+            "name": "create_additional_info",
+            "description": "Attach supplementary information not subject to the document release cycle",
+            "attributes": []
+        },
+        {
+            "name": "delete_additional_info",
+            "description": "Remove additional information directly without affecting document version",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Author proposes a modification to an existing document",
+            "attributes": []
+        },
+        {
+            "name": "implement_change_proposal",
+            "description": "Schedule a change proposal for implementation, creating a new document version",
+            "attributes": []
+        },
+        {
+            "name": "request_validity_extension",
+            "description": "Initiate workflow-supported request to extend document validity 30 days before expiration",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Confirm extended validity by designated reviewers, updating the Valid Until date",
+            "attributes": []
+        },
+        {
+            "name": "revise_document",
+            "description": "Create a new document version with retained data from the previous version",
+            "attributes": []
+        },
+        {
+            "name": "request_override",
+            "description": "Initiate workflow-supported request to invalidate a document",
+            "attributes": []
+        },
+        {
+            "name": "declare_override",
+            "description": "Confirm document invalidation and archiving through workflow approval",
+            "attributes": []
+        },
+        {
+            "name": "request_reactivation",
+            "description": "Initiate workflow-supported request to re-validate an archived document",
+            "attributes": []
+        },
+        {
+            "name": "confirm_reactivation",
+            "description": "Approve reactivation and create a new version of the previously invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorization",
+            "description": "Designate users or groups with reader, author, reviewer, or releaser roles",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Send email notification to designated users and user groups when document is released",
+            "attributes": []
+        },
+        {
+            "name": "request_acknowledgement",
+            "description": "Prompt designated users to actively confirm receipt and understanding of a released document",
+            "attributes": []
+        },
+        {
+            "name": "confirm_acknowledgement",
+            "description": "User workflow-supported confirmation of document acknowledgement without signature",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Create a language-dependent version of a released document in another language",
+            "attributes": []
+        },
+        {
+            "name": "review_translation",
+            "description": "Translator checks and validates translated document content",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Releaser approves and signs translated document for visibility to language-specific readers",
+            "attributes": []
+        },
+        {
+            "name": "view_document",
+            "description": "Reader access approved document via dashboard or direct retrieval",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains attachments that are automatically released with the parent document"
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Document contains additional information not subject to the parent document release cycle"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change proposal is associated with and proposed for a specific document"
+        },
+        {
+            "a": "document",
+            "b": "validity_extension_request",
+            "description": "Validity extension request is linked to a document for validity checking"
+        },
+        {
+            "a": "document",
+            "b": "override_request",
+            "description": "Override request is associated with a document to be invalidated"
+        },
+        {
+            "a": "document",
+            "b": "reactivation_request",
+            "description": "Reactivation request selects a document to be re-validated"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution list designates users and groups to receive document notifications"
+        },
+        {
+            "a": "user",
+            "b": "user_group",
+            "description": "User is a member of one or more user groups"
+        },
+        {
+            "a": "attachment",
+            "b": "attachment",
+            "description": "Attachments retain references to the version of the parent document at archival"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Create Document event creates a new document object"
+        },
+        {
+            "a": "document",
+            "b": "edit_content",
+            "description": "Edit Content event modifies document content"
+        },
+        {
+            "a": "document",
+            "b": "edit_properties",
+            "description": "Edit Properties event modifies document metadata and attributes"
+        },
+        {
+            "a": "document",
+            "b": "convert_to_pdf",
+            "description": "Convert to PDF event transforms document to PDF format"
+        },
+        {
+            "a": "document",
+            "b": "request_review",
+            "description": "Request Review event initiates the approval workflow for a document"
+        },
+        {
+            "a": "document",
+            "b": "sign_creator",
+            "description": "Sign Creator event records author signature on document in first workflow step"
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Review Document event is performed on the document being reviewed"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Release Document event records releaser approval and signature"
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Publish Document event makes document visible following successful release"
+        },
+        {
+            "a": "document",
+            "b": "revise_document",
+            "description": "Revise Document event creates a new version of an existing document"
+        },
+        {
+            "a": "document",
+            "b": "request_validity_extension",
+            "description": "Request Validity Extension event initiates validity check workflow for document"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Extend Validity event updates the Valid Until date of a document"
+        },
+        {
+            "a": "document",
+            "b": "request_override",
+            "description": "Request Override event initiates invalidation workflow for document"
+        },
+        {
+            "a": "document",
+            "b": "declare_override",
+            "description": "Declare Override event marks document as out of force"
+        },
+        {
+            "a": "document",
+            "b": "request_reactivation",
+            "description": "Request Reactivation event initiates re-validation workflow for archived document"
+        },
+        {
+            "a": "document",
+            "b": "confirm_reactivation",
+            "description": "Confirm Reactivation event creates new version of reactivated document"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Translate Document event creates language-dependent version of document"
+        },
+        {
+            "a": "document",
+            "b": "review_translation",
+            "description": "Review Translation event validates translated document content"
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Release Translation event approves translation for reader visibility"
+        },
+        {
+            "a": "document",
+            "b": "view_document",
+            "description": "View Document event records reader access to approved document"
+        },
+        {
+            "a": "attachment",
+            "b": "create_attachment",
+            "description": "Create Attachment event attaches a controlled document to parent"
+        },
+        {
+            "a": "attachment",
+            "b": "archive_attachment",
+            "description": "Archive Attachment event marks attachment for archival"
+        },
+        {
+            "a": "additional_info",
+            "b": "create_additional_info",
+            "description": "Create Additional Info event adds supplementary information"
+        },
+        {
+            "a": "additional_info",
+            "b": "delete_additional_info",
+            "description": "Delete Additional Info event removes supplementary information"
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Create Change Proposal event proposes modification to document"
+        },
+        {
+            "a": "change_proposal",
+            "b": "implement_change_proposal",
+            "description": "Implement Change Proposal event schedules proposal for implementation"
+        },
+        {
+            "a": "user",
+            "b": "assign_authorization",
+            "description": "Assign Authorization event designates user with specific role"
+        },
+        {
+            "a": "user",
+            "b": "sign_creator",
+            "description": "Sign Creator event records electronic signature by author user"
+        },
+        {
+            "a": "user",
+            "b": "review_document",
+            "description": "Review Document event is performed by reviewer user"
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "Release Document event is performed by releaser user"
+        },
+        {
+            "a": "user",
+            "b": "confirm_acknowledgement",
+            "description": "Confirm Acknowledgement event records user acknowledgement of document"
+        },
+        {
+            "a": "user",
+            "b": "view_document",
+            "description": "View Document event records reader user access to document"
+        },
+        {
+            "a": "user_group",
+            "b": "assign_authorization",
+            "description": "Assign Authorization event designates user group with access rights"
+        },
+        {
+            "a": "user_group",
+            "b": "distribute_by_email",
+            "description": "Distribute by Email event sends notification to user group members"
+        },
+        {
+            "a": "user_group",
+            "b": "request_acknowledgement",
+            "description": "Request Acknowledgement event prompts user group members for confirmation"
+        },
+        {
+            "a": "distribution_list",
+            "b": "distribute_by_email",
+            "description": "Distribute by Email event sends notifications per distribution list configuration"
+        },
+        {
+            "a": "distribution_list",
+            "b": "request_acknowledgement",
+            "description": "Request Acknowledgement event prompts recipients per distribution list"
+        }
+    ]
+}

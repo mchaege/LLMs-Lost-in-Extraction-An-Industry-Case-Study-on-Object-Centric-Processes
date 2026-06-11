@@ -1,0 +1,365 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact managed in the system that undergoes creation, editing, release, distribution, archiving and versioning.",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Classification of documents such as Policy, Guideline, Work Instruction, etc.",
+            "attributes": []
+        },
+        {
+            "name": "language",
+            "description": "Language in which a document may be released and translated.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment linked to a Document content that can be released with main document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attachments that are part of the document context.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal for changes to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "version",
+            "description": "Version of a Document with release and editing statuses.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person in the system with roles such as Author, Reviewer, Releaser, Reader, Translator.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of Users used for role assignments and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "distributiongroup",
+            "description": "Group of users for distribution and acknowledgement.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new document by a user.",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing of document content or metadata.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release of a document through the 3-step process.",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review of document content and compliance.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of a released document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "attachattachment",
+            "description": "Attachment of a file to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "Attachment of additional information to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attachment of equipment to a document.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Creation of a change proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "reviewchangeproposal",
+            "description": "Review of a change proposal.",
+            "attributes": []
+        },
+        {
+            "name": "approvechangeproposal",
+            "description": "Approval of a change proposal.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend validity of a document.",
+            "attributes": []
+        },
+        {
+            "name": "aksoverride",
+            "description": "Override of validity or AKS process for a document.",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override of document validity.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archiving of a document.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution of a document to groups.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledgement of a document by readers.",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Creation of a new document version.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has DocumentType"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Document uses Language"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document contains AdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document contains Equipment"
+        },
+        {
+            "a": "document",
+            "b": "version",
+            "description": "Document has Versions"
+        },
+        {
+            "a": "distributiongroup",
+            "b": "document",
+            "description": "Document distributed to DistributionGroup"
+        },
+        {
+            "a": "usergroup",
+            "b": "document",
+            "description": "Document assigned to UserGroup"
+        },
+        {
+            "a": "changeproposal",
+            "b": "document",
+            "description": "ChangeProposal for a Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "user",
+            "description": "Creator of ChangeProposal"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Document created by User"
+        },
+        {
+            "a": "createdocument",
+            "b": "user",
+            "description": "Document creation performed by User"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Document release targets Document"
+        },
+        {
+            "a": "releasedocument",
+            "b": "user",
+            "description": "Document release performed by User"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "Document review targets Document"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "user",
+            "description": "Document review performed by User"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Document translation targets Document"
+        },
+        {
+            "a": "translatedocument",
+            "b": "language",
+            "description": "Document translation into Language"
+        },
+        {
+            "a": "attachattachment",
+            "b": "document",
+            "description": "Attachment added to Document"
+        },
+        {
+            "a": "attachattachment",
+            "b": "attachment",
+            "description": "Attachment created and linked"
+        },
+        {
+            "a": "attachadditionalinfo",
+            "b": "document",
+            "description": "AdditionalInfo linked to Document"
+        },
+        {
+            "a": "attachadditionalinfo",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo attached to Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "document",
+            "description": "Equipment linked to Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "equipment",
+            "description": "Equipment attached to Document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "ChangeProposal created for Document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "user",
+            "description": "ChangeProposal created by User"
+        },
+        {
+            "a": "reviewchangeproposal",
+            "b": "document",
+            "description": "ChangeProposal reviewed for Document"
+        },
+        {
+            "a": "reviewchangeproposal",
+            "b": "user",
+            "description": "Review of ChangeProposal by User"
+        },
+        {
+            "a": "approvechangeproposal",
+            "b": "document",
+            "description": "ChangeProposal approved for Document"
+        },
+        {
+            "a": "approvechangeproposal",
+            "b": "user",
+            "description": "Approval by User"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Validity extended for Document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "user",
+            "description": "Extension initiated by User"
+        },
+        {
+            "a": "aksoverride",
+            "b": "document",
+            "description": "AKS override for Document"
+        },
+        {
+            "a": "aksoverride",
+            "b": "user",
+            "description": "AKS override by User"
+        },
+        {
+            "a": "overridedocument",
+            "b": "document",
+            "description": "Override for Document"
+        },
+        {
+            "a": "overridedocument",
+            "b": "user",
+            "description": "Override by User"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Document reactivation"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "user",
+            "description": "Reactivation by User"
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "Document archival"
+        },
+        {
+            "a": "archivedocument",
+            "b": "user",
+            "description": "Archive action by User"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Document distributed to Document"
+        }
+    ]
+}

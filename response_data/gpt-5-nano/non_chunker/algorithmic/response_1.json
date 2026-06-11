@@ -1,0 +1,115 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document represents a policy, guideline, or related working document in P&R Management.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "User performs actions in the system to create, edit, release, review and manage documents.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a Document; created by users with author rights.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A User creates a new Document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "A User edits an existing Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "A User releases a Document after approval workflow.",
+            "attributes": []
+        },
+        {
+            "name": "create_changeproposal",
+            "description": "A User creates a ChangeProposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "A User reviews a Document as part of the release process.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "A User archives a Document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "ChangeProposal belongs to or is contained in a Document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "user",
+            "description": "Actor who creates the Document."
+        },
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Document created."
+        },
+        {
+            "a": "edit_document",
+            "b": "user",
+            "description": "Actor who edits the Document."
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Document edited."
+        },
+        {
+            "a": "release_document",
+            "b": "user",
+            "description": "Actor who releases the Document."
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Document released."
+        },
+        {
+            "a": "create_changeproposal",
+            "b": "user",
+            "description": "Actor who creates the ChangeProposal."
+        },
+        {
+            "a": "create_changeproposal",
+            "b": "changeproposal",
+            "description": "ChangeProposal created for a Document."
+        },
+        {
+            "a": "review_document",
+            "b": "user",
+            "description": "User reviews the Document."
+        },
+        {
+            "a": "archive_document",
+            "b": "user",
+            "description": "User archives the Document."
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Document archived."
+        }
+    ]
+}

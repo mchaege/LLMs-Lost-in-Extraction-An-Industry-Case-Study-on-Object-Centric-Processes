@@ -1,0 +1,156 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed policy or guideline document in DHC VISION, including created, edited, released, distributed, versioned, archived, translated, and evaluated documents.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Type selected for a document; examples include policy, guideline, procedural instruction, work instruction, additional info, and attachment."
+                },
+                {
+                    "name": "document_level",
+                    "description": "Level used to differentiate documents in the document pyramid."
+                },
+                {
+                    "name": "references",
+                    "description": "Attribute maintained via document properties to link documents to Master data or other documents."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Attribute maintained via document properties to link documents to IT applications."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Attribute maintained via document properties for relevant companies."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Attribute maintained via document properties for areas of validity."
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Document type abbreviation included in the document name by default."
+                },
+                {
+                    "name": "number",
+                    "description": "Cross-client, consecutive, 4-digit number per document type included in the document name by default."
+                },
+                {
+                    "name": "title",
+                    "description": "Title included in the document name."
+                },
+                {
+                    "name": "version",
+                    "description": "Metadata that can be printed in the document and is managed through versioning."
+                },
+                {
+                    "name": "status",
+                    "description": "Metadata that can be printed in the document and indicates workflow or lifecycle state."
+                },
+                {
+                    "name": "scope",
+                    "description": "Metadata that can be printed in the document using TAG technology."
+                },
+                {
+                    "name": "reader",
+                    "description": "Attribute for assigning reader authorizations via User Group assignment."
+                },
+                {
+                    "name": "author",
+                    "description": "Attribute for assigning the registered author and personal authorizations."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Attribute for assigning additional personal change rights."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Attribute for assigning reviewers and personal authorizations."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Attribute for assigning releasers and personal authorizations."
+                },
+                {
+                    "name": "releaser_incl._translation",
+                    "description": "Attribute for assigning releasers including translation."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which document validity starts."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Period used to calculate the valid-until date."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document remains valid."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Duration for which archived documents are retained."
+                },
+                {
+                    "name": "original_language_version",
+                    "description": "Original language version required for translation."
+                },
+                {
+                    "name": "login_language",
+                    "description": "Language in which an authorized reader views the released language version."
+                },
+                {
+                    "name": "client_visibility",
+                    "description": "Specifies in which clients a document is visible in a multi-client system."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A new document is created in DHC VISION by attaching a new information object and selecting a document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_content",
+            "description": "The content of a document is edited with the implemented editing client.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "The approval workflow releases a document after creator, review, and release steps.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_template",
+            "description": "One or more document templates can be defined for each document type and selected when creating new objects."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "The event creates a document."
+        },
+        {
+            "a": "information_object",
+            "b": "create_document",
+            "description": "The event attaches a new information object when creating the document."
+        },
+        {
+            "a": "document",
+            "b": "edit_content",
+            "description": "The event edits document content."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "The event releases the document."
+        }
+    ]
+}

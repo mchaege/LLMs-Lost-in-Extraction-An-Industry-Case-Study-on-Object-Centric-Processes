@@ -1,0 +1,516 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed paperless content object in DHC VISION, including policies, guidelines, instructions and related document records.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Corresponding type selected when creating a new document."
+                },
+                {
+                    "name": "references",
+                    "description": "Document property maintained to link documents to Master data or other documents."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Document property maintained to link documents to Master data or other documents."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Document property maintained to link documents to Master data or other documents."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Document property maintained to link documents to Master data or other documents."
+                },
+                {
+                    "name": "document_abbreviation",
+                    "description": "Abbreviation of the document, adaptable to requirements and same for all languages."
+                },
+                {
+                    "name": "consecutive_number",
+                    "description": "Consecutive number assigned to the document."
+                },
+                {
+                    "name": "version",
+                    "description": "Metadata that can be printed in the document and is associated with versioning."
+                },
+                {
+                    "name": "status",
+                    "description": "Metadata indicating the document status."
+                },
+                {
+                    "name": "scope",
+                    "description": "Metadata that can be printed in the document."
+                },
+                {
+                    "name": "reader",
+                    "description": "Attribute used to assign reader authorizations through User Groups."
+                },
+                {
+                    "name": "author",
+                    "description": "Attribute for the registered author of the document."
+                },
+                {
+                    "name": "co_authors",
+                    "description": "Attribute for additional persons with change rights."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Attribute for reviewers of the document."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Attribute for releasers of the document."
+                },
+                {
+                    "name": "translation",
+                    "description": "Attribute included with releaser assignment for translation."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which validity starts, calculated from release."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Period after which validity extension check is necessary."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Validity expiration date calculated from Valid From and Period of Extended Validity."
+                },
+                {
+                    "name": "distribution_by_info",
+                    "description": "Attribute affecting email notification for assigned groups and persons when the next version is released."
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "Attribute affecting distribution of acknowledgement workflow tasks when the next version is released."
+                },
+                {
+                    "name": "original_language_version",
+                    "description": "Language version of a released document before translation."
+                },
+                {
+                    "name": "login_language",
+                    "description": "Language in which released translated document is visible to authorized readers."
+                },
+                {
+                    "name": "client_visibility",
+                    "description": "Specifies in which clients the document is visible or not."
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "description": "Document type containing company-wide regulations and processes at a strategic level.",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "Document type describing locally defined regulations or regulations relating to a business process.",
+            "attributes": []
+        },
+        {
+            "name": "procedural_instruction",
+            "description": "Document type describing specific procedures, process sequences, details and responsible persons.",
+            "attributes": []
+        },
+        {
+            "name": "work_instruction",
+            "description": "Document type documenting detailed special work steps relevant for few departments.",
+            "attributes": []
+        },
+        {
+            "name": "document_type",
+            "description": "Classification used to differentiate and structure documents and to define templates, validity and archive settings.",
+            "attributes": [
+                {
+                    "name": "type_abbreviation",
+                    "description": "Abbreviation for common document types."
+                },
+                {
+                    "name": "document_template",
+                    "description": "One or more templates that can be defined for each document type."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Period for which a check of extended validity is necessary."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Duration for which archived documents remain before physical deletion."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template selected when creating new document objects.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Object attached in the system to create new documents or related information objects.",
+            "attributes": []
+        },
+        {
+            "name": "object_cover",
+            "description": "Pure object cover to which external files or documents can be uploaded or generated.",
+            "attributes": []
+        },
+        {
+            "name": "external_file",
+            "description": "File uploaded to an object cover.",
+            "attributes": []
+        },
+        {
+            "name": "office_format",
+            "description": "Standard MS Office formats used to generate new documents, such as Excel, Word and PowerPoint.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled document attachment associated with a main document and released with the main document.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content that has an effect on the associated version of the main document."
+                },
+                {
+                    "name": "version",
+                    "description": "Attachments are subject to their own versioning."
+                },
+                {
+                    "name": "status",
+                    "description": "Attachments pass through all statuses of the release process of the main document."
+                },
+                {
+                    "name": "validity",
+                    "description": "Attachments have the same validity as the main document when released through validity extension."
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "Additional information object that supplements a document and is not subject to the release cycle of the main document.",
+            "attributes": [
+                {
+                    "name": "published",
+                    "description": "Released and published directly via switches in the properties."
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Document attachment or relevant equipment/additional information mentioned as supplement to documents.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual system user involved in authoring, reviewing, releasing, reading, translating or administering documents.",
+            "attributes": []
+        },
+        {
+            "name": "person",
+            "description": "Person assigned directly to authorizations or distribution.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group used for role assignment, read authorization, distribution and archive access.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the user group, such as Reader - Document Management, Authors, Reviewer, releaser, Archive, or Business Admin group."
+                }
+            ]
+        },
+        {
+            "name": "authorization_group",
+            "description": "Group defined in the system and assigned to documents to provide read and change rights.",
+            "attributes": []
+        },
+        {
+            "name": "authorization",
+            "description": "Group and person-related authorization assigned in document properties.",
+            "attributes": [
+                {
+                    "name": "read_rights",
+                    "description": "Read access rights for documents and dependent objects."
+                },
+                {
+                    "name": "change_rights",
+                    "description": "Change access rights for documents and dependent objects."
+                },
+                {
+                    "name": "write_access",
+                    "description": "Access allowing users to create requests for AKS for selected documents."
+                }
+            ]
+        },
+        {
+            "name": "role",
+            "description": "System role implemented in DHC VISION to provide users with functions according to area of application.",
+            "attributes": [
+                {
+                    "name": "license_role",
+                    "description": "License role shown in brackets for a system role."
+                }
+            ]
+        },
+        {
+            "name": "document_author",
+            "description": "Role or user responsible for authoring documents.",
+            "attributes": []
+        },
+        {
+            "name": "reader",
+            "description": "Role or user who can view approved objects and take note of documents.",
+            "attributes": []
+        },
+        {
+            "name": "co_author",
+            "description": "Person with additional personal change rights on a document and no relevance within release workflow.",
+            "attributes": []
+        },
+        {
+            "name": "reviewer",
+            "description": "Person who checks document content according to technical and formal aspects.",
+            "attributes": []
+        },
+        {
+            "name": "releaser",
+            "description": "Person responsible for document and content and deciding distribution to readers.",
+            "attributes": []
+        },
+        {
+            "name": "document_approver",
+            "description": "Role corresponding to releaser responsible for approving documents.",
+            "attributes": []
+        },
+        {
+            "name": "translator",
+            "description": "Person who can translate released content into another language.",
+            "attributes": []
+        },
+        {
+            "name": "creator",
+            "description": "Person who creates a document, proposal or request and may be initiator of workflows.",
+            "attributes": []
+        },
+        {
+            "name": "editor",
+            "description": "Person editing a workflow step or document content.",
+            "attributes": []
+        },
+        {
+            "name": "archive_group",
+            "description": "Specific user group retaining read access to archived documents.",
+            "attributes": []
+        },
+        {
+            "name": "business_admin_group",
+            "description": "Group permitted to create requests for reactivation.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changing an existing document without affecting document content or version history at creation.",
+            "attributes": [
+                {
+                    "name": "note",
+                    "description": "Note about an existing Change proposal that can be printed in a new document version."
+                },
+                {
+                    "name": "status",
+                    "description": "Indicates whether the Change proposal is completed or otherwise displayed/managed."
+                }
+            ]
+        },
+        {
+            "name": "request_for_validity_extension",
+            "description": "System-created request linked to a document to be checked before validity expires.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_aks",
+            "description": "Request created for a selected document to invalidate or override it.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_out_of_force",
+            "description": "Request retained for documentation after declaration of Out of force.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_reactivation",
+            "description": "Request created to reactivate invalidated documents.",
+            "attributes": [
+                {
+                    "name": "initiator",
+                    "description": "Creator of the request for reactivation."
+                }
+            ]
+        },
+        {
+            "name": "workflow_participant",
+            "description": "User involved in workflow steps and completing tasks with electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "workflow_task",
+            "description": "Task assigned to workflow participants or acknowledgement recipients.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Current status of the workflow task."
+                }
+            ]
+        },
+        {
+            "name": "electronic_signature",
+            "description": "Signature completed by workflow participants and documented for each released version.",
+            "attributes": []
+        },
+        {
+            "name": "signature",
+            "description": "Signature of an individual participant documented in the system and printable as document content.",
+            "attributes": []
+        },
+        {
+            "name": "e_mail_notification",
+            "description": "Email sent by the system to inform users about workflow tasks, change proposals, validity extension, release or acknowledgements.",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Assignment of User Groups and persons to a document distribution list for read authorization, notification, acknowledgement and dashboards.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List per document containing User Groups and persons for distribution.",
+            "attributes": [
+                {
+                    "name": "user_groups",
+                    "description": "User Groups assigned to the distribution list."
+                },
+                {
+                    "name": "persons",
+                    "description": "Persons assigned to the distribution list."
+                }
+            ]
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Confirmation by recipients that they have taken note of a document version.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Status used in acknowledgement reports."
+                }
+            ]
+        },
+        {
+            "name": "dashboard",
+            "description": "User and role-specific display populated by distribution groups and document relevance.",
+            "attributes": []
+        },
+        {
+            "name": "document_list",
+            "description": "Reader dashboard listing all documents relevant to the user.",
+            "attributes": []
+        },
+        {
+            "name": "report",
+            "description": "Role-specific evaluation report or search for documents and instructions.",
+            "attributes": [
+                {
+                    "name": "selection_parameters",
+                    "description": "Parameters available for reports."
+                },
+                {
+                    "name": "selection_criteria",
+                    "description": "Criteria available for reports."
+                },
+                {
+                    "name": "evaluation_results",
+                    "description": "Results filtered according to settings made."
+                }
+            ]
+        },
+        {
+            "name": "status_report",
+            "description": "Report providing evaluations of documents or instructions depending on selected parameters.",
+            "attributes": []
+        },
+        {
+            "name": "instruction",
+            "description": "Instruction stored in the system and evaluated by reports.",
+            "attributes": []
+        },
+        {
+            "name": "traffic_light_system",
+            "description": "Status display for reports using green, yellow and red indicators.",
+            "attributes": []
+        },
+        {
+            "name": "language_version",
+            "description": "Language-dependent version of released document content.",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "Language of the document version."
+                },
+                {
+                    "name": "status",
+                    "description": "Release state of the translated or original language version."
+                }
+            ]
+        },
+        {
+            "name": "client",
+            "description": "Client in a multi-client system for which document visibility can be specified.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "Process object that documents can be linked with.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "Organizational unit object that documents can be linked with.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "Risk object that documents can be linked with.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data object that documents can be linked with.",
+            "attributes": []
+        },
+        {
+            "name": "it_application",
+            "description": "Example of Master data object referenced by document properties.",
+            "attributes": []
+        },
+        {
+            "name": "company",
+            "description": "Relevant company maintained as document property.",
+            "attributes": []
+        },
+        {
+            "name": "area_of_validity",
+            "description": "Area of validity maintained as document property.",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

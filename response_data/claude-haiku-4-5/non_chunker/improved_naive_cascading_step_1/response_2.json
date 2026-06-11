@@ -1,0 +1,363 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed artifact containing company-wide or locally-defined regulations, instructions, or procedural information that undergoes a complete lifecycle including creation, editing, release, distribution, and archiving.",
+            "attributes": [
+                {
+                    "name": "documenttype",
+                    "description": "Classification of document such as Policy, Guideline, Procedural Instruction, or Work Instruction"
+                },
+                {
+                    "name": "level",
+                    "description": "Hierarchical level of the document within the document pyramid (1-4)"
+                },
+                {
+                    "name": "title",
+                    "description": "Name or designation of the document"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Short code prefix assigned to document type (e.g., RL, P)"
+                },
+                {
+                    "name": "number",
+                    "description": "Cross-client consecutive 4-digit identifier per document type"
+                },
+                {
+                    "name": "status",
+                    "description": "Current workflow or lifecycle state of the document"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "validfrom",
+                    "description": "Date from which the document becomes effective"
+                },
+                {
+                    "name": "validuntil",
+                    "description": "Date after which the document is no longer valid"
+                },
+                {
+                    "name": "author",
+                    "description": "Person responsible for creating the document"
+                },
+                {
+                    "name": "coauthor",
+                    "description": "Additional persons with change rights on the document"
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person who checks technical and formal aspects of the document"
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person responsible for approving and releasing the document"
+                },
+                {
+                    "name": "translator",
+                    "description": "Person who translates document content into other languages"
+                },
+                {
+                    "name": "reader",
+                    "description": "User group assigned to view the document"
+                },
+                {
+                    "name": "sourceformat",
+                    "description": "Original file format of document content (e.g., Word, Excel, PowerPoint)"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or objects referenced by this document"
+                },
+                {
+                    "name": "itapplication",
+                    "description": "IT systems or applications relevant to the document"
+                },
+                {
+                    "name": "company",
+                    "description": "Company or organizational unit for which the document applies"
+                },
+                {
+                    "name": "areaofvalidity",
+                    "description": "Geographic, functional, or organizational scope where document applies"
+                },
+                {
+                    "name": "archiveduration",
+                    "description": "Period for which archived document is retained before physical deletion"
+                },
+                {
+                    "name": "extendedvalidityperiod",
+                    "description": "Period of time between document release and when validity extension check is required"
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "description": "A document type containing company-wide regulations and processes at a strategic level such as code of conduct or organizational structure.",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "A document type describing locally-defined regulations or regulations relating to a business process.",
+            "attributes": []
+        },
+        {
+            "name": "proceduralinstruction",
+            "description": "A document type describing specific procedures, process sequences, details, and responsible persons to achieve objectives within a framework.",
+            "attributes": []
+        },
+        {
+            "name": "workinstruction",
+            "description": "A document type containing detailed work steps and special procedures for sub-processes, often supplemented with forms and checklists.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A person who interacts with documents in roles such as reader, author, reviewer, or releaser.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "System role assigned to user such as Reader, Author, Reviewer, or Releaser"
+                },
+                {
+                    "name": "usergroup",
+                    "description": "Group membership that defines authorization scope"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "A collection of users with common authorization rights and responsibilities.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Identifier of the user group"
+                },
+                {
+                    "name": "role",
+                    "description": "System role associated with the group"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document automatically released with the main document, subject to its own versioning and triggering new versions of the main document when modified or archived.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Name of the attachment"
+                },
+                {
+                    "name": "status",
+                    "description": "Workflow status of the attachment"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "A non-controlled document attachment not subject to the main document's release cycle, which can be released and deleted independently.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Name of the additional information"
+                },
+                {
+                    "name": "type",
+                    "description": "Category such as brief instructions, photos, or screenshots"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "A proposed modification to an existing document that can be created by employees with author rights without affecting the current version or content.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Description of the proposed change"
+                },
+                {
+                    "name": "status",
+                    "description": "State of the change proposal such as proposed or scheduled"
+                }
+            ]
+        },
+        {
+            "name": "validityextensionrequest",
+            "description": "An automatically created request triggered 30 days before document validity expires, requiring workflow-supported processing to extend or revise the document.",
+            "attributes": [
+                {
+                    "name": "triggereddate",
+                    "description": "Date when the request was automatically created"
+                },
+                {
+                    "name": "documentreference",
+                    "description": "Reference to the document being checked"
+                }
+            ]
+        },
+        {
+            "name": "overriderequest",
+            "description": "A request to declare a document invalid and archive it when it no longer has additional validity.",
+            "attributes": [
+                {
+                    "name": "createddate",
+                    "description": "Date when the override request was created"
+                },
+                {
+                    "name": "archivestartdate",
+                    "description": "Date from which the archive duration begins"
+                }
+            ]
+        },
+        {
+            "name": "reactivationrequest",
+            "description": "A request to re-validate a previously invalidated and archived document, created only by Business Admin group.",
+            "attributes": [
+                {
+                    "name": "createddate",
+                    "description": "Date when the reactivation request was created"
+                },
+                {
+                    "name": "requesteddocument",
+                    "description": "Reference to the document being reactivated"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "A list of user groups and persons assigned to receive notifications about document releases and participate in acknowledgement workflows.",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "Distribution type such as email notification or acknowledgement requirement"
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "An electronic signature documenting the approval action of a workflow participant on a specific document version.",
+            "attributes": [
+                {
+                    "name": "participant",
+                    "description": "Name of the person providing the signature"
+                },
+                {
+                    "name": "role",
+                    "description": "Role of participant such as author, reviewer, or releaser"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "Date and time when signature was applied"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version to which the signature applies"
+                }
+            ]
+        },
+        {
+            "name": "dashboard",
+            "description": "A role-specific view displaying documents and information relevant to a user based on their authorization and distribution list membership.",
+            "attributes": [
+                {
+                    "name": "userrole",
+                    "description": "System role for which the dashboard is configured"
+                },
+                {
+                    "name": "filtercriteria",
+                    "description": "Parameters used to determine which documents appear in the dashboard"
+                }
+            ]
+        },
+        {
+            "name": "report",
+            "description": "A role-specific evaluation or search function providing filtered lists of documents based on selected parameters and criteria.",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "Category of report such as status report or search"
+                },
+                {
+                    "name": "role",
+                    "description": "User role for which the report is available"
+                },
+                {
+                    "name": "selectionparameters",
+                    "description": "Criteria available for filtering report results"
+                }
+            ]
+        },
+        {
+            "name": "acknowledgement",
+            "description": "An active confirmation by a recipient that they have received and reviewed a released document version.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "State indicating whether acknowledgement has been confirmed"
+                },
+                {
+                    "name": "recipient",
+                    "description": "User who provided or is requested to provide acknowledgement"
+                },
+                {
+                    "name": "confirmationdate",
+                    "description": "Date when acknowledgement was confirmed"
+                }
+            ]
+        },
+        {
+            "name": "organizationalunit",
+            "description": "A logical grouping of the organization to which documents can be assigned for validity or distribution purposes.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Identifier of the organizational unit"
+                }
+            ]
+        },
+        {
+            "name": "risk",
+            "description": "A business or operational risk that can be linked to documents for reference and governance purposes.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Description of the risk"
+                }
+            ]
+        },
+        {
+            "name": "client",
+            "description": "A separate instance or tenant in a multi-client system for which document visibility can be controlled.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Identifier of the client"
+                }
+            ]
+        },
+        {
+            "name": "documenttemplate",
+            "description": "A predefined structure or format that can be selected when creating new documents of a specific type.",
+            "attributes": [
+                {
+                    "name": "documenttype",
+                    "description": "Type of document for which the template applies"
+                },
+                {
+                    "name": "format",
+                    "description": "File format such as MS Word, Excel, or PowerPoint"
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

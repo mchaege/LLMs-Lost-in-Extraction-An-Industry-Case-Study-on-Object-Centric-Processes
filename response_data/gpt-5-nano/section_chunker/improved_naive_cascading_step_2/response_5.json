@@ -1,0 +1,228 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central artifact in policies, guidelines and documents management; participates in creation, editing, release, distribution and archiving workflows.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Type of document; selected when creating a new object."
+                },
+                {
+                    "name": "reference",
+                    "description": "References to other documents or external references."
+                },
+                {
+                    "name": "it_application",
+                    "description": "Associated IT applications as master data."
+                },
+                {
+                    "name": "relevant_company",
+                    "description": "Companies relevant to the document's scope or validity."
+                },
+                {
+                    "name": "area_of_validity",
+                    "description": "Geographic or organizational areas where the document is valid."
+                },
+                {
+                    "name": "version",
+                    "description": "Document version metadata."
+                },
+                {
+                    "name": "status",
+                    "description": "Document status metadata."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) covered by the document."
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Document attachment that is linked to a document; can be released together with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Supplementary information attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment or equipment-related information attached to a document; subject to its own versioning.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New document created in the system.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Document content or properties modified; may create new version.",
+            "attributes": []
+        },
+        {
+            "name": "attach_object_to_document",
+            "description": "Attachment of a new information object to a document (Attachment, Additional_info or Equippment).",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document passes through the release workflow and becomes visible to readers; attachments may be released with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Document and its attachments may be archived for defined period; archiving is not physical deletion.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Invalidated document reactivated; a new version is created.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of documents to the distribution list (e-mail or info-based).",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Language-dependent display of released documents; translation has its own release workflow.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check for validity extension and potential new version creation.",
+            "attributes": []
+        },
+        {
+            "name": "override_aks",
+            "description": "Override process for invalidation of documents.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Employees can create Change Proposals for documents; change proposals are managed in the cockpit.",
+            "attributes": []
+        },
+        {
+            "name": "review_change_proposal",
+            "description": "Review of Change Proposals during the lifecycle; may impact release.",
+            "attributes": []
+        },
+        {
+            "name": "apply_change_proposal",
+            "description": "Applying approved Change Proposals creates a new version of the document.",
+            "attributes": []
+        },
+        {
+            "name": "create_translation",
+            "description": "Process to translate released documents (already covered by Translate Document).",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Additional information linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Equippment linked to Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Creating a document affects the Document"
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Editing a document affects the Document"
+        },
+        {
+            "a": "attach_object_to_document",
+            "b": "attachment",
+            "description": "Attaching an object to Document affects Attachments"
+        },
+        {
+            "a": "attach_object_to_document",
+            "b": "additional_info",
+            "description": "Attaching an object to Document affects Additional_info"
+        },
+        {
+            "a": "attach_object_to_document",
+            "b": "equippment",
+            "description": "Attaching an object to Document affects Equippment"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Releasing a document affects the Document"
+        },
+        {
+            "a": "release_document",
+            "b": "attachment",
+            "description": "Releasing a document also releases Attachments"
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Archiving a document affects the Document"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Reactivating a document affects the Document"
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Distributing a document affects the Document"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translation affects the Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extending validity affects the Document"
+        },
+        {
+            "a": "override_aks",
+            "b": "document",
+            "description": "Override process affects the Document"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Change Proposal is associated with the Document"
+        },
+        {
+            "a": "review_change_proposal",
+            "b": "document",
+            "description": "Review of Change Proposals affects the Document"
+        },
+        {
+            "a": "apply_change_proposal",
+            "b": "document",
+            "description": "Applying a Change Proposal creates a new version of the Document"
+        }
+    ]
+}

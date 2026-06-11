@@ -1,0 +1,149 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Represents a document within P&R Management; can be a policy, guideline, procedural instruction or work instruction.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Object attached to documents during creation.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment type; content influences the main document versioning.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Non-release attachment such as brief instructions, photos and screenshots that do not require checking and release.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachment with content that is subject to release and can trigger versioning of the main document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment_of_new_information_object",
+            "description": "Attaches a new information object to a document during creation.",
+            "attributes": []
+        },
+        {
+            "name": "document_release",
+            "description": "Release process for documents with signatures and approvals.",
+            "attributes": []
+        },
+        {
+            "name": "content_editing",
+            "description": "Editing of document content using an Office component and templates.",
+            "attributes": []
+        },
+        {
+            "name": "translation",
+            "description": "Translation of released document content.",
+            "attributes": []
+        },
+        {
+            "name": "versioning",
+            "description": "Versioning and revision of documents.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Reactivation of previously invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Process to extend validity of a document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override / AKS process to invalidate or override a document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposals",
+            "description": "Management of change proposals for a document.",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Distribution of documents via email or for acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Acknowledgement of distribution by recipients.",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "attachment_of_new_information_object",
+            "b": "information_object",
+            "description": "Attaches new information object to create a new document"
+        },
+        {
+            "a": "attachment_of_new_information_object",
+            "b": "document",
+            "description": "Creates a new document by attaching a new information object"
+        },
+        {
+            "a": "document_release",
+            "b": "document",
+            "description": "Release applied to Document"
+        },
+        {
+            "a": "content_editing",
+            "b": "document",
+            "description": "Content editing performed on Document"
+        },
+        {
+            "a": "translation",
+            "b": "document",
+            "description": "Translation of Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extend validity of Document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override/AKS for Document"
+        },
+        {
+            "a": "reactivate",
+            "b": "document",
+            "description": "Reactivation of Document"
+        },
+        {
+            "a": "versioning",
+            "b": "document",
+            "description": "Versioning of Document"
+        },
+        {
+            "a": "change_proposals",
+            "b": "document",
+            "description": "Change proposals management for Document"
+        },
+        {
+            "a": "distribution",
+            "b": "document",
+            "description": "Distribution of Document"
+        },
+        {
+            "a": "acknowledgement",
+            "b": "document",
+            "description": "Acknowledgement of Distribution for Document"
+        }
+    ]
+}

@@ -1,0 +1,255 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document within the P&R Management system.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information object that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Additional information that can be added to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment of a Information Object or other document-related content.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a Document; content can be released with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person who performs actions in the workflow.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new Document in the system.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attach a new Information Object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_info",
+            "description": "Attach Additional Info to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equippment",
+            "description": "Attach Equippment to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit the content or properties of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Convert a Document to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "create_new_version",
+            "description": "Create a new version of a released or editing Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Initiate the release process of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Document requires an electronic signature by a participant.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Automatically publish a released Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a Document at the end of its life cycle.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Initiate AKS/Override to invalidate a Document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an previously invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_reactivation_request",
+            "description": "Create a request for Reactivation of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a Document to designated User Groups or Users.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Recipients acknowledge the distributed Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Manage Change Proposals for a Document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document has Information Object"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document has Equippment"
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Document has Additional Info"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document Created"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Document Receives Information Object"
+        },
+        {
+            "a": "information_object",
+            "b": "attach_information_object",
+            "description": "Information Object Attached To Document"
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Document Edited"
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Document Converted To PDF"
+        },
+        {
+            "a": "document",
+            "b": "create_new_version",
+            "description": "New Version Created For Document"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document Released"
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Document Signed"
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Document Published"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document Archived"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Document Validity Extended"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Document Overridden"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document Reactivated"
+        },
+        {
+            "a": "document",
+            "b": "create_reactivation_request",
+            "description": "Reactivation Requested"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document Translated"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document Distributed"
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_distribution",
+            "description": "Distribution Acknowledged"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change Proposal Created"
+        },
+        {
+            "a": "document",
+            "b": "manage_change_proposals",
+            "description": "Change Proposals Managed"
+        }
+    ]
+}

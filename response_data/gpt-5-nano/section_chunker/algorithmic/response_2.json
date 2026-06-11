@@ -1,0 +1,315 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Represents a document (policy, guideline, work instruction, etc.).",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment linked to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment related to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g., Policy, Guideline, Instruction).",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template used for new Documents.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users with assigned authorizations.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual user.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new Document in the system.",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attach an information object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "editdocumentcontent",
+            "description": "Edit the content or properties of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release a Document for readers via the release process.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "releasetranslation",
+            "description": "Release a translated Document.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override a Document (AKS) to withdraw or invalidate.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a Document and its attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a Document via email to Distribution List.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledge a Document upon distribution or release.",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Sign a Document electronically.",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review a Document as part of the release process.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains Attachment."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document contains AdditionalInfo."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document contains Equippment."
+        },
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has DocumentType."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses Template."
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "Document assigned to UserGroup for permissions."
+        },
+        {
+            "a": "usergroup",
+            "b": "user",
+            "description": "UserGroup contains Users."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Actor creates a Document."
+        },
+        {
+            "a": "createdocument",
+            "b": "user",
+            "description": "Actor who creates a Document."
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "Attachment activity relates to a Document."
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "attachment",
+            "description": "Attachment involved."
+        },
+        {
+            "a": "editdocumentcontent",
+            "b": "document",
+            "description": "Editor modifies Document."
+        },
+        {
+            "a": "editdocumentcontent",
+            "b": "user",
+            "description": "Editor."
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Release process affects Document."
+        },
+        {
+            "a": "releasedocument",
+            "b": "user",
+            "description": "Releaser / Authorizes release."
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Translation of a released Document."
+        },
+        {
+            "a": "translatedocument",
+            "b": "user",
+            "description": "Translator."
+        },
+        {
+            "a": "releasetranslation",
+            "b": "document",
+            "description": "Release translated document."
+        },
+        {
+            "a": "releasetranslation",
+            "b": "user",
+            "description": "Releaser / Translator."
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "Create change proposal for document."
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "user",
+            "description": "Author / Change proposer."
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extend validity period."
+        },
+        {
+            "a": "extendvalidity",
+            "b": "user",
+            "description": "User who initiates validity extension."
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "AKS override."
+        },
+        {
+            "a": "override",
+            "b": "user",
+            "description": "Operator initiates override."
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "Archive document."
+        },
+        {
+            "a": "archivedocument",
+            "b": "user",
+            "description": "Archivist."
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Reactivate document."
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "user",
+            "description": "Initiator."
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Distribute document."
+        },
+        {
+            "a": "distributedocument",
+            "b": "usergroup",
+            "description": "Distribution group."
+        },
+        {
+            "a": "distributedocument",
+            "b": "user",
+            "description": "Distribution recipient."
+        },
+        {
+            "a": "acknowledgedocument",
+            "b": "document",
+            "description": "Acknowledge document."
+        },
+        {
+            "a": "acknowledgedocument",
+            "b": "user",
+            "description": "Acknowledging user."
+        },
+        {
+            "a": "signdocument",
+            "b": "document",
+            "description": "Sign document."
+        },
+        {
+            "a": "signdocument",
+            "b": "user",
+            "description": "Signer."
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "Review document."
+        },
+        {
+            "a": "reviewdocument",
+            "b": "user",
+            "description": "Reviewer."
+        }
+    ]
+}

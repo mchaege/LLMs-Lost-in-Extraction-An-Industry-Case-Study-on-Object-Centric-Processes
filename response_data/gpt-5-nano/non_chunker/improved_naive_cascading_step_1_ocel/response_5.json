@@ -1,0 +1,76 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document object representing documents in the P&R Management system (e.g., Policy, Guideline, Procedural Instruction, Work Instruction).",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "The document name composed as <abbreviation>_<number per type>_<title>."
+                },
+                {
+                    "name": "version",
+                    "description": "Versioning information; new version is created for content or attribute changes."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status in the document lifecycle (e.g., editing, released)."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) included in the document (e.g., Scope(s) printed in metadata)."
+                },
+                {
+                    "name": "references",
+                    "description": "Document property References."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Document property IT Applications."
+                },
+                {
+                    "name": "relevant_companies_or_areas_of_validity",
+                    "description": "Document property relevant companies or areas of validity."
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Type of document (e.g., Policy, Guidelines, Procedural Instructions, Work Instructions).",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation of the document type."
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template that can be defined for each document type and selected when creating new objects.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "General information object that can be attached to a document (e.g., Additional Information, Attachment, Equippments).",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Document attachment that is not subject to the release cycle and can be deleted without impacting the main document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Document attachment that is automatically released with the main document and may trigger a new version.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Attachments with their own versioning that pass through the release process of the main document.",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

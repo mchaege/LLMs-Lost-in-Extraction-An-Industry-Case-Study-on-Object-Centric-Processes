@@ -1,0 +1,208 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed information object that goes through creation, editing, release, distribution, versioning, and archiving lifecycle in the system.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Classification of the document (e.g., policy, guideline, procedural instruction, work instruction)."
+                },
+                {
+                    "name": "document_type_abbreviation",
+                    "description": "Short abbreviation code for the document type used in naming convention."
+                },
+                {
+                    "name": "document_number",
+                    "description": "Cross-client consecutive 4-digit number assigned per document type."
+                },
+                {
+                    "name": "title",
+                    "description": "The descriptive title portion of the document name."
+                },
+                {
+                    "name": "version",
+                    "description": "The version identifier of the document, incremented upon content or relevant attribute changes."
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document within the status network (e.g., editing, released, out of force)."
+                },
+                {
+                    "name": "scope",
+                    "description": "The scope or area of applicability of the document."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the document version is considered valid, set upon release."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document is valid, calculated from Valid From plus period of extended validity."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Time period defining how long a document remains valid before requiring a validity check (default 3 years)."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Period for which an invalidated document is retained before physical deletion (default 10 years)."
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or master data referenced by this document."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "IT applications associated with the document."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies to which the document is relevant."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Areas or regions where the document is applicable."
+                },
+                {
+                    "name": "author",
+                    "description": "Person registered as the primary author of the document, automatically set to the creator."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional persons assigned personal change rights on the document."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person(s) assigned to check the document for technical and formal correctness."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person(s) responsible for approving and releasing the document."
+                },
+                {
+                    "name": "reader",
+                    "description": "User group assignment controlling which readers may view the document."
+                },
+                {
+                    "name": "distribution_by_email",
+                    "description": "User groups or persons automatically informed by email upon release of a new version."
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "User groups or persons required to actively confirm acknowledgement upon release."
+                },
+                {
+                    "name": "source_format",
+                    "description": "The original file format of the document content (e.g., Excel, Word, PowerPoint)."
+                },
+                {
+                    "name": "language",
+                    "description": "The language of the document content, relevant for translation management."
+                },
+                {
+                    "name": "client_visibility",
+                    "description": "Specification of which clients in a multi-client system can see the document."
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "A document attachment that is not subject to the release cycle of the main document and has no own release cycle, used for non-critical supplementary information.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document attachment that is automatically released with the main document and subject to its own versioning, triggering a new version of the main document upon creation, modification, or archiving.",
+            "attributes": []
+        },
+        {
+            "name": "document_template",
+            "description": "A predefined template associated with a document type that can be selected when creating new document objects.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal created by authors to suggest changes to an existing document without affecting its content or version history until scheduled for implementation.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_validity_extension",
+            "description": "A system-generated request created 30 days before a document's validity expires, requiring workflow-supported processing to extend or revise the document.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_override",
+            "description": "A request created to invalidate a released document that has no additional validity, triggering archiving of the document and its attachments.",
+            "attributes": []
+        },
+        {
+            "name": "request_for_reactivation",
+            "description": "A request to re-validate a previously invalidated and archived document, created by the Business Admin group.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "A defined group of users in the system used to assign read and change authorizations to documents.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "An individual person who interacts with the system in various roles such as author, reviewer, releaser, reader, or translator.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "An organizational entity within the company to which documents can be linked.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "A business process defined in process management to which documents can be linked.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "A risk object in the system that can be linked to documents.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Reference data objects such as IT applications that can be linked to documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "A list maintained per document containing user groups and persons who are informed about document releases.",
+            "attributes": []
+        },
+        {
+            "name": "workflow",
+            "description": "A system-supported process controlling the steps of document release, validity extension, override, reactivation, and acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "A digital signature used by workflow participants to complete their tasks, documented per released version.",
+            "attributes": []
+        },
+        {
+            "name": "dashboard",
+            "description": "A role-specific user interface displaying relevant documents, tasks, and evaluations for the logged-in user.",
+            "attributes": []
+        },
+        {
+            "name": "report",
+            "description": "A role-specific evaluation providing filtered results based on selection parameters and criteria.",
+            "attributes": []
+        },
+        {
+            "name": "client",
+            "description": "A tenant in a multi-client system where documents can be made visible or restricted.",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

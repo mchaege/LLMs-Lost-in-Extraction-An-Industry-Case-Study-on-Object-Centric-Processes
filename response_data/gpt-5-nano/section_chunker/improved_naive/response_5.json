@@ -1,0 +1,220 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Represents a document in the P&R management system",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Auxiliary information object that can be attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "External file or document linked to a Document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposed modification to a Document",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of users or groups for distribution",
+            "attributes": []
+        },
+        {
+            "name": "client",
+            "description": "Client in a multi-client system",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person or system user who performs actions",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Distribution-related activity or state",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of an Information Object to a Document",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release of a Document with signature workflow",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review of a Document in the release process",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of a released Document to another language",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override of a Document's validity or status",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation of an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of a Document and its Attachments",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of a Document to Distribution List/Users via email",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_document",
+            "description": "Acknowledgement by recipients",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Management of Change Proposals",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Signature of a Document in workflow",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document Has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document Has Information Object"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document Has Change Proposal"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document Assigned To Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "client",
+            "description": "Document Exists In Client"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document Created By / Owned By"
+        },
+        {
+            "a": "change_proposal",
+            "b": "document",
+            "description": "Change Proposal For Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document Creation"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document Release"
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Document Review"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document Translation"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Validity Extension"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Override"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document Reactivation"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document Archiving"
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_document",
+            "description": "Document Acknowledgement"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document Distribution"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change Proposal Creation"
+        },
+        {
+            "a": "document",
+            "b": "manage_change_proposals",
+            "description": "Change Proposals Management"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Attach Information Object"
+        }
+    ]
+}

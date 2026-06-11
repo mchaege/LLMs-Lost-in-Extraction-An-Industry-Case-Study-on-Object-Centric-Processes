@@ -1,0 +1,207 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A controlled information object that can be created, edited, reviewed, released, and archived within the P&R Management system. Documents have a lifecycle including versioning, status management, and validity periods.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Classification of the document such as Policy, Guideline, Procedural Instruction, or Work Instruction"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Short code assigned to a document for identification purposes"
+                },
+                {
+                    "name": "version",
+                    "description": "Sequential version number of the document"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document in its lifecycle such as editing, review, released, or archived"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date when the document becomes valid"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date when the document validity expires"
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Duration for which a document remains valid before requiring validity check"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or objects related to this document"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Information technology applications associated with or referenced by the document"
+                },
+                {
+                    "name": "relevant_companies_or_areas_of_validity",
+                    "description": "Geographic, organizational, or functional scope of the document's applicability"
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "description": "A document type containing company-wide regulations and processes at a strategic level",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "A document type that documents locally defined regulations or regulations relating to a business process",
+            "attributes": []
+        },
+        {
+            "name": "procedural_instruction",
+            "description": "A document type that describes specific procedures and process sequences with details and responsible persons",
+            "attributes": []
+        },
+        {
+            "name": "work_instruction",
+            "description": "A document type that details specific work steps, test instructions, and criteria for sub-processes",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A person who interacts with the system in various roles including author, reviewer, releaser, translator, or reader",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "Assigned function such as Author, Co-author, Reviewer, Releaser, Translator, or Reader"
+                },
+                {
+                    "name": "authorization",
+                    "description": "Access rights and permissions assigned to the user for specific documents"
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "A collection of users assigned with specific roles and authorizations for document access and workflow participation",
+            "attributes": [
+                {
+                    "name": "group_name",
+                    "description": "Identifier of the user group such as Reader - Document Management or Archive group"
+                },
+                {
+                    "name": "authorization_type",
+                    "description": "Type of permissions granted to group members"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document supplement that is released with the main document and has its own versioning but follows the release cycle of the main document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "A non-controlled document supplement that is not subject to the release cycle of the main document and does not create new versions",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A request to amend an existing document without affecting the content or version history of the document",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Current state of the change proposal such as pending, scheduled, or completed"
+                }
+            ]
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A system-generated or manual request to review and extend the validity period of a document",
+            "attributes": []
+        },
+        {
+            "name": "invalidation_request",
+            "description": "A request to declare a document invalid and archive it due to loss of validity",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A request to re-validate and restore a previously archived document",
+            "attributes": []
+        },
+        {
+            "name": "signature",
+            "description": "Electronic signature provided by workflow participants to authorize document actions",
+            "attributes": [
+                {
+                    "name": "participant",
+                    "description": "User who provided the signature"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "Date and time when the signature was applied"
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "A list of users and user groups authorized to receive a document and participate in acknowledgement workflows",
+            "attributes": [
+                {
+                    "name": "email_notification",
+                    "description": "Flag indicating whether users receive email notification on document release"
+                },
+                {
+                    "name": "acknowledgement_required",
+                    "description": "Flag indicating whether users must actively confirm receipt of the document"
+                }
+            ]
+        },
+        {
+            "name": "workflow_task",
+            "description": "An assigned action in the document approval or acknowledgement process that a user must complete",
+            "attributes": [
+                {
+                    "name": "task_type",
+                    "description": "Type of task such as creator signature, review, release, or acknowledgement"
+                },
+                {
+                    "name": "assigned_user",
+                    "description": "User responsible for completing the task"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the task such as pending, completed, or rejected"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "A predefined document structure that can be selected when creating new documents of a specific type",
+            "attributes": [
+                {
+                    "name": "template_format",
+                    "description": "Office format such as Word, Excel, or PowerPoint used for the template"
+                }
+            ]
+        },
+        {
+            "name": "organizationalunit",
+            "description": "A department, location, or functional area within the organization that can be referenced by documents",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "A business risk that can be linked to documents for governance purposes",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Reference information that can be linked to documents such as IT applications, companies, or organizational units",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

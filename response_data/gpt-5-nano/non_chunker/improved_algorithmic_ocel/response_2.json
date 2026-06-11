@@ -1,0 +1,383 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A uniquely identifiable document in P&R Management.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document name or title."
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Document type abbreviation (e.g., RL)."
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope covered by the document."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the document version is valid."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document version is valid."
+                },
+                {
+                    "name": "language",
+                    "description": "Language/version of the document."
+                }
+            ]
+        },
+        {
+            "name": "information_object",
+            "description": "An object representing information attached to documents.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the information object."
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Document attachment that is not subject to the release cycle.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the additional information."
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment of information objects to documents.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the attachment."
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to documents that affects the main document version.",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template used by a document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the template."
+                },
+                {
+                    "name": "version",
+                    "description": "Template version."
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to a document.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the change proposal."
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of users or groups to whom a document is distributed.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the distribution list."
+                },
+                {
+                    "name": "members",
+                    "description": "Members of the distribution list."
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users with assigned roles for documents.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the user group."
+                },
+                {
+                    "name": "members",
+                    "description": "Members of the user group."
+                }
+            ]
+        },
+        {
+            "name": "person",
+            "description": "Individual user/employee.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Full name of the person."
+                },
+                {
+                    "name": "email",
+                    "description": "Email address of the person."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment_of_new_document",
+            "description": "Attachment of a new information object to create a document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing the content or properties of a document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_to_pdf",
+            "description": "Automatic conversion of the document to PDF after editing.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Initiation of the release workflow for a document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Assignment of read/write authorizations to readers, authors, reviewers and releasers.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge",
+            "description": "Acknowledgement of a document by readers.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Electronic signature and documentation of signatures during release.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Publication of the released document for readers.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a change proposal for a document.",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Management of change proposals for a document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Process to extend the validity period of a document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process to override (AKS) an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate",
+            "description": "Process to reactivate an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of a document after invalidation or override.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of a document to a distribution list.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement of distribution by recipients.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of released documents into another language.",
+            "attributes": []
+        },
+        {
+            "name": "version_document",
+            "description": "Creation of a new version after revision.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_information",
+            "description": "Attachment of additional information to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equippment",
+            "description": "Attachment of equipment to a document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of an information object to a document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal_implemented",
+            "description": "Implementation of a change proposal resulting in a new document version.",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "attachment_of_new_document",
+            "b": "document",
+            "description": "Attaches a new Document."
+        },
+        {
+            "a": "attachment_of_new_document",
+            "b": "information_object",
+            "description": "Attaches Information Object to Document."
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Releases a Document."
+        },
+        {
+            "a": "assign_authorizations",
+            "b": "document",
+            "description": "Assigns authorizations for a Document."
+        },
+        {
+            "a": "assign_authorizations",
+            "b": "user_group",
+            "description": "Assigns authorizations to a User Group."
+        },
+        {
+            "a": "assign_authorizations",
+            "b": "person",
+            "description": "Assigns authorizations to a Person."
+        },
+        {
+            "a": "sign_document",
+            "b": "document",
+            "description": "Signs a Document."
+        },
+        {
+            "a": "sign_document",
+            "b": "person",
+            "description": "Signature by a Person."
+        },
+        {
+            "a": "publish_document",
+            "b": "document",
+            "description": "Publishes a Document."
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Creates a Change Proposal for a Document."
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "change_proposal",
+            "description": "Change Proposal linked to a Document."
+        },
+        {
+            "a": "manage_change_proposals",
+            "b": "document",
+            "description": "Manages Change Proposals for a Document."
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extends validity of a Document."
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Overrides a Document."
+        },
+        {
+            "a": "reactivate",
+            "b": "document",
+            "description": "Reactivates a Document."
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Archives a Document."
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Distributes a Document."
+        },
+        {
+            "a": "distribute_document",
+            "b": "distribution_list",
+            "description": "Document distributed to a Distribution List."
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translates a Document."
+        },
+        {
+            "a": "version_document",
+            "b": "document",
+            "description": "Creates a new version of a Document."
+        },
+        {
+            "a": "attach_additional_information",
+            "b": "document",
+            "description": "Attaches Additional Information to a Document."
+        },
+        {
+            "a": "attach_additional_information",
+            "b": "additional_information",
+            "description": "Additional Information attached to a Document."
+        },
+        {
+            "a": "attach_equippment",
+            "b": "document",
+            "description": "Attaches Equippment to a Document."
+        },
+        {
+            "a": "attach_information_object",
+            "b": "document",
+            "description": "Attaches Information Object to a Document."
+        },
+        {
+            "a": "change_proposal_implemented",
+            "b": "change_proposal",
+            "description": "A Change Proposal was implemented."
+        }
+    ]
+}

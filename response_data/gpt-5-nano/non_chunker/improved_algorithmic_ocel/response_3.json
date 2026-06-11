@@ -1,0 +1,400 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central artifact representing a policy, guideline, procedural instruction or work instruction document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Document abbreviation"
+                },
+                {
+                    "name": "numberpertype",
+                    "description": "Consecutive 4-digit number per type"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Document type (Policy, Guideline, Procedural Instruction, Work Instruction)"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status (editing, released, etc.)"
+                },
+                {
+                    "name": "validfrom",
+                    "description": "Validity start date"
+                },
+                {
+                    "name": "validuntil",
+                    "description": "Validity end date"
+                },
+                {
+                    "name": "references",
+                    "description": "Related master data or references"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "Related IT applications"
+                },
+                {
+                    "name": "relevantcompaniesorareasofvalidity",
+                    "description": "Companies or areas where valid"
+                },
+                {
+                    "name": "languageversions",
+                    "description": "Available language versions"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to a document",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the change proposal"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the change proposal"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment object attached to a document",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Attachment description"
+                },
+                {
+                    "name": "attachmentname",
+                    "description": "Name of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Non-release information attached to a document",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Description of additional information"
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a document that may affect the main document version",
+            "attributes": [
+                {
+                    "name": "description",
+                    "description": "Description of equipment"
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "Recipients or groups to be informed about document releases",
+            "attributes": [
+                {
+                    "name": "members",
+                    "description": "Users or groups in the distribution list"
+                },
+                {
+                    "name": "distributiontype",
+                    "description": "Type: email or acknowledgement"
+                }
+            ]
+        },
+        {
+            "name": "time",
+            "description": "Timestamp for events",
+            "attributes": [
+                {
+                    "name": "timestamp",
+                    "description": "Event timestamp"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "document_creation",
+            "description": "Creation of a new document",
+            "attributes": []
+        },
+        {
+            "name": "document_editing",
+            "description": "Editing of a document content",
+            "attributes": []
+        },
+        {
+            "name": "document_release",
+            "description": "Release of a document after the release workflow",
+            "attributes": []
+        },
+        {
+            "name": "document_version_created",
+            "description": "New version created after changes",
+            "attributes": []
+        },
+        {
+            "name": "attachment_added",
+            "description": "Attachment added to a document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information_added",
+            "description": "Additional information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "equippment_added",
+            "description": "Equipment attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal_created",
+            "description": "Change proposal created for a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_requested",
+            "description": "Reactivation requested for a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_completed",
+            "description": "Reactivation completed and new version created",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity_requested",
+            "description": "Validity extension requested for a document",
+            "attributes": []
+        },
+        {
+            "name": "validity_extended",
+            "description": "Validity extended for a document",
+            "attributes": []
+        },
+        {
+            "name": "aks_override_requested",
+            "description": "Override (AKS) requested for a document",
+            "attributes": []
+        },
+        {
+            "name": "aks_override_completed",
+            "description": "Override (AKS) completed for a document",
+            "attributes": []
+        },
+        {
+            "name": "archive_requested",
+            "description": "Archive requested for a document",
+            "attributes": []
+        },
+        {
+            "name": "archived",
+            "description": "Document archived",
+            "attributes": []
+        },
+        {
+            "name": "distribution_by_email",
+            "description": "Distribution by email on release",
+            "attributes": []
+        },
+        {
+            "name": "distribution_for_acknowledgement",
+            "description": "Distribution for acknowledgement on release",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement_completed",
+            "description": "Acknowledgements completed",
+            "attributes": []
+        },
+        {
+            "name": "translation_release",
+            "description": "Release of a translated version",
+            "attributes": []
+        },
+        {
+            "name": "document_translation",
+            "description": "Translation workflow for a document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change proposals belong to a document"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document has equip­ments"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document has distribution list"
+        },
+        {
+            "a": "document",
+            "b": "time",
+            "description": "Document has timestamp related objects"
+        },
+        {
+            "a": "change_proposal",
+            "b": "document",
+            "description": "Change proposal belongs to a document"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment is attached to a document"
+        },
+        {
+            "a": "additional_information",
+            "b": "document",
+            "description": "Additional information is attached to a document"
+        },
+        {
+            "a": "equippment",
+            "b": "document",
+            "description": "Equipment is attached to a document"
+        },
+        {
+            "a": "distribution_list",
+            "b": "document",
+            "description": "Document has a distribution list"
+        },
+        {
+            "a": "time",
+            "b": "document_creation",
+            "description": "Time links to document creation event"
+        },
+        {
+            "a": "time",
+            "b": "document_release",
+            "description": "Time links to document release event"
+        },
+        {
+            "a": "time",
+            "b": "attachment_added",
+            "description": "Time links to attachment events"
+        },
+        {
+            "a": "time",
+            "b": "additional_information_added",
+            "description": "Time links to information added events"
+        },
+        {
+            "a": "time",
+            "b": "equippment_added",
+            "description": "Time links to equipment events"
+        },
+        {
+            "a": "time",
+            "b": "distribution_by_email",
+            "description": "Time links to distribution email events"
+        },
+        {
+            "a": "time",
+            "b": "translation_release",
+            "description": "Time links to translation release events"
+        },
+        {
+            "a": "time",
+            "b": "document_version_created",
+            "description": "Time links to new version events"
+        },
+        {
+            "a": "time",
+            "b": "extend_validity_requested",
+            "description": "Time links to validity extension requests"
+        },
+        {
+            "a": "time",
+            "b": "validity_extended",
+            "description": "Time links to validity extension events"
+        },
+        {
+            "a": "time",
+            "b": "aks_override_requested",
+            "description": "Time links to AKS override requests"
+        },
+        {
+            "a": "time",
+            "b": "aks_override_completed",
+            "description": "Time links to AKS override completions"
+        },
+        {
+            "a": "time",
+            "b": "reactivation_requested",
+            "description": "Time links to reactivation requests"
+        },
+        {
+            "a": "time",
+            "b": "reactivation_completed",
+            "description": "Time links to reactivation completions"
+        },
+        {
+            "a": "time",
+            "b": "archive_requested",
+            "description": "Time links to archive requests"
+        },
+        {
+            "a": "time",
+            "b": "archived",
+            "description": "Time links to archived events"
+        },
+        {
+            "a": "time",
+            "b": "distribution_by_email",
+            "description": "Time links to distribution by email events"
+        },
+        {
+            "a": "time",
+            "b": "distribution_for_acknowledgement",
+            "description": "Time links to distribution ack events"
+        },
+        {
+            "a": "time",
+            "b": "acknowledgement_completed",
+            "description": "Time links to acknowledgements completed"
+        },
+        {
+            "a": "time",
+            "b": "translation_release",
+            "description": "Time links to translation release events"
+        },
+        {
+            "a": "time",
+            "b": "document_translation",
+            "description": "Time links to translation workflow events"
+        }
+    ],
+    "o2e": []
+}

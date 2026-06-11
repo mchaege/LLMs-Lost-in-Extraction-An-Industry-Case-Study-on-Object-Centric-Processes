@@ -1,0 +1,220 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing documents in the system.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment that is a controlled document released with the main document.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information object attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Equipment attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "System user.",
+            "attributes": []
+        },
+        {
+            "name": "user_groups",
+            "description": "Groups of users for access control.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of users and user groups for distribution.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposals to amend documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of new Document in system.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of Information Object to Document.",
+            "attributes": []
+        },
+        {
+            "name": "upload_external_file",
+            "description": "External file uploaded to Document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document automatically converted to PDF.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release of Document with signature process.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review step in document release.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Electronic signature in workflow.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity of Document.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override of Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive Document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate Document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate of released content.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Distribute Document by Email.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_acknowledgement",
+            "description": "Distribution for acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create Change Proposal for Document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal_review",
+            "description": "Review Change Proposal.",
+            "attributes": []
+        },
+        {
+            "name": "approve_change_proposal",
+            "description": "Approve Change Proposal.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "New Version Created during Revision.",
+            "attributes": []
+        },
+        {
+            "name": "notify_user",
+            "description": "Notification to users via email.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document Attachment"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Information Object linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "Equippments linked to Document"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change Proposals for Document"
+        },
+        {
+            "a": "distribution_list",
+            "b": "user_group",
+            "description": "Distribution List contains User Groups"
+        },
+        {
+            "a": "distribution_list",
+            "b": "user",
+            "description": "Distribution List contains Users"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution for Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document creation event"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document release event"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Translation workflow for Document"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Validity extension workflow for Document"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Override workflow for Document"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Archive workflow for Document"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Reactivation workflow for Document"
+        },
+        {
+            "a": "document",
+            "b": "distribute_by_email",
+            "description": "Email distribution workflow for Document"
+        }
+    ]
+}

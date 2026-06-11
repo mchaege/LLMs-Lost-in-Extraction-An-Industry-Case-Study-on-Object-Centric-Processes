@@ -1,0 +1,99 @@
+{
+    "objs": [],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document in DHC VISION by attaching a new information object and selecting a document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit document content or properties in the system.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release a document through the approval workflow.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a released document to readers by e-mail or acknowledgement distribution.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive an invalidated document by withdrawing authorizations while retaining archive-group access.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "A document is created by attaching a new information object."
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "A document has a distribution list."
+        },
+        {
+            "a": "document",
+            "b": "archive_group",
+            "description": "Archived document remains readable by the archive group."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "The document is created."
+        },
+        {
+            "a": "information_object",
+            "b": "create_document",
+            "description": "A new information object is attached to create the document."
+        },
+        {
+            "a": "document_type",
+            "b": "create_document",
+            "description": "A corresponding document type is selected for the new document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Document content or properties are edited."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "The document is released through workflow support."
+        },
+        {
+            "a": "electronic_signature",
+            "b": "release_document",
+            "description": "Workflow participants complete release tasks with electronic signatures."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Released document is distributed to assigned recipients."
+        },
+        {
+            "a": "distribution_list",
+            "b": "distribute_document",
+            "description": "Distribution list determines assigned user groups and persons."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Invalidated document is archived."
+        },
+        {
+            "a": "archive_group",
+            "b": "archive_document",
+            "description": "Archive group retains read access to archived documents."
+        }
+    ]
+}

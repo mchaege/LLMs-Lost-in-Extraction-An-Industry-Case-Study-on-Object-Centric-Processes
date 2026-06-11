@@ -1,0 +1,270 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core item representing a document in P&R Management; supports versioning, release, and various metadata.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "An information object attached to a Document; used to attach added context or data.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary information attached to a Document; not subject to the release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachments that are controlled documents; their changes affect the main Document and they follow the release workflow.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person or group performing actions within the workflow and document lifecycle.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of a new Information Object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document in the system.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of the content or properties of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Automatic conversion of the Document to PDF format.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Workflow step where a Document is released and made visible to Readers.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Completion of tasks with an electronic signature by workflow participants.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of Change Proposals for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Process to extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "AKS; process to declare a Document invalid/override its validity.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Process to Reactivate an invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Process to archive a Document after invalidation or override.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Process to invalidate a Document and its Attachments.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of released Documents into another language.",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Approval and release of translated Content.",
+            "attributes": []
+        },
+        {
+            "name": "approve_translation",
+            "description": "Approval of a Translation during translation workflow.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document contains Information Object (attachment)"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document contains Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document contains Equippment"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document creation by a User"
+        },
+        {
+            "a": "user",
+            "b": "create_document",
+            "description": "Performer creates a Document"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Document receives an Information Object"
+        },
+        {
+            "a": "user",
+            "b": "attach_information_object",
+            "description": "User attaches Information Object to Document"
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Document edited by a User"
+        },
+        {
+            "a": "user",
+            "b": "edit_document",
+            "description": "User edits Document"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document released by a User"
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "User releases Document"
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Document signed by a User"
+        },
+        {
+            "a": "user",
+            "b": "sign_document",
+            "description": "User signs Document"
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Document converted to PDF by the system or user"
+        },
+        {
+            "a": "user",
+            "b": "translate_document",
+            "description": "User translates Document"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translation performed or in progress"
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Translation released for Document"
+        },
+        {
+            "a": "user",
+            "b": "release_translation",
+            "description": "User releases Translation for Document"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change Proposal created for Document by a User"
+        },
+        {
+            "a": "user",
+            "b": "create_change_proposal",
+            "description": "User creates Change Proposal for Document"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Validity extended for Document"
+        },
+        {
+            "a": "user",
+            "b": "extend_validity",
+            "description": "User extends validity for Document"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Document overridden (AKS) by a User"
+        },
+        {
+            "a": "user",
+            "b": "override_document",
+            "description": "User performs Override for Document"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document reactivated by a User"
+        },
+        {
+            "a": "user",
+            "b": "reactivate_document",
+            "description": "User reactivates Document"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document archived by a User"
+        },
+        {
+            "a": "user",
+            "b": "archive_document",
+            "description": "User archives Document"
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Document invalidated by a User"
+        },
+        {
+            "a": "user",
+            "b": "invalidate_document",
+            "description": "User invalidates Document"
+        },
+        {
+            "a": "document",
+            "b": "approve_translation",
+            "description": "Translation approved for Document by a User"
+        },
+        {
+            "a": "user",
+            "b": "approve_translation",
+            "description": "User approves Translation"
+        }
+    ]
+}

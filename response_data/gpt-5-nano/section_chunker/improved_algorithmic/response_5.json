@@ -1,0 +1,325 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document managed in DHC VISION (policies, guidelines, work instructions).",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person interacting with the system.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users used for role-based authorizations and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment associated with a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information object attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposals for documents.",
+            "attributes": []
+        },
+        {
+            "name": "translateddocument",
+            "description": "Document version translated into another language.",
+            "attributes": []
+        },
+        {
+            "name": "authorsgroup",
+            "description": "Group of Users assigned for authoring documents.",
+            "attributes": []
+        },
+        {
+            "name": "reviewersgroup",
+            "description": "Group of Users assigned for reviewing documents.",
+            "attributes": []
+        },
+        {
+            "name": "releasersgroup",
+            "description": "Group of Users assigned for releasing documents.",
+            "attributes": []
+        },
+        {
+            "name": "readersgroup",
+            "description": "Group of Users assigned for reading documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing of a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachattachment",
+            "description": "Attachment added to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "AdditionalInfo attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Equipment attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "converttopdf",
+            "description": "Document converted to PDF",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release of a Document",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronic signature for a Document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create ChangeProposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review of a Document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a Document into another language",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a Document to groups or users",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedistribution",
+            "description": "Acknowledge distribution of a Document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend validity of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override by applicant for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate a previously invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a Document",
+            "attributes": []
+        },
+        {
+            "name": "createnewversion",
+            "description": "Create a new version of a Document",
+            "attributes": []
+        },
+        {
+            "name": "updatedistributionlist",
+            "description": "Update the distribution list for a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "authorsgroup",
+            "description": "Document assigned to AuthorsGroup"
+        },
+        {
+            "a": "document",
+            "b": "reviewersgroup",
+            "description": "Document assigned to ReviewersGroup"
+        },
+        {
+            "a": "document",
+            "b": "releasersgroup",
+            "description": "Document assigned to ReleasersGroup"
+        },
+        {
+            "a": "document",
+            "b": "readersgroup",
+            "description": "Document assigned to ReadersGroup"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document holds Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document holds AdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document holds Equipment"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposals"
+        },
+        {
+            "a": "document",
+            "b": "translateddocument",
+            "description": "Document has TranslatedDocument"
+        },
+        {
+            "a": "translateddocument",
+            "b": "document",
+            "description": "TranslatedFrom Original Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "user",
+            "description": "ChangeProposal created by User"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "CreateDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "EditDocument"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "AttachAttachment"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AttachAdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "AttachEquipment"
+        },
+        {
+            "a": "document",
+            "b": "translateddocument",
+            "description": "TranslateDocument"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "CreateChangeProposal"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "ReleaseDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "SignDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "ReviewDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "ExtendValidity"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Override"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "ReactivateDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "ArchiveDocument"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "CreateNewVersion"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "UpdateDistributionList"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "DistributeDocument"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "AcknowledgeDistribution"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "ExtendValidity"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "Override"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "ReactivateDocument"
+        }
+    ]
+}

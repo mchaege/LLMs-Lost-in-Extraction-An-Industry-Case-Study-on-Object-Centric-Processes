@@ -1,0 +1,363 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed artifact representing policies, guidelines, procedural instructions, work instructions, or other controlled content that undergoes creation, editing, approval, distribution, and archiving.",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "The classification of the document such as Policy, Guideline, Procedural Instruction, or Work Instruction"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "A short code prefix assigned to each document type (e.g., RL for Guideline, PO for Policy)"
+                },
+                {
+                    "name": "number",
+                    "description": "A cross-client consecutive 4-digit number assigned to each document of its type"
+                },
+                {
+                    "name": "title",
+                    "description": "The name or heading of the document"
+                },
+                {
+                    "name": "status",
+                    "description": "The current workflow state of the document such as In Editing, Under Review, Released, or Out of Force"
+                },
+                {
+                    "name": "version",
+                    "description": "The revision level of the document"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "The date from which the document becomes effective"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "The date after which the document is no longer valid"
+                },
+                {
+                    "name": "content",
+                    "description": "The body or substantive material of the document"
+                },
+                {
+                    "name": "source_format",
+                    "description": "The original file format such as Word, Excel, or PowerPoint"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents related to this document"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "System applications referenced or relevant to the document"
+                },
+                {
+                    "name": "scope",
+                    "description": "The companies or areas to which the document applies"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "A predefined document structure that can be selected when creating new documents of a specific type, with embedded TAG technology for automatic metadata insertion.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "The type of document for which the template is designed"
+                },
+                {
+                    "name": "format",
+                    "description": "The file format of the template"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document linked to a main document that is automatically released with the main document and triggers versioning when created, modified, or archived.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "The file or document content"
+                },
+                {
+                    "name": "version",
+                    "description": "The version number of the attachment"
+                },
+                {
+                    "name": "status",
+                    "description": "The release status aligned with the main document"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary material attached to a document that is not subject to the release cycle and does not create new versions of the main document.",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "The supplementary material or information"
+                },
+                {
+                    "name": "release_status",
+                    "description": "Whether the additional information is published or not"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "A suggested modification to a document that does not affect the document's version history until accepted and implemented.",
+            "attributes": [
+                {
+                    "name": "proposed_change",
+                    "description": "The modification or update being suggested"
+                },
+                {
+                    "name": "status",
+                    "description": "The state of the proposal such as Pending, Scheduled, or Completed"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "A person who interacts with documents in defined roles such as Reader, Author, Reviewer, Releaser, or Translator.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "The function assigned to the user such as Reader, Author, Reviewer, Releaser, or Translator"
+                },
+                {
+                    "name": "authorization",
+                    "description": "The specific permissions granted to the user"
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "A collection of users organized together for the purpose of assigning common authorizations and distribution.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "The identifier of the user group"
+                },
+                {
+                    "name": "members",
+                    "description": "The users belonging to the group"
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "An electronic record documenting that a user has completed a workflow task such as creation, review, or release of a document.",
+            "attributes": [
+                {
+                    "name": "participant",
+                    "description": "The user who provided the signature"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "The date and time the signature was applied"
+                },
+                {
+                    "name": "workflow_step",
+                    "description": "The phase of the process during which the signature was collected"
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "A maintained record of users and user groups who should receive a document and/or provide acknowledgement upon its release.",
+            "attributes": [
+                {
+                    "name": "distribution_type",
+                    "description": "Either Distribution by Email or Distribution for Acknowledgement"
+                },
+                {
+                    "name": "recipients",
+                    "description": "The users or user groups included in the distribution"
+                }
+            ]
+        },
+        {
+            "name": "workflow_task",
+            "description": "An activity assigned to a user within the document approval process, such as creation, review, or release.",
+            "attributes": [
+                {
+                    "name": "task_type",
+                    "description": "The nature of the task such as Creator, Reviewer, or Releaser"
+                },
+                {
+                    "name": "assigned_to",
+                    "description": "The user responsible for completing the task"
+                },
+                {
+                    "name": "status",
+                    "description": "Whether the task is pending or completed"
+                }
+            ]
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A system-generated or manual request to confirm or update the continued validity of a document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "The document for which validity is being checked"
+                },
+                {
+                    "name": "status",
+                    "description": "The state of the request such as Pending or Completed"
+                },
+                {
+                    "name": "process_type",
+                    "description": "Whether processing involves releasers only or includes authors, reviewers, and releasers"
+                }
+            ]
+        },
+        {
+            "name": "override_request",
+            "description": "A request to invalidate and archive a document that no longer has validity, removing it from active circulation.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "The document being invalidated"
+                },
+                {
+                    "name": "status",
+                    "description": "The state of the invalidation process"
+                },
+                {
+                    "name": "process_type",
+                    "description": "Whether processing involves releasers only or includes initiator, reviewers, and releasers"
+                }
+            ]
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A request to restore a previously invalidated and archived document to active status.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "The archived document being reactivated"
+                },
+                {
+                    "name": "initiator",
+                    "description": "The user requesting reactivation, must be from Business Admin group"
+                },
+                {
+                    "name": "status",
+                    "description": "The state of the reactivation request"
+                }
+            ]
+        },
+        {
+            "name": "acknowledgement",
+            "description": "A record of confirmation by a user that they have reviewed and understood a document distributed for acknowledgement.",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "The person confirming the acknowledgement"
+                },
+                {
+                    "name": "document",
+                    "description": "The document being acknowledged"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "The date and time the acknowledgement was confirmed"
+                },
+                {
+                    "name": "status",
+                    "description": "Whether the acknowledgement is pending or confirmed"
+                }
+            ]
+        },
+        {
+            "name": "dashboard",
+            "description": "A role-specific interface displaying documents and tasks relevant to the user based on their permissions and distribution assignments.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "The user role for which the dashboard is configured"
+                },
+                {
+                    "name": "content",
+                    "description": "The documents and tasks displayed"
+                }
+            ]
+        },
+        {
+            "name": "report",
+            "description": "A role-specific evaluation or search function providing filtered views of documents and their status according to selected criteria.",
+            "attributes": [
+                {
+                    "name": "report_type",
+                    "description": "The category of report such as Status Report or Search Report"
+                },
+                {
+                    "name": "selection_parameters",
+                    "description": "The criteria used to filter results"
+                },
+                {
+                    "name": "target_role",
+                    "description": "The user role for which the report is designed"
+                }
+            ]
+        },
+        {
+            "name": "archive_group",
+            "description": "A special user group with read access to archived and invalidated documents for historical and compliance purposes.",
+            "attributes": [
+                {
+                    "name": "members",
+                    "description": "Users with archive access rights"
+                }
+            ]
+        },
+        {
+            "name": "business_admin_group",
+            "description": "A user group with authority to create reactivation requests for invalidated documents.",
+            "attributes": [
+                {
+                    "name": "members",
+                    "description": "Users with business administration authority"
+                }
+            ]
+        },
+        {
+            "name": "language_version",
+            "description": "A translated version of a released document that must undergo its own approval process before becoming visible to readers.",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "The target language of the translation"
+                },
+                {
+                    "name": "original_document",
+                    "description": "The document being translated"
+                },
+                {
+                    "name": "status",
+                    "description": "The approval status of the translated version"
+                }
+            ]
+        },
+        {
+            "name": "client",
+            "description": "A separate organizational instance or tenant in a multi-client system, each with its own document visibility and management settings.",
+            "attributes": [
+                {
+                    "name": "identifier",
+                    "description": "The unique identifier for the client"
+                },
+                {
+                    "name": "document_visibility",
+                    "description": "Which documents are visible or hidden in this client"
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

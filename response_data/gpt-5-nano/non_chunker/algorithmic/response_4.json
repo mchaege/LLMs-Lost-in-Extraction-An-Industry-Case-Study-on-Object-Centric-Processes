@@ -1,0 +1,254 @@
+{
+    "objs": [
+        {
+            "name": "documenttype",
+            "description": "Classification of documents (Policy, Guidelines, Procedural Instruction, Work Instruction)",
+            "attributes": []
+        },
+        {
+            "name": "document",
+            "description": "Policy, Guideline, Procedural Instruction or Work Instruction managed in DHC VISION",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person who performs actions in the system",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template used when creating new documents",
+            "attributes": []
+        },
+        {
+            "name": "informationobject",
+            "description": "Attachment or additional information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposed changes to a document that can be implemented to create a new version",
+            "attributes": []
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of users or user groups that receive release notifications and acknowledgements",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new Document with a selected DocumentType by a User",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Edit content or properties of a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attach an InformationObject to a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create a new version of a released Document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity of a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Declare a document override for invalidation by a User",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a Document to DistributionList and Users",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a ChangeProposal for a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review a Document by a User",
+            "attributes": []
+        },
+        {
+            "name": "approvedocument",
+            "description": "Approve a Document in the release process by a User",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "creates"
+        },
+        {
+            "a": "createdocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "createdocument",
+            "b": "documenttype",
+            "description": "uses"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "edits"
+        },
+        {
+            "a": "editdocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "releases"
+        },
+        {
+            "a": "releasedocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "informationobject",
+            "description": "attaches"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "to"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "distributes"
+        },
+        {
+            "a": "distributedocument",
+            "b": "distributionlist",
+            "description": "to"
+        },
+        {
+            "a": "distributedocument",
+            "b": "user",
+            "description": "notified"
+        },
+        {
+            "a": "createversion",
+            "b": "document",
+            "description": "creates"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "translates"
+        },
+        {
+            "a": "translatedocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "extends validity"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "overrides"
+        },
+        {
+            "a": "override",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "reactivates"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "archives"
+        },
+        {
+            "a": "archivedocument",
+            "b": "user",
+            "description": "performed by"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "for"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "user",
+            "description": "initiator"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "reviews"
+        },
+        {
+            "a": "approvedocument",
+            "b": "document",
+            "description": "approves"
+        }
+    ]
+}

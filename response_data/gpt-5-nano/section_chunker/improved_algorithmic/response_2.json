@@ -1,0 +1,349 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing policies, guidelines, work instructions, and other documents.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment to a Document; may include supplementary artifacts.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary information attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment related to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposed changes to an existing Document.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Object containing information that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "document_type",
+            "description": "Categories of documents (e.g., Policies, Guidelines, Work Instructions).",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document templates defined for each Document Type.",
+            "attributes": []
+        },
+        {
+            "name": "language",
+            "description": "Language in which a Document can be translated.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person or role interacting with Documents (e.g., Authors, Reviewers).",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of a new Information Object to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_template",
+            "description": "Selection of a Template for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release of a Document with signature.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review step in the release process.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of a released Document into another Language.",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Release of a translated Document.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of a Document to Readers.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Distribution of a Document by Email to designated Users/Groups.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement of Distribution by recipients.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "review_change_proposal",
+            "description": "Review of a Change Proposal.",
+            "attributes": []
+        },
+        {
+            "name": "apply_change_proposal",
+            "description": "Apply a Change Proposal to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "complete_change_proposal",
+            "description": "Complete a Change Proposal.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity of a Document's version.",
+            "attributes": []
+        },
+        {
+            "name": "check_validity_extension",
+            "description": "Check validity extension for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "confirm_validity_extension",
+            "description": "Confirm validity extension and set new validity date.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override process (AKS) for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_aks_request",
+            "description": "Create an AKS request for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "process_aks",
+            "description": "Process an AKS for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Invalidate a Document and archive.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a Document and its Attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_reactivation_request",
+            "description": "Create a reactivation request for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "process_reactivation",
+            "description": "Process a reactivation of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Publish a released Document.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Signatures by workflow participants during release.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create Document relates to Document created by User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Edit Document relates to Document edited by User."
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Attach Information Object to Document."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Attach Template to Document."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Release Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Review Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Translate Document involves Document and Language."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Release Translation involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Distribute Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Distribute By Email involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Acknowledge Distribution involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Create Change Proposal relates Document and User."
+        },
+        {
+            "a": "change_proposal",
+            "b": "user",
+            "description": "Review Change Proposal involves Change Proposal and User."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Apply Change Proposal relates Document and Change Proposal."
+        },
+        {
+            "a": "change_proposal",
+            "b": "user",
+            "description": "Complete Change Proposal involves Change Proposal and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Extend Validity check extends Document via User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Check Validity Extension involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Confirm Validity Extension involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Override Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create AKS Request involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Process AKS involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Invalidate Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Archive Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Reactivate Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create Reactivation Request involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Process Reactivation involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create Version involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Publish Document involves Document and User."
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Sign Document involves Document and User."
+        }
+    ],
+    "o2e": []
+}

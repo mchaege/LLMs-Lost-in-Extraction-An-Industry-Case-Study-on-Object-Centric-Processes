@@ -1,0 +1,330 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in P&R Management representing a policy, guideline, or instruction.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "System user performing actions on documents.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment linked to a Document containing information.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information object attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment information associated with a Document.",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g., policy, guideline, instruction).",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template used for creating new Documents of a given type.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal for changes to a Document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new Document by a User.",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Modification of a Document by a User.",
+            "attributes": []
+        },
+        {
+            "name": "attachinformation",
+            "description": "Attach an Information object (Attachment) to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attachequipment",
+            "description": "Attach an Equipment to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create a new version of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release of a Document after workflow approval.",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review of a Document by a Reviewer.",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of a previously invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archiving of a document and its attachments.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution of a Document to distribution lists/users via email.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledgement of a Document by recipients.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Creation of a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronic signature during workflow steps.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has a DocumentType."
+        },
+        {
+            "a": "documenttype",
+            "b": "template",
+            "description": "DocumentType has Template."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachment."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has AdditionalInfo."
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment."
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposal."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Created Document"
+        },
+        {
+            "a": "createdocument",
+            "b": "user",
+            "description": "Performed by User"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "Edited Document"
+        },
+        {
+            "a": "editdocument",
+            "b": "user",
+            "description": "Edited by User"
+        },
+        {
+            "a": "attachinformation",
+            "b": "document",
+            "description": "Information attached to Document"
+        },
+        {
+            "a": "attachinformation",
+            "b": "attachment",
+            "description": "Attachment added to Document"
+        },
+        {
+            "a": "attachinformation",
+            "b": "user",
+            "description": "Attachment action by User"
+        },
+        {
+            "a": "attachequipment",
+            "b": "document",
+            "description": "Equipment attached to Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "equipment",
+            "description": "Attachment of Equipment to Document"
+        },
+        {
+            "a": "attachequipment",
+            "b": "user",
+            "description": "Attachment action by User"
+        },
+        {
+            "a": "createversion",
+            "b": "document",
+            "description": "New version created for Document"
+        },
+        {
+            "a": "createversion",
+            "b": "user",
+            "description": "Version created by User"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Document released"
+        },
+        {
+            "a": "releasedocument",
+            "b": "user",
+            "description": "Release performed by User"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "Document review by Reviewer"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "user",
+            "description": "Review performed by User"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Document translated"
+        },
+        {
+            "a": "translatedocument",
+            "b": "user",
+            "description": "Translation performed by User"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Validity extended for Document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "user",
+            "description": "Validity extension performed by User"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override initiated for Document"
+        },
+        {
+            "a": "override",
+            "b": "user",
+            "description": "Override performed by User"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Document reactivated"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "user",
+            "description": "Reactivation performed by User"
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "Document archived"
+        },
+        {
+            "a": "archivedocument",
+            "b": "user",
+            "description": "Archiving performed by User"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Document distributed"
+        },
+        {
+            "a": "distributedocument",
+            "b": "user",
+            "description": "Distribution performed by User"
+        },
+        {
+            "a": "acknowledgedocument",
+            "b": "document",
+            "description": "Document acknowledgement"
+        },
+        {
+            "a": "acknowledgedocument",
+            "b": "user",
+            "description": "Acknowledgement performed by User"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "Change Proposal created for Document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "user",
+            "description": "Change Proposal creation by User"
+        },
+        {
+            "a": "signdocument",
+            "b": "document",
+            "description": "Document signed"
+        },
+        {
+            "a": "signdocument",
+            "b": "user",
+            "description": "Signature by User"
+        }
+    ]
+}

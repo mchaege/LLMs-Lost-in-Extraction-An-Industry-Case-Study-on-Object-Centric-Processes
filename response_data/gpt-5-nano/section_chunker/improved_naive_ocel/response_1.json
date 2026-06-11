@@ -1,0 +1,179 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in DHC VISION",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "References for linking to Master Data or other documents"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "IT applications used by the document"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies applicable to the document"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Areas of validity for the document"
+                },
+                {
+                    "name": "version",
+                    "description": "Version of the document"
+                },
+                {
+                    "name": "status",
+                    "description": "Status of the document"
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s)"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment object",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Document attachment that is not subject to the release cycle",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "document_created",
+            "description": "Created a new document in the system",
+            "attributes": []
+        },
+        {
+            "name": "attachment_added",
+            "description": "Attachment added to a document",
+            "attributes": []
+        },
+        {
+            "name": "document_edited",
+            "description": "Content or properties edited",
+            "attributes": []
+        },
+        {
+            "name": "document_released",
+            "description": "Document release step completed",
+            "attributes": []
+        },
+        {
+            "name": "version_created",
+            "description": "New version created",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of released content",
+            "attributes": []
+        },
+        {
+            "name": "translation_released",
+            "description": "Translation released",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity check performed",
+            "attributes": []
+        },
+        {
+            "name": "validity_extension_requested",
+            "description": "Request for validity extension created",
+            "attributes": []
+        },
+        {
+            "name": "validity_extended",
+            "description": "Validity extended",
+            "attributes": []
+        },
+        {
+            "name": "aks_requested",
+            "description": "Override requested",
+            "attributes": []
+        },
+        {
+            "name": "aks_completed",
+            "description": "Override completed",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_requested",
+            "description": "Reactivation requested",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_completed",
+            "description": "Reactivation completed",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "Has Equipments"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document_created",
+            "b": "document",
+            "description": "Related Object"
+        },
+        {
+            "a": "attachment_added",
+            "b": "attachment",
+            "description": "Attachment Associated"
+        },
+        {
+            "a": "document_released",
+            "b": "document",
+            "description": "Released Document"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translated Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extend Validity Event"
+        },
+        {
+            "a": "validity_extension_requested",
+            "b": "document",
+            "description": "Document Validity Extension Request"
+        },
+        {
+            "a": "aks_requested",
+            "b": "document",
+            "description": "AKS Request"
+        },
+        {
+            "a": "reactivation_requested",
+            "b": "document",
+            "description": "Reactivation Request"
+        }
+    ]
+}

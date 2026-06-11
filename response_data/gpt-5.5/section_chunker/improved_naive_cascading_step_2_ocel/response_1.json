@@ -1,0 +1,70 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed document in DHC VISION, including policies, guidelines, procedural instructions, work instructions and other document types.",
+            "attributes": []
+        },
+        {
+            "name": "document_type",
+            "description": "Type used to differentiate documents and define templates, validity periods and archive duration.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A new document is created in DHC VISION.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_properties",
+            "description": "Document properties and metadata are maintained.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Document content is edited.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "A document is released after workflow processing.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "A document has a selected corresponding document type."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "A document is created."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_properties",
+            "description": "Properties are maintained for a document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_content",
+            "description": "Content is edited for a document."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "A document is released."
+        },
+        {
+            "a": "document_type",
+            "b": "create_document",
+            "description": "A corresponding document type is selected when creating a document."
+        }
+    ]
+}

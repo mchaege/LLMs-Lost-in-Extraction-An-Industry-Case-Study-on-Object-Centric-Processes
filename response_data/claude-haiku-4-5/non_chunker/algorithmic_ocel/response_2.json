@@ -1,0 +1,981 @@
+{
+    "objs": [
+        {
+            "name": "policy",
+            "description": "A document containing company-wide regulations and processes at a strategic level",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document (e.g., editing, in review, released, out of force)"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Expiration date of document validity"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation for the document"
+                }
+            ]
+        },
+        {
+            "name": "guideline",
+            "description": "A document defining locally-defined regulations or business process regulations",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Expiration date of document validity"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation for the document"
+                }
+            ]
+        },
+        {
+            "name": "procedural_instruction",
+            "description": "A document describing specific procedures, process sequences, and responsible persons",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Expiration date of document validity"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation for the document"
+                }
+            ]
+        },
+        {
+            "name": "work_instruction",
+            "description": "A document detailing specific work steps and procedures for sub-processes",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the document"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Expiration date of document validity"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviation for the document"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document linked to a main document that is released with the main document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Attachment name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state of the attachment"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number matching the main document"
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "A document supplement not subject to release cycle of the main document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Additional info name or title"
+                },
+                {
+                    "name": "status",
+                    "description": "Published or unpublished state"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal for changes to an existing document without affecting version history",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Change proposal description"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposed, scheduled, or completed state"
+                }
+            ]
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A request to extend the validity period of a document",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Pending or approved state"
+                },
+                {
+                    "name": "created_date",
+                    "description": "Date the request was created"
+                }
+            ]
+        },
+        {
+            "name": "override_request",
+            "description": "A request to invalidate and archive a document",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Pending, approved, or completed state"
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Period for which document remains archived"
+                }
+            ]
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A request to revalidate a previously invalidated document",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Pending or approved state"
+                }
+            ]
+        },
+        {
+            "name": "document_approval_workflow",
+            "description": "A workflow process for document creation, review, and release with signature",
+            "attributes": [
+                {
+                    "name": "step",
+                    "description": "Current workflow step (creator, review, release)"
+                },
+                {
+                    "name": "status",
+                    "description": "In progress or completed state"
+                }
+            ]
+        },
+        {
+            "name": "translation_workflow",
+            "description": "A workflow process for translating released documents to other languages",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "Target language for translation"
+                },
+                {
+                    "name": "status",
+                    "description": "In progress or completed state"
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "A group of users with assigned roles and permissions",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "User group name"
+                },
+                {
+                    "name": "role",
+                    "description": "Role assigned to the group (reader, author, reviewer, releaser, translator)"
+                }
+            ]
+        },
+        {
+            "name": "person",
+            "description": "An individual user with specific roles and permissions",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Person name"
+                },
+                {
+                    "name": "role",
+                    "description": "Role assigned to the person"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Attachment of a new document object to the system with document type selection",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Type of document being created"
+                },
+                {
+                    "name": "template_selected",
+                    "description": "Whether a template was used"
+                }
+            ]
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Modification of document content using the editing client",
+            "attributes": [
+                {
+                    "name": "format",
+                    "description": "Office format used for editing"
+                }
+            ]
+        },
+        {
+            "name": "maintain_metadata",
+            "description": "Setting or updating document properties and attributes",
+            "attributes": [
+                {
+                    "name": "category",
+                    "description": "Metadata category being updated"
+                },
+                {
+                    "name": "attributes_modified",
+                    "description": "List of attributes changed"
+                }
+            ]
+        },
+        {
+            "name": "assign_authorization",
+            "description": "Assigning read, write, or change permissions to users or groups",
+            "attributes": [
+                {
+                    "name": "permission_type",
+                    "description": "Type of permission assigned"
+                }
+            ]
+        },
+        {
+            "name": "create_attachment",
+            "description": "Adding a controlled attachment to a document",
+            "attributes": [
+                {
+                    "name": "attachment_name",
+                    "description": "Name of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "create_additional_info",
+            "description": "Adding uncontrolled additional information to a document",
+            "attributes": [
+                {
+                    "name": "info_name",
+                    "description": "Name of the additional information"
+                }
+            ]
+        },
+        {
+            "name": "initiate_release_workflow",
+            "description": "Starting the 3-step approval workflow for document release",
+            "attributes": [
+                {
+                    "name": "initiated_by",
+                    "description": "User who started the workflow"
+                }
+            ]
+        },
+        {
+            "name": "sign_document",
+            "description": "Electronically signing a document as part of the approval workflow",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "Role of person signing (creator, reviewer, releaser)"
+                },
+                {
+                    "name": "signature_status",
+                    "description": "Approved or rejected"
+                }
+            ]
+        },
+        {
+            "name": "publish_document",
+            "description": "Making a released document visible to addressed readers",
+            "attributes": [
+                {
+                    "name": "visibility",
+                    "description": "Document visibility status"
+                }
+            ]
+        },
+        {
+            "name": "create_document_version",
+            "description": "Automatic creation of a new version when changes trigger versioning",
+            "attributes": [
+                {
+                    "name": "trigger",
+                    "description": "Reason for version creation"
+                }
+            ]
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Submitting a proposal to modify an existing document",
+            "attributes": [
+                {
+                    "name": "proposed_changes",
+                    "description": "Description of proposed changes"
+                }
+            ]
+        },
+        {
+            "name": "implement_change_proposal",
+            "description": "Scheduling a change proposal for implementation",
+            "attributes": [
+                {
+                    "name": "implementation_status",
+                    "description": "Scheduled or completed"
+                }
+            ]
+        },
+        {
+            "name": "create_validity_extension_request",
+            "description": "System-generated or manual request to extend document validity",
+            "attributes": [
+                {
+                    "name": "trigger",
+                    "description": "System auto or manual creation"
+                }
+            ]
+        },
+        {
+            "name": "extend_validity",
+            "description": "Approving an extension of document validity period",
+            "attributes": [
+                {
+                    "name": "new_valid_until_date",
+                    "description": "Updated expiration date"
+                }
+            ]
+        },
+        {
+            "name": "create_override_request",
+            "description": "Request to invalidate and archive a document",
+            "attributes": [
+                {
+                    "name": "reason",
+                    "description": "Reason for override"
+                }
+            ]
+        },
+        {
+            "name": "declare_override",
+            "description": "Approving invalidation and archiving of a document",
+            "attributes": [
+                {
+                    "name": "archive_start_date",
+                    "description": "Date archiving begins"
+                }
+            ]
+        },
+        {
+            "name": "create_reactivation_request",
+            "description": "Request to revalidate a previously invalidated document",
+            "attributes": [
+                {
+                    "name": "requested_by",
+                    "description": "Business admin group member"
+                }
+            ]
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Approving and executing the reactivation of an archived document",
+            "attributes": [
+                {
+                    "name": "reactivation_status",
+                    "description": "Completed status"
+                }
+            ]
+        },
+        {
+            "name": "assign_distribution",
+            "description": "Adding users or groups to document distribution list",
+            "attributes": [
+                {
+                    "name": "distribution_type",
+                    "description": "Email or acknowledgement based"
+                }
+            ]
+        },
+        {
+            "name": "send_distribution_notification",
+            "description": "Sending email notification to distribution list upon document release",
+            "attributes": [
+                {
+                    "name": "notification_type",
+                    "description": "Email or acknowledgement request"
+                }
+            ]
+        },
+        {
+            "name": "confirm_acknowledgement",
+            "description": "Active confirmation of document acknowledgement by recipient",
+            "attributes": [
+                {
+                    "name": "confirmed_by",
+                    "description": "User confirming acknowledgement"
+                }
+            ]
+        },
+        {
+            "name": "translate_document",
+            "description": "Creating a translated version of a released document",
+            "attributes": [
+                {
+                    "name": "target_language",
+                    "description": "Language being translated to"
+                }
+            ]
+        },
+        {
+            "name": "archive_document",
+            "description": "Withdrawal of authorizations and archiving of invalidated document",
+            "attributes": [
+                {
+                    "name": "archive_duration",
+                    "description": "Length of archiving period"
+                }
+            ]
+        },
+        {
+            "name": "convert_to_pdf",
+            "description": "Automatic conversion of document to PDF format after saving",
+            "attributes": [
+                {
+                    "name": "format",
+                    "description": "PDF format output"
+                }
+            ]
+        }
+    ],
+    "o2o": [
+        {
+            "a": "policy",
+            "b": "attachment",
+            "description": "Policy can have controlled attachments"
+        },
+        {
+            "a": "policy",
+            "b": "additional_info",
+            "description": "Policy can have additional information"
+        },
+        {
+            "a": "guideline",
+            "b": "attachment",
+            "description": "Guideline can have controlled attachments"
+        },
+        {
+            "a": "guideline",
+            "b": "additional_info",
+            "description": "Guideline can have additional information"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "attachment",
+            "description": "Procedural instruction can have controlled attachments"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "additional_info",
+            "description": "Procedural instruction can have additional information"
+        },
+        {
+            "a": "work_instruction",
+            "b": "attachment",
+            "description": "Work instruction can have controlled attachments"
+        },
+        {
+            "a": "work_instruction",
+            "b": "additional_info",
+            "description": "Work instruction can have additional information"
+        },
+        {
+            "a": "policy",
+            "b": "change_proposal",
+            "description": "Change proposals are created for policies"
+        },
+        {
+            "a": "guideline",
+            "b": "change_proposal",
+            "description": "Change proposals are created for guidelines"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "change_proposal",
+            "description": "Change proposals are created for procedural instructions"
+        },
+        {
+            "a": "work_instruction",
+            "b": "change_proposal",
+            "description": "Change proposals are created for work instructions"
+        },
+        {
+            "a": "policy",
+            "b": "policy",
+            "description": "Policy can reference other policies"
+        },
+        {
+            "a": "guideline",
+            "b": "guideline",
+            "description": "Guideline can reference other guidelines"
+        },
+        {
+            "a": "policy",
+            "b": "guideline",
+            "description": "Policy can reference guidelines"
+        },
+        {
+            "a": "policy",
+            "b": "user_group",
+            "description": "User groups are assigned permissions for policy access"
+        },
+        {
+            "a": "guideline",
+            "b": "user_group",
+            "description": "User groups are assigned permissions for guideline access"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "user_group",
+            "description": "User groups are assigned permissions for procedural instruction access"
+        },
+        {
+            "a": "work_instruction",
+            "b": "user_group",
+            "description": "User groups are assigned permissions for work instruction access"
+        },
+        {
+            "a": "policy",
+            "b": "person",
+            "description": "Persons are assigned roles for policy management"
+        },
+        {
+            "a": "guideline",
+            "b": "person",
+            "description": "Persons are assigned roles for guideline management"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "person",
+            "description": "Persons are assigned roles for procedural instruction management"
+        },
+        {
+            "a": "work_instruction",
+            "b": "person",
+            "description": "Persons are assigned roles for work instruction management"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "policy",
+            "b": "create_document",
+            "description": "Policy is created as a document"
+        },
+        {
+            "a": "guideline",
+            "b": "create_document",
+            "description": "Guideline is created as a document"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_document",
+            "description": "Procedural instruction is created as a document"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_document",
+            "description": "Work instruction is created as a document"
+        },
+        {
+            "a": "policy",
+            "b": "edit_document_content",
+            "description": "Policy content is edited"
+        },
+        {
+            "a": "guideline",
+            "b": "edit_document_content",
+            "description": "Guideline content is edited"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "edit_document_content",
+            "description": "Procedural instruction content is edited"
+        },
+        {
+            "a": "work_instruction",
+            "b": "edit_document_content",
+            "description": "Work instruction content is edited"
+        },
+        {
+            "a": "policy",
+            "b": "maintain_metadata",
+            "description": "Policy metadata is maintained"
+        },
+        {
+            "a": "guideline",
+            "b": "maintain_metadata",
+            "description": "Guideline metadata is maintained"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "maintain_metadata",
+            "description": "Procedural instruction metadata is maintained"
+        },
+        {
+            "a": "work_instruction",
+            "b": "maintain_metadata",
+            "description": "Work instruction metadata is maintained"
+        },
+        {
+            "a": "user_group",
+            "b": "assign_authorization",
+            "description": "User group receives authorization assignment"
+        },
+        {
+            "a": "person",
+            "b": "assign_authorization",
+            "description": "Person receives authorization assignment"
+        },
+        {
+            "a": "attachment",
+            "b": "create_attachment",
+            "description": "Attachment is created for document"
+        },
+        {
+            "a": "additional_info",
+            "b": "create_additional_info",
+            "description": "Additional information is created for document"
+        },
+        {
+            "a": "policy",
+            "b": "initiate_release_workflow",
+            "description": "Release workflow is initiated for policy"
+        },
+        {
+            "a": "guideline",
+            "b": "initiate_release_workflow",
+            "description": "Release workflow is initiated for guideline"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "initiate_release_workflow",
+            "description": "Release workflow is initiated for procedural instruction"
+        },
+        {
+            "a": "work_instruction",
+            "b": "initiate_release_workflow",
+            "description": "Release workflow is initiated for work instruction"
+        },
+        {
+            "a": "person",
+            "b": "sign_document",
+            "description": "Person electronically signs document"
+        },
+        {
+            "a": "policy",
+            "b": "publish_document",
+            "description": "Released policy is published"
+        },
+        {
+            "a": "guideline",
+            "b": "publish_document",
+            "description": "Released guideline is published"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "publish_document",
+            "description": "Released procedural instruction is published"
+        },
+        {
+            "a": "work_instruction",
+            "b": "publish_document",
+            "description": "Released work instruction is published"
+        },
+        {
+            "a": "policy",
+            "b": "create_document_version",
+            "description": "New version of policy is created"
+        },
+        {
+            "a": "guideline",
+            "b": "create_document_version",
+            "description": "New version of guideline is created"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_document_version",
+            "description": "New version of procedural instruction is created"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_document_version",
+            "description": "New version of work instruction is created"
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Change proposal is created"
+        },
+        {
+            "a": "change_proposal",
+            "b": "implement_change_proposal",
+            "description": "Change proposal is scheduled for implementation"
+        },
+        {
+            "a": "policy",
+            "b": "create_validity_extension_request",
+            "description": "Validity extension request is created for policy"
+        },
+        {
+            "a": "guideline",
+            "b": "create_validity_extension_request",
+            "description": "Validity extension request is created for guideline"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_validity_extension_request",
+            "description": "Validity extension request is created for procedural instruction"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_validity_extension_request",
+            "description": "Validity extension request is created for work instruction"
+        },
+        {
+            "a": "policy",
+            "b": "extend_validity",
+            "description": "Policy validity is extended"
+        },
+        {
+            "a": "guideline",
+            "b": "extend_validity",
+            "description": "Guideline validity is extended"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "extend_validity",
+            "description": "Procedural instruction validity is extended"
+        },
+        {
+            "a": "work_instruction",
+            "b": "extend_validity",
+            "description": "Work instruction validity is extended"
+        },
+        {
+            "a": "policy",
+            "b": "create_override_request",
+            "description": "Override request is created for policy"
+        },
+        {
+            "a": "guideline",
+            "b": "create_override_request",
+            "description": "Override request is created for guideline"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_override_request",
+            "description": "Override request is created for procedural instruction"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_override_request",
+            "description": "Override request is created for work instruction"
+        },
+        {
+            "a": "policy",
+            "b": "declare_override",
+            "description": "Policy is invalidated and archived"
+        },
+        {
+            "a": "guideline",
+            "b": "declare_override",
+            "description": "Guideline is invalidated and archived"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "declare_override",
+            "description": "Procedural instruction is invalidated and archived"
+        },
+        {
+            "a": "work_instruction",
+            "b": "declare_override",
+            "description": "Work instruction is invalidated and archived"
+        },
+        {
+            "a": "policy",
+            "b": "create_reactivation_request",
+            "description": "Reactivation request is created for policy"
+        },
+        {
+            "a": "guideline",
+            "b": "create_reactivation_request",
+            "description": "Reactivation request is created for guideline"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_reactivation_request",
+            "description": "Reactivation request is created for procedural instruction"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_reactivation_request",
+            "description": "Reactivation request is created for work instruction"
+        },
+        {
+            "a": "policy",
+            "b": "reactivate_document",
+            "description": "Invalidated policy is reactivated"
+        },
+        {
+            "a": "guideline",
+            "b": "reactivate_document",
+            "description": "Invalidated guideline is reactivated"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "reactivate_document",
+            "description": "Invalidated procedural instruction is reactivated"
+        },
+        {
+            "a": "work_instruction",
+            "b": "reactivate_document",
+            "description": "Invalidated work instruction is reactivated"
+        },
+        {
+            "a": "user_group",
+            "b": "assign_distribution",
+            "description": "User group is added to distribution list"
+        },
+        {
+            "a": "person",
+            "b": "assign_distribution",
+            "description": "Person is added to distribution list"
+        },
+        {
+            "a": "user_group",
+            "b": "send_distribution_notification",
+            "description": "Distribution notification is sent to user group"
+        },
+        {
+            "a": "person",
+            "b": "send_distribution_notification",
+            "description": "Distribution notification is sent to person"
+        },
+        {
+            "a": "person",
+            "b": "confirm_acknowledgement",
+            "description": "Person confirms document acknowledgement"
+        },
+        {
+            "a": "policy",
+            "b": "translate_document",
+            "description": "Policy is translated to another language"
+        },
+        {
+            "a": "guideline",
+            "b": "translate_document",
+            "description": "Guideline is translated to another language"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "translate_document",
+            "description": "Procedural instruction is translated to another language"
+        },
+        {
+            "a": "work_instruction",
+            "b": "translate_document",
+            "description": "Work instruction is translated to another language"
+        },
+        {
+            "a": "policy",
+            "b": "archive_document",
+            "description": "Policy is archived"
+        },
+        {
+            "a": "guideline",
+            "b": "archive_document",
+            "description": "Guideline is archived"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "archive_document",
+            "description": "Procedural instruction is archived"
+        },
+        {
+            "a": "work_instruction",
+            "b": "archive_document",
+            "description": "Work instruction is archived"
+        },
+        {
+            "a": "policy",
+            "b": "convert_to_pdf",
+            "description": "Policy is converted to PDF"
+        },
+        {
+            "a": "guideline",
+            "b": "convert_to_pdf",
+            "description": "Guideline is converted to PDF"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "convert_to_pdf",
+            "description": "Procedural instruction is converted to PDF"
+        },
+        {
+            "a": "work_instruction",
+            "b": "convert_to_pdf",
+            "description": "Work instruction is converted to PDF"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Managed paperless document with properties, content, versions, release, distribution, validity, archiving and translation support.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Corresponding document type selected when creating a new document."
+                },
+                {
+                    "name": "references",
+                    "description": "Document property maintained to link documents to master data or other documents."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Document property maintained to link documents to master data or other documents."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Document property maintained via document properties."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Document property maintained via document properties."
+                },
+                {
+                    "name": "version",
+                    "description": "Metadata that can be printed in the document using TAG technology."
+                },
+                {
+                    "name": "status",
+                    "description": "Metadata that can be printed in the document using TAG technology and shown in workflow/status reports."
+                },
+                {
+                    "name": "scopes",
+                    "description": "Metadata that can be printed in the document using TAG technology."
+                },
+                {
+                    "name": "reader",
+                    "description": "Attribute used for assigning reader authorizations via user group assignment."
+                },
+                {
+                    "name": "author",
+                    "description": "Attribute for assigning the author; the creator is automatically confirmed in this field by default."
+                },
+                {
+                    "name": "co_authors",
+                    "description": "Attribute for additional personal change rights."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Attribute for assigning reviewers."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Attribute for assigning releasers, including translation."
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which document validity is calculated after release."
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Period used to calculate the valid until date."
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date when validity expires."
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Archive period defined for each document type."
+                },
+                {
+                    "name": "distribution_by_info",
+                    "description": "Attribute affecting e-mail notification when the next version is released."
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "Attribute affecting distribution of acknowledgement workflow task when the next version is released."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "A new document is created in the system.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_properties",
+            "description": "Document properties and metadata are maintained.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Document content is edited.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "A document is approved and released.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_template",
+            "description": "One or more templates can be defined for each document type and selected for new documents."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "New documents are created in the system."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_properties",
+            "description": "Document properties are edited for a document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_content",
+            "description": "Document content is edited for a document."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "A document is released after workflow-supported approval."
+        }
+    ]
+}

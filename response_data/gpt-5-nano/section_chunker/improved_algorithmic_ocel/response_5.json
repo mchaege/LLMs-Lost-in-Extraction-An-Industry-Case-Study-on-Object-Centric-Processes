@@ -1,0 +1,350 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Information object representing a policy, guideline, procedural instruction, work instruction, or other controlled document in the DHC VISION system.",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of a Document (e.g., Policies, Guidelines, Procedural Instructions, Work Instructions).",
+            "attributes": []
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template defined for a DocumentType, used when creating new Document objects.",
+            "attributes": []
+        },
+        {
+            "name": "language",
+            "description": "Language version of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "masterdata",
+            "description": "Master data linked with a Document (e.g., IT applications).",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment to a Document representing an information object.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment related to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users assigned to roles and authorizations for documents.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual user who participates in document workflows.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposals for documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New documents created in the system by attachment of a new information object to the document.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing the content or properties of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "The 3-step release process Creator-Review-Release with signatures.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature",
+            "description": "All workflow participants complete their tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "convert_to_pdf",
+            "description": "Document is automatically converted to PDF after saving.",
+            "attributes": []
+        },
+        {
+            "name": "attach_attachment",
+            "description": "Attachment of a new Information Object to the Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additionalinfo",
+            "description": "Attachment of a new Information Object to the Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attachment of a new Information Object to the Document.",
+            "attributes": []
+        },
+        {
+            "name": "link_document_to_masterdata",
+            "description": "Link a Document to MasterData.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "A new editing version is created after release of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a Document and its Attachments according to archive rules.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an archived Document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend a Document's validity period via a workflow-supported request.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process for declaring a Document as Out of Force (AKS) and related steps.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_document",
+            "description": "Notify distribution recipients to acknowledge current version.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Notify assigned Users/Groups by email on a new version release.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_acknowledgement",
+            "description": "Distribute by acknowledgement list to the distribution recipients.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "release_translated_document",
+            "description": "Release workflow-supported translation version.",
+            "attributes": []
+        },
+        {
+            "name": "review_translation",
+            "description": "Check translation for quality.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Manage Change Proposals for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "complete_change_proposal",
+            "description": "Complete a Change Proposal.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has DocumentType"
+        },
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "Document uses DocumentTemplate"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Document has Language"
+        },
+        {
+            "a": "document",
+            "b": "masterdata",
+            "description": "Document linked to MasterData"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has AdditionalInfo"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposals"
+        },
+        {
+            "a": "document",
+            "b": "usergroup",
+            "description": "Document distribution groups defined by UserGroups"
+        },
+        {
+            "a": "documenttemplate",
+            "b": "documenttype",
+            "description": "DocumentTemplate belongs to DocumentType"
+        },
+        {
+            "a": "masterdata",
+            "b": "document",
+            "description": "Document linked to MasterData"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Event Create Document touches Document"
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Event Edit Document touches Document"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Event Release Document touches Document"
+        },
+        {
+            "a": "electronic_signature",
+            "b": "document",
+            "description": "Event Electronic Signature touches Document"
+        },
+        {
+            "a": "convert_to_pdf",
+            "b": "document",
+            "description": "Event Convert To PDF touches Document"
+        },
+        {
+            "a": "attach_attachment",
+            "b": "document",
+            "description": "Event Attach Attachment touches Document"
+        },
+        {
+            "a": "attach_additionalinfo",
+            "b": "document",
+            "description": "Event Attach AdditionalInfo touches Document"
+        },
+        {
+            "a": "attach_equipment",
+            "b": "document",
+            "description": "Event Attach Equipment touches Document"
+        },
+        {
+            "a": "link_document_to_masterdata",
+            "b": "document",
+            "description": "Event Link Document To MasterData touches Document"
+        },
+        {
+            "a": "create_version",
+            "b": "document",
+            "description": "Event Create Version touches Document"
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Event Archive Document touches Document"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Event Reactivate Document touches Document"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Event Extend Validity touches Document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Event Override touches Document"
+        },
+        {
+            "a": "acknowledge_document",
+            "b": "document",
+            "description": "Event Acknowledge Document touches Document"
+        },
+        {
+            "a": "distribute_by_email",
+            "b": "document",
+            "description": "Event Distribute By Email touches Document"
+        },
+        {
+            "a": "distribute_by_acknowledgement",
+            "b": "document",
+            "description": "Event Distribute By Acknowledgement touches Document"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Event Translate Document touches Document"
+        },
+        {
+            "a": "release_translated_document",
+            "b": "document",
+            "description": "Event Release Translated Document touches Document"
+        },
+        {
+            "a": "review_translation",
+            "b": "document",
+            "description": "Event Review Translation touches Document"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "changeproposal",
+            "description": "Event Create Change Proposal touches ChangeProposal"
+        },
+        {
+            "a": "manage_change_proposals",
+            "b": "changeproposal",
+            "description": "Event Manage Change Proposals touches ChangeProposal"
+        },
+        {
+            "a": "complete_change_proposal",
+            "b": "changeproposal",
+            "description": "Event Complete Change Proposal touches ChangeProposal"
+        }
+    ]
+}

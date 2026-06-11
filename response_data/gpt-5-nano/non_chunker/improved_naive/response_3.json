@@ -1,0 +1,305 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in P&R Management",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information object attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment linked to a Document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional information attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "document_template",
+            "description": "Template used for documents",
+            "attributes": []
+        },
+        {
+            "name": "object_cover",
+            "description": "Pure object cover",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Change proposals for documents",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "Distribution lists for documents",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Actor performing actions",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users for permissions and distribution",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Document creation by a User",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attach Information Object to a Document",
+            "attributes": []
+        },
+        {
+            "name": "upload_external_file",
+            "description": "Upload external file to a Document",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Convert Document to PDF automatically on save",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document release process",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Documents are signed electronically during workflow",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Language-dependent display of released documents",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "release_change_proposal",
+            "description": "Apply Change Proposal to update a Document version",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) process for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a Document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a Document to Distribution List",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement of distribution via email workflow",
+            "attributes": []
+        },
+        {
+            "name": "create_document_template",
+            "description": "Create a Document Template",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attach Equipment to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_information",
+            "description": "Attach Additional Information to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_document_cover",
+            "description": "Attach Object Cover to a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document_template",
+            "b": "document",
+            "description": "Document uses Template"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains Attachments"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document linked to Information Object"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Document linked to Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "object_cover",
+            "description": "Document linked to Object Cover"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document associated with Change Proposals"
+        },
+        {
+            "a": "distribution_list",
+            "b": "user_group",
+            "description": "Distribution List includes User Groups"
+        },
+        {
+            "a": "user",
+            "b": "user_group",
+            "description": "User belongs to User Group"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Create Document creates Document"
+        },
+        {
+            "a": "attach_information_object",
+            "b": "information_object",
+            "description": "Attach Information Object to a Document"
+        },
+        {
+            "a": "attach_information_object",
+            "b": "document",
+            "description": "Document to which Information Object is attached"
+        },
+        {
+            "a": "upload_external_file",
+            "b": "attachment",
+            "description": "Attach External File as Attachment"
+        },
+        {
+            "a": "convert_document_to_pdf",
+            "b": "document",
+            "description": "Document converted to PDF on save"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Document release begins"
+        },
+        {
+            "a": "release_document",
+            "b": "user",
+            "description": "User performing Release"
+        },
+        {
+            "a": "sign_document",
+            "b": "document",
+            "description": "Document signed"
+        },
+        {
+            "a": "sign_document",
+            "b": "user",
+            "description": "User performing Sign"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translate Document content"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extend Validity of Document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "AKS override of Document"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Reactivate Document"
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Archive Document"
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Distribute Document"
+        },
+        {
+            "a": "acknowledge_distribution",
+            "b": "distribution_list",
+            "description": "Distribution acknowledgement"
+        },
+        {
+            "a": "create_document_template",
+            "b": "document_template",
+            "description": "Create a Document Template"
+        },
+        {
+            "a": "attach_equipment",
+            "b": "equipment",
+            "description": "Attach Equipment to a Document"
+        },
+        {
+            "a": "attach_additional_information",
+            "b": "additional_information",
+            "description": "Attach Additional Information to a Document"
+        },
+        {
+            "a": "attach_document_cover",
+            "b": "object_cover",
+            "description": "Attach Object Cover to a Document"
+        }
+    ]
+}

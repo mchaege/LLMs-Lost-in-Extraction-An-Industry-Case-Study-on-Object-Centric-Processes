@@ -1,0 +1,244 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact that represents a policy, guideline, procedural instruction, or work instruction, and serves as the container for related attachments, change proposals, distribution and lifecycle activities.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "People who perform actions on documents as authors, reviewers, releasers, translators, etc.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a document, associated with a document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "An information object attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinformation",
+            "description": "An information object attached to a document, not subject to the main release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Attachment that is controlled and affects the associated version of the main document.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users used for distribution and access control.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New documents are created by attaching a new information object with a selected document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of document content or properties.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is automatically converted to PDF after saving.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "3-step release process (Creator – Review – Release) with signatures.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document is automatically published after release, visible to readers.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Process to check and extend the validity period of a document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process to invalidate and archiving documents or their attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Process to reactivate previously invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving period and revocation of authorizations during archiving.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language with workflow checks.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Employees with author rights can create Change proposals for a document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additional_information",
+            "description": "Attach additional information to a document; not subject to release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attach equipment to a document; attachments are released and may trigger new versions.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Maintain distribution lists; inform readers via email or for acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "attach_document",
+            "description": "Attach a new information object to a document.",
+            "attributes": []
+        }
+    ],
+    "o2o": [],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document creation"
+        },
+        {
+            "a": "user",
+            "b": "create_document",
+            "description": "Performer"
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Editing"
+        },
+        {
+            "a": "user",
+            "b": "edit_document",
+            "description": "Editor"
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "PDF conversion target"
+        },
+        {
+            "a": "user",
+            "b": "convert_document_to_pdf",
+            "description": "Operator"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Release target"
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "Signer"
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Publication target"
+        },
+        {
+            "a": "user",
+            "b": "publish_document",
+            "description": "Publisher"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Validity extension target"
+        },
+        {
+            "a": "user",
+            "b": "extend_validity",
+            "description": "Reviewer/Author"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Override target"
+        },
+        {
+            "a": "user",
+            "b": "override",
+            "description": "Override initiator"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Reactivation target"
+        },
+        {
+            "a": "user",
+            "b": "reactivate_document",
+            "description": "Reactivation initiator"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Archiving target"
+        },
+        {
+            "a": "user",
+            "b": "archive_document",
+            "description": "Archivist"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Translation target"
+        },
+        {
+            "a": "user",
+            "b": "translate_document",
+            "description": "Translator"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change proposal creation"
+        },
+        {
+            "a": "user",
+            "b": "create_change_proposal",
+            "description": "Author"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Distribution target"
+        },
+        {
+            "a": "usergroup",
+            "b": "distribute_document",
+            "description": "Distribution group"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Distribution to user"
+        }
+    ]
+}

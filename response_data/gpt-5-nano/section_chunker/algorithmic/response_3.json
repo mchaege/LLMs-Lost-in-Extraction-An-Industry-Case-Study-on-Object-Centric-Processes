@@ -1,0 +1,283 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document managed in DHC VISION",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Document version"
+                },
+                {
+                    "name": "language",
+                    "description": "Original language"
+                },
+                {
+                    "name": "status",
+                    "description": "Release status"
+                },
+                {
+                    "name": "validuntil",
+                    "description": "Validity end date"
+                },
+                {
+                    "name": "release",
+                    "description": "Release status"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment associated with a Document",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information associated with a Document",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to amend a Document",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "Type of change proposal"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the proposal"
+                },
+                {
+                    "name": "note",
+                    "description": "Notes within the proposal"
+                }
+            ]
+        },
+        {
+            "name": "translation",
+            "description": "Translated version of a Document",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "Target language"
+                },
+                {
+                    "name": "status",
+                    "description": "Release status"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "System user",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "User role"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users for authorizations and distribution",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Group name"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of recipients for distribution",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "List name"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new Document",
+            "attributes": []
+        },
+        {
+            "name": "attachobjecttodocument",
+            "description": "Attach an object (Attachment/AdditionalInfo/Equippment) to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfotodocument",
+            "description": "Attach Additional Information to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachequippmenttodocument",
+            "description": "Attach Equippment to a Document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review Document",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release Document",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Sign Document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate Document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend Validity of Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate Document",
+            "attributes": []
+        },
+        {
+            "name": "distributedocumentbyemail",
+            "description": "Distribute Document by Email",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledge Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment created for Document"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Equippment attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document associated with ChangeProposal"
+        },
+        {
+            "a": "document",
+            "b": "translation",
+            "description": "Document translated into Translation"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distributed to DistributionList"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Release/Review/Author actions performed by User on Document"
+        },
+        {
+            "a": "user",
+            "b": "changeproposal",
+            "description": "User creates ChangeProposal"
+        },
+        {
+            "a": "user",
+            "b": "translation",
+            "description": "User participates in Translation"
+        },
+        {
+            "a": "user",
+            "b": "acknowledgedocument",
+            "description": "User acknowledges Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Actor on Document for events such as Create/Release/Review"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document associated with ChangeProposal"
+        },
+        {
+            "a": "document",
+            "b": "translation",
+            "description": "Document translation relation"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment exists for Document"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Additional information attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Equipments attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distributed to DistributionList"
+        },
+        {
+            "a": "user",
+            "b": "changeproposal",
+            "description": "User responsible for ChangeProposal"
+        },
+        {
+            "a": "user",
+            "b": "translation",
+            "description": "User involved in Translation"
+        },
+        {
+            "a": "user",
+            "b": "acknowledgedocument",
+            "description": "User acknowledges Document"
+        }
+    ]
+}

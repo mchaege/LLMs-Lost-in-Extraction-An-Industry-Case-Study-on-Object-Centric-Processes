@@ -1,0 +1,243 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A controlled artifact subject to version management, release processes, and lifecycle management that can be policies, guidelines, procedural instructions, or work instructions",
+            "attributes": []
+        },
+        {
+            "name": "policy",
+            "description": "A company-wide regulation and process at strategic level",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "Regulations and instructions that document locally defined regulations or regulations relating to a business process",
+            "attributes": []
+        },
+        {
+            "name": "procedureinstruction",
+            "description": "Specific procedures within a framework that describe process sequences, details and responsible persons",
+            "attributes": []
+        },
+        {
+            "name": "workinstruction",
+            "description": "Detailed documentation of special work steps and sub-processes with forms and checklists",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document automatically released with the main document, subject to its own versioning and affecting the main document version",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "A document supplement not subject to the release cycle of the main document and not requiring formal approval",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "A planned amendment to an existing document managed without affecting content or version history",
+            "attributes": []
+        },
+        {
+            "name": "validityextensionrequest",
+            "description": "A system-generated request to check document validity after a defined period before expiration",
+            "attributes": []
+        },
+        {
+            "name": "overriderequest",
+            "description": "A request to invalidate and archive a document that no longer has validity",
+            "attributes": []
+        },
+        {
+            "name": "reactivationrequest",
+            "description": "A request to re-validate a previously invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "A person who interacts with the system in various roles",
+            "attributes": []
+        },
+        {
+            "name": "author",
+            "description": "A person responsible for creating and editing document content",
+            "attributes": []
+        },
+        {
+            "name": "coauthor",
+            "description": "A person with personal change rights in addition to the primary author",
+            "attributes": []
+        },
+        {
+            "name": "reviewer",
+            "description": "A person who checks document content according to technical and formal aspects",
+            "attributes": []
+        },
+        {
+            "name": "releaser",
+            "description": "A person responsible for deciding whether a document is released and distributed to readers",
+            "attributes": []
+        },
+        {
+            "name": "translator",
+            "description": "A person responsible for translating released document content into other languages",
+            "attributes": []
+        },
+        {
+            "name": "reader",
+            "description": "A person who can only view approved objects and documents",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "A collection of users assigned together for authorization and distribution purposes",
+            "attributes": []
+        },
+        {
+            "name": "authorizationgroup",
+            "description": "A defined group in the system for assigning read and change rights to documents",
+            "attributes": []
+        },
+        {
+            "name": "distributionlist",
+            "description": "A list of User Groups and persons assigned to receive document distribution",
+            "attributes": []
+        },
+        {
+            "name": "organizationalunit",
+            "description": "A structural entity that documents can be linked to",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "An entity that documents can be linked to",
+            "attributes": []
+        },
+        {
+            "name": "masterdata",
+            "description": "Reference data that documents can be automatically linked to",
+            "attributes": []
+        },
+        {
+            "name": "itapplication",
+            "description": "A software application that documents can be linked to",
+            "attributes": []
+        },
+        {
+            "name": "client",
+            "description": "A system entity for which document visibility can be specified in a multi-client system",
+            "attributes": []
+        }
+    ],
+    "evts": [],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Document can reference another document"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document contains one or more attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document can be supplemented with additional information"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Change proposal belongs to and is displayed in a document"
+        },
+        {
+            "a": "document",
+            "b": "validityextensionrequest",
+            "description": "Validity extension request is linked to a document for checking"
+        },
+        {
+            "a": "document",
+            "b": "overriderequest",
+            "description": "Override request is created for a selected document"
+        },
+        {
+            "a": "document",
+            "b": "reactivationrequest",
+            "description": "Reactivation request selects a document to be reactivated"
+        },
+        {
+            "a": "document",
+            "b": "organizationalunit",
+            "description": "Document can be linked to an organizational unit"
+        },
+        {
+            "a": "document",
+            "b": "risk",
+            "description": "Document can be linked to a risk"
+        },
+        {
+            "a": "document",
+            "b": "itapplication",
+            "description": "Document can be linked to an IT application"
+        },
+        {
+            "a": "document",
+            "b": "client",
+            "description": "Document visibility is specified per client"
+        },
+        {
+            "a": "policy",
+            "b": "document",
+            "description": "Policy is a type of document"
+        },
+        {
+            "a": "guideline",
+            "b": "document",
+            "description": "Guideline is a type of document"
+        },
+        {
+            "a": "procedureinstruction",
+            "b": "document",
+            "description": "Procedure instruction is a type of document"
+        },
+        {
+            "a": "workinstruction",
+            "b": "document",
+            "description": "Work instruction is a type of document"
+        },
+        {
+            "a": "attachment",
+            "b": "attachment",
+            "description": "Attachments can have versions"
+        },
+        {
+            "a": "usergroup",
+            "b": "user",
+            "description": "User group contains multiple users"
+        },
+        {
+            "a": "authorizationgroup",
+            "b": "usergroup",
+            "description": "Authorization groups are defined for assigning rights to user groups"
+        },
+        {
+            "a": "authorizationgroup",
+            "b": "user",
+            "description": "Authorization groups can assign rights to individual persons"
+        },
+        {
+            "a": "distributionlist",
+            "b": "usergroup",
+            "description": "Distribution list contains user groups"
+        },
+        {
+            "a": "distributionlist",
+            "b": "user",
+            "description": "Distribution list contains individual persons"
+        }
+    ],
+    "o2e": []
+}

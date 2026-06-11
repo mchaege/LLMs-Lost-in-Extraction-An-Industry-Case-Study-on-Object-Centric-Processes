@@ -1,0 +1,415 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in P&R Management; supports levels such as Policies, Guidelines, and Work Instructions; subject to versioning, release, attachments and workflow.",
+            "attributes": [
+                {
+                    "name": "doc_id",
+                    "description": "Unique document identifier"
+                },
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Document type (e.g., Policy, Guideline, Work Instruction)"
+                },
+                {
+                    "name": "version",
+                    "description": "Current version number"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status (e.g., editing, released)"
+                },
+                {
+                    "name": "language",
+                    "description": "Original language version"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Start of validity period"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "End of validity period"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment associated with a Document; can be an AdditionalInfo or Equippment; is released together with the main document in most cases.",
+            "attributes": [
+                {
+                    "name": "attachment_id",
+                    "description": "Unique attachment identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "attachment_type",
+                    "description": "Type of attachment (e.g., AdditionalInfo, Equippment)"
+                },
+                {
+                    "name": "created_on",
+                    "description": "Timestamp of creation"
+                },
+                {
+                    "name": "release_status",
+                    "description": "Release status of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information attached to a Document.",
+            "attributes": [
+                {
+                    "name": "info_id",
+                    "description": "Unique information identifier"
+                },
+                {
+                    "name": "description",
+                    "description": "Description of the additional information"
+                },
+                {
+                    "name": "created_on",
+                    "description": "Timestamp of creation"
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a Document; has its own versioning and is released together with the main document.",
+            "attributes": [
+                {
+                    "name": "equip_id",
+                    "description": "Unique equipment identifier"
+                },
+                {
+                    "name": "description",
+                    "description": "Description of equipment"
+                },
+                {
+                    "name": "version",
+                    "description": "Version of equipment"
+                },
+                {
+                    "name": "release_status",
+                    "description": "Release status"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to amend a Document's content; can be created and managed with its own lifecycle.",
+            "attributes": [
+                {
+                    "name": "proposal_id",
+                    "description": "Unique change proposal identifier"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the proposal"
+                },
+                {
+                    "name": "author",
+                    "description": "Creator of the proposal"
+                },
+                {
+                    "name": "created_on",
+                    "description": "Timestamp of creation"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document template used when creating new Documents; templates can be defined per document type.",
+            "attributes": [
+                {
+                    "name": "template_id",
+                    "description": "Unique template identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "Template name"
+                },
+                {
+                    "name": "format",
+                    "description": "Template file format (e.g., DOCX, XLSX)"
+                },
+                {
+                    "name": "applicable_document_type",
+                    "description": "Document types the template applies to"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new document in the system",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Document type"
+                },
+                {
+                    "name": "language",
+                    "description": "Original language"
+                }
+            ]
+        },
+        {
+            "name": "editdocument",
+            "description": "Modification of document content or metadata",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Identifier of the document"
+                },
+                {
+                    "name": "modified_fields",
+                    "description": "Fields changed"
+                }
+            ]
+        },
+        {
+            "name": "releasedocument",
+            "description": "Process of releasing a document after approvals",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Identifier of the document"
+                },
+                {
+                    "name": "release_version",
+                    "description": "Version after release"
+                }
+            ]
+        },
+        {
+            "name": "attachobject",
+            "description": "Attachment of an object to a Document (Attachment, AdditionalInfo, Equippment)",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Identifier of the document"
+                },
+                {
+                    "name": "object_id",
+                    "description": "Identifier of attached object"
+                },
+                {
+                    "name": "object_type",
+                    "description": "Type of attached object"
+                }
+            ]
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Creation of a change proposal for a document",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "proposal_id",
+                    "description": "Change proposal identifier"
+                }
+            ]
+        },
+        {
+            "name": "completechangeproposal",
+            "description": "Completion or resolution of a change proposal",
+            "attributes": [
+                {
+                    "name": "proposal_id",
+                    "description": "Change proposal identifier"
+                },
+                {
+                    "name": "status",
+                    "description": "Status of completion"
+                }
+            ]
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of a released document into another language",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "language",
+                    "description": "Target language"
+                }
+            ]
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution of document to readers via email or dashboard",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "distribution_type",
+                    "description": "Distribution method"
+                }
+            ]
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of previously invalidated document",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                }
+            ]
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Request to extend a document's validity period",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "new_valid_until",
+                    "description": "Proposed new end date"
+                }
+            ]
+        },
+        {
+            "name": "override",
+            "description": "Override process for a document ( AKS ) to discard from circulation",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "reason",
+                    "description": "Reason for override"
+                }
+            ]
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive (invalidate) a document and its attachments after expiry or for other reasons",
+            "attributes": [
+                {
+                    "name": "document_id",
+                    "description": "Document identifier"
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Archive duration"
+                }
+            ]
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has change proposals"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document has equippment"
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document uses template"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "CreateDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "editdocument",
+            "description": "EditDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "ReleaseDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "attachobject",
+            "description": "AttachObject involves Document"
+        },
+        {
+            "a": "document",
+            "b": "createchangeproposal",
+            "description": "CreateChangeProposal involves Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "completechangeproposal",
+            "description": "CompleteChangeProposal involves ChangeProposal"
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "TranslateDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "DistributeDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "ReactivateDocument involves Document"
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "ExtendValidity involves Document"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Override involves Document"
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "ArchiveDocument involves Document"
+        }
+    ]
+}

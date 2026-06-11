@@ -1,0 +1,275 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Document in P&R Management (Policy/Guideline/Procedural/Work Instruction)",
+            "attributes": []
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (Policy, Guidelines, Procedural Instructions, Work Instructions)",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Document template",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment that is part of a document (Equipment)",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposals for a document",
+            "attributes": []
+        },
+        {
+            "name": "aksrequest",
+            "description": "Override request to invalidate a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivationrequest",
+            "description": "Request to reactivate an invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "validityextensionrequest",
+            "description": "Request to extend a document's validity",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create new document with selected document type",
+            "attributes": []
+        },
+        {
+            "name": "attachadditionalinfo",
+            "description": "Attach AdditionalInfo to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachattachment",
+            "description": "Attach Attachment to a Document",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Edit document content or properties",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release a document after approval",
+            "attributes": []
+        },
+        {
+            "name": "newversioncreated",
+            "description": "Create a new version of a released document",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive a document (invalidate and archive)",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend validity period of a document (GüV)",
+            "attributes": []
+        },
+        {
+            "name": "overrideinitiated",
+            "description": "Initiate Override (AKS) process for a document",
+            "attributes": []
+        },
+        {
+            "name": "overridecompleted",
+            "description": "Complete Override (AKS) process for a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate a document after invalidation",
+            "attributes": []
+        },
+        {
+            "name": "reactivatecompleted",
+            "description": "Complete Reactivation process for a document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate released content into another language",
+            "attributes": []
+        },
+        {
+            "name": "releasetranslation",
+            "description": "Release translated content",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a Change Proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "implementchangeproposal",
+            "description": "Implement a Change Proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "extendvaliditycomplete",
+            "description": "Process complete for validity extension",
+            "attributes": []
+        },
+        {
+            "name": "akscheck",
+            "description": "Check/approval of AKS/Override",
+            "attributes": []
+        },
+        {
+            "name": "activatedistribution",
+            "description": "Distribution activated on release",
+            "attributes": []
+        },
+        {
+            "name": "adddocumenttemplate",
+            "description": "Template linked to DocumentType",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has type"
+        },
+        {
+            "a": "documenttype",
+            "b": "template",
+            "description": "DocumentType defines Templates"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Document created"
+        },
+        {
+            "a": "createdocument",
+            "b": "documenttype",
+            "description": "DocumentType referenced at creation"
+        },
+        {
+            "a": "attachadditionalinfo",
+            "b": "document",
+            "description": "AdditionalInfo attached to Document"
+        },
+        {
+            "a": "attachadditionalinfo",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo attached to Document (duplicate if needed)"
+        },
+        {
+            "a": "attachattachment",
+            "b": "document",
+            "description": "Attachment attached to Document"
+        },
+        {
+            "a": "attachattachment",
+            "b": "attachment",
+            "description": "Attachment attached to Document"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "Document edited"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Document released"
+        },
+        {
+            "a": "newversioncreated",
+            "b": "document",
+            "description": "New version of Document created"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extend validity for Document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "validityextensionrequest",
+            "description": "Validity extension request created/processed"
+        },
+        {
+            "a": "overrideinitiated",
+            "b": "document",
+            "description": "AKS initiated for Document"
+        },
+        {
+            "a": "overrideinitiated",
+            "b": "aksrequest",
+            "description": "AKS request created"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Reactivation of Document"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "reactivationrequest",
+            "description": "Reactivation request made"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Document translated"
+        },
+        {
+            "a": "releasetranslation",
+            "b": "document",
+            "description": "Translation released"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "Change proposal created for Document"
+        },
+        {
+            "a": "implementchangeproposal",
+            "b": "changeproposal",
+            "description": "Change proposal implemented"
+        },
+        {
+            "a": "akscheck",
+            "b": "aksrequest",
+            "description": "AKS check performed"
+        },
+        {
+            "a": "activatedistribution",
+            "b": "document",
+            "description": "Distribution activated on release"
+        },
+        {
+            "a": "adddocumenttemplate",
+            "b": "template",
+            "description": "Template linked to DocumentType"
+        }
+    ]
+}

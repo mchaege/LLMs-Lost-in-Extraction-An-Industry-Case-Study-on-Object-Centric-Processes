@@ -1,0 +1,310 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document within DHC VISION.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "An attachment to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional information attached to a Document or Attachment.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposed modification to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equippments",
+            "description": "Equipment-related information associated with a Document.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data to which a Document can be linked.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of Users Groups and Persons for distribution.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users for access control and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "reader",
+            "description": "User group assigned read access.",
+            "attributes": []
+        },
+        {
+            "name": "author",
+            "description": "User group assigned as author of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "co_author",
+            "description": "Additional author with edit rights.",
+            "attributes": []
+        },
+        {
+            "name": "reviewer",
+            "description": "User group assigned to review a Document.",
+            "attributes": []
+        },
+        {
+            "name": "releaser",
+            "description": "User group assigned to release a Document.",
+            "attributes": []
+        },
+        {
+            "name": "translator",
+            "description": "User who can translate released content.",
+            "attributes": []
+        },
+        {
+            "name": "language",
+            "description": "Language involved in translation.",
+            "attributes": []
+        },
+        {
+            "name": "version",
+            "description": "Version of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_group",
+            "description": "Archive-related user group.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Attachment of new information object and creation of Document.",
+            "attributes": []
+        },
+        {
+            "name": "attachment_upload",
+            "description": "External files or documents uploaded.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of document content or properties.",
+            "attributes": []
+        },
+        {
+            "name": "versioning",
+            "description": "Version created when content or attachments change.",
+            "attributes": []
+        },
+        {
+            "name": "release",
+            "description": "Process of releasing a document to readers.",
+            "attributes": []
+        },
+        {
+            "name": "validation",
+            "description": "Validation step in the release process.",
+            "attributes": []
+        },
+        {
+            "name": "check",
+            "description": "Check of validity extension or other checks.",
+            "attributes": []
+        },
+        {
+            "name": "review",
+            "description": "Review step in the release process.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process for AKS override.",
+            "attributes": []
+        },
+        {
+            "name": "archiving",
+            "description": "Archiving of documents or attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivation",
+            "description": "Reactivation process of invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Email distribution of a document.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Acknowledgement workflow action.",
+            "attributes": []
+        },
+        {
+            "name": "signature",
+            "description": "Electronic signature captured for workflow.",
+            "attributes": []
+        },
+        {
+            "name": "translate",
+            "description": "Translation of released documents.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extension of document validity period.",
+            "attributes": []
+        },
+        {
+            "name": "translate_validation",
+            "description": "Validation of translated documents.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "has Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "has Change Proposals"
+        },
+        {
+            "a": "document",
+            "b": "equippments",
+            "description": "has Equippments"
+        },
+        {
+            "a": "document",
+            "b": "master_data",
+            "description": "references Master Data"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "has Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "version",
+            "description": "has Version"
+        },
+        {
+            "a": "document",
+            "b": "archive_group",
+            "description": "assigned Archive Group"
+        },
+        {
+            "a": "distribution_list",
+            "b": "user_group",
+            "description": "contains User Groups"
+        },
+        {
+            "a": "user_group",
+            "b": "reader",
+            "description": "includes Readers"
+        },
+        {
+            "a": "user_group",
+            "b": "author",
+            "description": "includes Authors"
+        },
+        {
+            "a": "user_group",
+            "b": "co_author",
+            "description": "includes Co-authors"
+        },
+        {
+            "a": "user_group",
+            "b": "reviewer",
+            "description": "includes Reviewers"
+        },
+        {
+            "a": "user_group",
+            "b": "releaser",
+            "description": "includes Releasers"
+        },
+        {
+            "a": "user_group",
+            "b": "translator",
+            "description": "includes Translators"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "attachment_upload",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "release",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "validation",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "review",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "archiving",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "reactivation",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "distribute_by_email",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "triggers"
+        },
+        {
+            "a": "document",
+            "b": "translate",
+            "description": "triggers"
+        }
+    ]
+}

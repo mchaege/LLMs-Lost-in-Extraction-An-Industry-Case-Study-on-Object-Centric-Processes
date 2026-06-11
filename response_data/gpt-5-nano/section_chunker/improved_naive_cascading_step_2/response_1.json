@@ -1,0 +1,409 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in P&R management with properties and relations",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "References to other documents, master data or external sources"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Related IT applications (as master data)"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies relevant to the document's scope"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Scope or entities for which the document is valid"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Type classification of the document"
+                },
+                {
+                    "name": "document_template",
+                    "description": "Template used when creating new documents"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "File or object attached to a document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent document to which the attachment is linked"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment associated with a document, with its own versioning",
+            "attributes": [
+                {
+                    "name": "versioning",
+                    "description": "Has its own versioning independent of main document"
+                },
+                {
+                    "name": "status",
+                    "description": "Follows the release process statuses of the main document"
+                }
+            ]
+        },
+        {
+            "name": "information_object",
+            "description": "Generic information object that can be attached",
+            "attributes": []
+        },
+        {
+            "name": "document_type",
+            "description": "Classification of documents with its own templates",
+            "attributes": [
+                {
+                    "name": "templates",
+                    "description": "Document Templates associated with this document type"
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template used for document creation",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data linked to documents (e.g., IT applications)",
+            "attributes": [
+                {
+                    "name": "it_applications",
+                    "description": "Examples of master data such as IT applications"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Editing of a Document",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release of a Document",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of a Document",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Convert the current version of a Document to PDF",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attach an Information Object to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_attachment",
+            "description": "Attach an Attachment to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attach Equipment to a Document",
+            "attributes": []
+        },
+        {
+            "name": "link_document_to_master_data",
+            "description": "Link a Document to Master Data",
+            "attributes": []
+        },
+        {
+            "name": "assign_document_type",
+            "description": "Assign a Document Type to a Document",
+            "attributes": []
+        },
+        {
+            "name": "define_document_type",
+            "description": "Define a Document Type (including its templates)",
+            "attributes": []
+        },
+        {
+            "name": "define_document_template",
+            "description": "Define a Document Template",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a Document",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a Document",
+            "attributes": []
+        },
+        {
+            "name": "check_validity_extension",
+            "description": "Check and process a validity extension",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override the validity or status of a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an archived or invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_by_email",
+            "description": "Distribute a Document by email to distribution list",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_for_acknowledgement",
+            "description": "Distribute a Document for acknowledgement",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_document",
+            "description": "Acknowledge a Document",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate a released Document into another language",
+            "attributes": []
+        },
+        {
+            "name": "check_translation",
+            "description": "Check a translated Document",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Release a translated Document",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "review_change_proposal",
+            "description": "Review a Change Proposal",
+            "attributes": []
+        },
+        {
+            "name": "approve_change_proposal",
+            "description": "Approve a Change Proposal",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Apply an electronic signature to a Document",
+            "attributes": []
+        },
+        {
+            "name": "signatures_documentation",
+            "description": "Document signatures for released versions",
+            "attributes": []
+        },
+        {
+            "name": "create_document_version",
+            "description": "Create a new version of a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment attached to a Document"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Information Object attached to a Document"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment associated with a Document"
+        },
+        {
+            "a": "document",
+            "b": "master_data",
+            "description": "Master Data linked to a Document"
+        },
+        {
+            "a": "document_type",
+            "b": "document_template",
+            "description": "Document Templates associated with Document Type"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment belongs to a Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Creation of a Document"
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Editing a Document"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Releasing a Document"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Archiving a Document"
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "PDF conversion"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Attach an Information Object to a Document"
+        },
+        {
+            "a": "document",
+            "b": "attach_attachment",
+            "description": "Attach an Attachment to a Document"
+        },
+        {
+            "a": "document",
+            "b": "attach_equipment",
+            "description": "Attach Equipment to a Document"
+        },
+        {
+            "a": "document",
+            "b": "link_document_to_master_data",
+            "description": "Link a Document to Master Data"
+        },
+        {
+            "a": "document_type",
+            "b": "define_document_type",
+            "description": "Definition of a Document Type"
+        },
+        {
+            "a": "document_type",
+            "b": "define_document_template",
+            "description": "Document Templates associated with a Document Type"
+        },
+        {
+            "a": "document",
+            "b": "assign_document_type",
+            "description": "Document Type assigned to a Document"
+        },
+        {
+            "a": "document",
+            "b": "create_version",
+            "description": "Create a new version"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Extend Validity process"
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Override document validity or status"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Reactivate a Document"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document_by_email",
+            "description": "Distribute by Email"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document_for_acknowledgement",
+            "description": "Distribute for Acknowledgement"
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_document",
+            "description": "Acknowledge a Document"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Translate a Document"
+        },
+        {
+            "a": "document",
+            "b": "check_translation",
+            "description": "Check Translation"
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Release Translation"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Create Change Proposal"
+        },
+        {
+            "a": "document",
+            "b": "review_change_proposal",
+            "description": "Review Change Proposal"
+        },
+        {
+            "a": "document",
+            "b": "approve_change_proposal",
+            "description": "Approve Change Proposal"
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Sign Document"
+        },
+        {
+            "a": "document",
+            "b": "create_document_version",
+            "description": "Create Document Version"
+        }
+    ]
+}

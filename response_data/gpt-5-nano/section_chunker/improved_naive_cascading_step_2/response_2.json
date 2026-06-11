@@ -1,0 +1,392 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing a policy, guideline, instruction or other document managed in DHC VISION.",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "References to other documents or information; maintained via document properties."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Master data attribute linking to IT applications."
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies or organizational units relevant to the document."
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Geographic or organizational areas where the document is valid."
+                },
+                {
+                    "name": "reader",
+                    "description": "Readers who have view permissions for the document and dependent objects."
+                },
+                {
+                    "name": "author",
+                    "description": "Primary author(s) of the document."
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional authors with editing rights; not necessarily signing in release workflow."
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Individuals responsible for technical and formal checks during review."
+                },
+                {
+                    "name": "releaser",
+                    "description": "Individuals responsible for releasing the document."
+                },
+                {
+                    "name": "creator",
+                    "description": "Initial creator of the document; can be changed."
+                },
+                {
+                    "name": "distribution_list",
+                    "description": "List of groups or users for distribution and acknowledgement."
+                },
+                {
+                    "name": "document_type",
+                    "description": "Type of document (e.g., policy, guideline, work instruction)."
+                },
+                {
+                    "name": "template",
+                    "description": "Document template(s) used for this document type."
+                },
+                {
+                    "name": "version",
+                    "description": "Current version identifier; part of versioning and revision."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status in the workflow (e.g., editing, released)."
+                },
+                {
+                    "name": "scope",
+                    "description": "Scope(s) associated with the document; used by TAG technology."
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A document attachment that is linked to a parent document; treated as a separate controlled object.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent document to which this attachment belongs."
+                }
+            ]
+        },
+        {
+            "name": "additional_info",
+            "description": "Supplementary information added to a document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent document."
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Additional equipment attached to a document; subject to its own versioning.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Parent document."
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to a document; managed within the document cockpit.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Underlying document this change proposal refers to."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the change proposal."
+                },
+                {
+                    "name": "proposer",
+                    "description": "Author who created the change proposal."
+                },
+                {
+                    "name": "change_content",
+                    "description": "Text describing the proposed changes."
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New documents are created in the system by attaching a new information object, with selection of the corresponding document type.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Subsequent changes to the content or properties are possible; versioning and revision apply.",
+            "attributes": []
+        },
+        {
+            "name": "attach_object_to_document",
+            "description": "Attachment of a new information object to a document (e.g., attachments, additional info, equippment, or change proposals).",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "All documents can have a Change Proposal created; Change proposals are managed in the Cockpit.",
+            "attributes": []
+        },
+        {
+            "name": "manage_change_proposals",
+            "description": "Change proposals can be created and managed; includes the Change proposals folder.",
+            "attributes": []
+        },
+        {
+            "name": "submit_change_proposal",
+            "description": "Submit change proposals for consideration in the workflow.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "A reviewer checks the document for technical and formal aspects; multiple reviewers may be involved.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "The 3-step release process (Creator - Review - Release) is started to publish a document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of released documents into another language; translation can be viewed and edited per language.",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "The translated version must be checked and released with workflow support; only released translations are visible to readers.",
+            "attributes": []
+        },
+        {
+            "name": "assign_reviewers",
+            "description": "Assign reviewers to a document for technical and formal checks.",
+            "attributes": []
+        },
+        {
+            "name": "assign_releasers",
+            "description": "Assign releasers to a document for releasing content.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check and extend document validity before expiry; includes notifying authors, co-authors and reviewers.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) for a document; the process decides invalidation and archiving.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "To invalidate documents; creates AKS and starts an override process.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation process to re-validate invalidated documents.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of documents to user groups and individuals; can trigger email distribution.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Inform distribution groups and individuals by email when a new version is released.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_document",
+            "description": "Acknowledgement workflow where recipients confirm receipt and acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "translate_approval",
+            "description": "Approval process for translated documents (translation requires release).",
+            "attributes": []
+        },
+        {
+            "name": "create_reactivation_request",
+            "description": "Create a request for reactivation for a previously invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "override_release_check",
+            "description": "The AKS check performed by releaser as part of Override workflow.",
+            "attributes": []
+        },
+        {
+            "name": "publish_signatures",
+            "description": "Electronic signatures are collected and documented for released versions.",
+            "attributes": []
+        },
+        {
+            "name": "print_signatures",
+            "description": "Signatures can be printed with the document content.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment is linked to a Document."
+        },
+        {
+            "a": "document",
+            "b": "additional_info",
+            "description": "Additional information associated with a Document."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Equippment attached to a Document."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change proposals associated with a Document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "edit_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "attach_object_to_document",
+            "description": "Event affects Document and the attached object."
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "manage_change_proposals",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "submit_change_proposal",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "assign_reviewers",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "assign_releasers",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "distribute_by_email",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "acknowledge_document",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "translate_approval",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "create_reactivation_request",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "override_release_check",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "publish_signatures",
+            "description": "Event affects Document."
+        },
+        {
+            "a": "document",
+            "b": "print_signatures",
+            "description": "Event affects Document."
+        }
+    ]
+}

@@ -1,0 +1,281 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A managed document that contains content, metadata, and goes through a release lifecycle from creation to archiving",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Document type abbreviation identifier"
+                },
+                {
+                    "name": "number",
+                    "description": "Consecutive number assigned to the document"
+                },
+                {
+                    "name": "type",
+                    "description": "Classification of the document (Policy, Guideline, Work Instruction, Procedural Instruction)"
+                },
+                {
+                    "name": "template",
+                    "description": "Selected template for document creation"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status in the lifecycle (Editing, Released, Out of Force, Archived)"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "content",
+                    "description": "Main textual and formatted content of the document"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date from which the document is valid"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date until which the document is valid"
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Time period after which validity must be checked"
+                },
+                {
+                    "name": "author",
+                    "description": "Primary creator and signer of the document"
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional persons with change rights on the document"
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person who checks technical and formal aspects"
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person responsible for approving and publishing the document"
+                },
+                {
+                    "name": "translator",
+                    "description": "Person who translates the document to another language"
+                },
+                {
+                    "name": "reader_group",
+                    "description": "User groups with read access to the document"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other referenced documents"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Associated IT applications relevant to the document"
+                },
+                {
+                    "name": "company",
+                    "description": "Company associated with document validity"
+                },
+                {
+                    "name": "area_of_validity",
+                    "description": "Organizational areas where document is valid"
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Period document is kept before physical deletion"
+                },
+                {
+                    "name": "language_version",
+                    "description": "Language in which document is available"
+                },
+                {
+                    "name": "original_language",
+                    "description": "Primary language of document content"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled supplementary document subject to the release cycle of the main document",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Attachment content"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the attachment"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status following main document release process"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Validity date synchronized with main document"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary non-critical information not subject to the release cycle of the main document",
+            "attributes": [
+                {
+                    "name": "content",
+                    "description": "Content of the additional information"
+                },
+                {
+                    "name": "published",
+                    "description": "Publication status"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "Planned amendment to an existing document without affecting version history",
+            "attributes": [
+                {
+                    "name": "author",
+                    "description": "Creator of the change proposal"
+                },
+                {
+                    "name": "status",
+                    "description": "Processing status of the proposal"
+                },
+                {
+                    "name": "scheduled_implementation",
+                    "description": "Whether the proposal is scheduled for implementation"
+                }
+            ]
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "System-generated request to check if a document remains valid after its validity period expires",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Associated document being checked"
+                },
+                {
+                    "name": "status",
+                    "description": "Processing status of the request"
+                }
+            ]
+        },
+        {
+            "name": "override_request",
+            "description": "Request to invalidate and archive a document that no longer has validity",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document to be invalidated"
+                },
+                {
+                    "name": "initiator",
+                    "description": "Person creating the override request"
+                },
+                {
+                    "name": "status",
+                    "description": "Processing status of the request"
+                }
+            ]
+        },
+        {
+            "name": "reactivation_request",
+            "description": "Request to re-validate and restore an archived document",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Document to be reactivated"
+                },
+                {
+                    "name": "initiator",
+                    "description": "Person creating the reactivation request"
+                },
+                {
+                    "name": "status",
+                    "description": "Processing status of the request"
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "User groups and persons assigned to receive document notifications or acknowledgements",
+            "attributes": [
+                {
+                    "name": "user_group",
+                    "description": "Group of users included in distribution"
+                },
+                {
+                    "name": "person",
+                    "description": "Individual person included in distribution"
+                },
+                {
+                    "name": "distribution_by_email",
+                    "description": "Whether users receive email notification on release"
+                },
+                {
+                    "name": "distribution_for_acknowledgement",
+                    "description": "Whether users must actively confirm receipt"
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "Collection of users with shared roles and permissions",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Identifier for the user group"
+                },
+                {
+                    "name": "role",
+                    "description": "System role assigned (Reader, Author, Reviewer, Releaser, Translator, Archive)"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Individual system user with assigned permissions and roles",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "User identifier"
+                },
+                {
+                    "name": "role",
+                    "description": "Assigned system role"
+                },
+                {
+                    "name": "permissions",
+                    "description": "Access rights to documents and functions"
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "Electronic signature applied by workflow participants",
+            "attributes": [
+                {
+                    "name": "participant",
+                    "description": "Person who applied the signature"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "Date and time of signature"
+                },
+                {
+                    "name": "workflow_step",
+                    "description": "Step in which signature was applied (Creator, Review, Release)"
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

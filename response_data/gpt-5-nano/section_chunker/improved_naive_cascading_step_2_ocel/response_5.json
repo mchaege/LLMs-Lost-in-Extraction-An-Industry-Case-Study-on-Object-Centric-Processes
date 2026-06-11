@@ -1,0 +1,211 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in DHC VISION with properties and metadata.",
+            "attributes": [
+                {
+                    "name": "references",
+                    "description": "Links to external references or related data"
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Linked master data about IT applications"
+                },
+                {
+                    "name": "relevant_companies",
+                    "description": "Companies related to validity or scope"
+                },
+                {
+                    "name": "areas_of_validity",
+                    "description": "Geographic or organizational validity scope"
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Classification of documents such as policies, guidelines, procedural instructions, work instructions.",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Type abbreviations for common document types"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document templates associated with document types.",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment of documents or information objects to documents.",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Supplementary information attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Document attachment that is not subject to the release cycle of the main document.",
+            "attributes": []
+        },
+        {
+            "name": "master_data",
+            "description": "Master data linked to documents.",
+            "attributes": []
+        },
+        {
+            "name": "it_applications",
+            "description": "Examples of master data such as IT applications.",
+            "attributes": []
+        },
+        {
+            "name": "process",
+            "description": "Process objects used in process management.",
+            "attributes": []
+        },
+        {
+            "name": "organizational_unit",
+            "description": "Units within the organization related to documents.",
+            "attributes": []
+        },
+        {
+            "name": "risk",
+            "description": "Risks linked to documents.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "document_created",
+            "description": "New Document created via attachment of a new information object.",
+            "attributes": []
+        },
+        {
+            "name": "attachment_of_new_information_object",
+            "description": "Attachment of a new information object to a document.",
+            "attributes": []
+        },
+        {
+            "name": "version_created",
+            "description": "Creation of a new version for a document.",
+            "attributes": []
+        },
+        {
+            "name": "release_process_initiated",
+            "description": "Start of the release workflow for a document.",
+            "attributes": []
+        },
+        {
+            "name": "document_published",
+            "description": "Document published after release.",
+            "attributes": []
+        },
+        {
+            "name": "document_archived",
+            "description": "Document archived after invalidation or end of life cycle.",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_initiated",
+            "description": "Initiation of a reactivation workflow for an invalidated document.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_by_email",
+            "description": "Distribution by email performed for a document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal_created",
+            "description": "Change proposal created for a document.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal_completed",
+            "description": "Change proposal completed and applied to the document.",
+            "attributes": []
+        },
+        {
+            "name": "override_initiated",
+            "description": "Override process initiated for a document.",
+            "attributes": []
+        },
+        {
+            "name": "override_completed",
+            "description": "Override process completed for a document.",
+            "attributes": []
+        },
+        {
+            "name": "translation_released",
+            "description": "Translation released for a document.",
+            "attributes": []
+        },
+        {
+            "name": "electronic_signature_completed",
+            "description": "All required electronic signatures completed for a released version.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "Documents are classified by a Document Type."
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Documents can use Templates defined for their type."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Documents can have Attachments."
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Documents can have Additional Information."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Documents can have Equippments."
+        },
+        {
+            "a": "document",
+            "b": "master_data",
+            "description": "Documents linked to Master Data."
+        },
+        {
+            "a": "document",
+            "b": "it_applications",
+            "description": "Documents linked to IT Applications."
+        },
+        {
+            "a": "document",
+            "b": "process",
+            "description": "Documents linked to Processes."
+        },
+        {
+            "a": "document",
+            "b": "organizational_unit",
+            "description": "Documents related to Organizational Units."
+        },
+        {
+            "a": "document",
+            "b": "risk",
+            "description": "Documents linked to Risks."
+        },
+        {
+            "a": "document",
+            "b": "document",
+            "description": "Documents related to other documents."
+        }
+    ],
+    "o2e": []
+}

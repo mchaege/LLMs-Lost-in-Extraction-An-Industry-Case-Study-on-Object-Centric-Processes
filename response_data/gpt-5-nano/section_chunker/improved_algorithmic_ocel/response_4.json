@@ -1,0 +1,276 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central document entity representing policies, guidelines, and work instructions; associated with attributes such as abbreviation, consecutive number, and references.",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Document abbreviation"
+                },
+                {
+                    "name": "consecutivenumber",
+                    "description": "Assignment of the consecutive number to the document"
+                },
+                {
+                    "name": "references",
+                    "description": "References related to the document"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "IT applications related to the document"
+                },
+                {
+                    "name": "relevantcompanies",
+                    "description": "Relevant companies or areas of validity associated with the document"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment object associated with a document (a type of object that can be attached to a document).",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document; documented with the document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment related to a document; can be attached as part of document information.",
+            "attributes": []
+        },
+        {
+            "name": "informationobject",
+            "description": "General information object that can be attached to a document.",
+            "attributes": []
+        },
+        {
+            "name": "distributionlist",
+            "description": "List or grouping of recipients for distribution of the document.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Change proposals associated with a document; managed in the cockpit.",
+            "attributes": []
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users for access control and distribution roles.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Individual user in the system.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "New document created in the system",
+            "attributes": []
+        },
+        {
+            "name": "editdocument",
+            "description": "Existing document edited",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Document release process initiated or completed",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Document reviewed for content and form",
+            "attributes": []
+        },
+        {
+            "name": "approvedocument",
+            "description": "Document approved for release",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Document translation performed and language version released",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "InformationObject attached to a Document or to provide additional information to a document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Creation of a ChangeProposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) processing for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archiving of a Document and its Attachments",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution of a Document to recipients or groups",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronic signatures applied to the Document",
+            "attributes": []
+        },
+        {
+            "name": "converttopdf",
+            "description": "Document converted to PDF after release",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "New version created for a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distribution to distribution lists"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document can be supplemented with Equipment"
+        },
+        {
+            "a": "document",
+            "b": "informationobject",
+            "description": "Document has information object attachments"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document associated with change proposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Creation of document"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "Editing of document"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Release of document"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "Review of document"
+        },
+        {
+            "a": "approvedocument",
+            "b": "document",
+            "description": "Approval of document"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Translation of document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "informationobject",
+            "description": "Attach information object"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "Attachment of information object to document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "changeproposal",
+            "description": "Create change proposal"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "Change proposal associated with document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extend validity of document"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Override document"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Reactivate document"
+        },
+        {
+            "a": "archivedocument",
+            "b": "document",
+            "description": "Archive document"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Distribute document"
+        },
+        {
+            "a": "signdocument",
+            "b": "document",
+            "description": "Sign document"
+        },
+        {
+            "a": "converttopdf",
+            "b": "document",
+            "description": "Convert document to PDF"
+        },
+        {
+            "a": "createversion",
+            "b": "document",
+            "description": "Create a new version of the document"
+        }
+    ]
+}

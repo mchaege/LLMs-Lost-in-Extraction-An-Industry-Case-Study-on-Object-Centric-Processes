@@ -1,0 +1,323 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Main document in the system, subject to lifecycle processes such as release, review, and versioning.",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version identifier"
+                },
+                {
+                    "name": "language",
+                    "description": "Original language of the document"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status (e.g., editing, released)"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g., Policy, Guideline, Work Instruction).",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document type name"
+                },
+                {
+                    "name": "abbrev",
+                    "description": "Document type abbreviation"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "External or internal file linked to a Document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "type",
+                    "description": "Attachment type"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information attached to a Document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Additional information name"
+                },
+                {
+                    "name": "type",
+                    "description": "Information type"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment linked to a Document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "model",
+                    "description": "Equipment model"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of Groups/Users designated to receive distributions for a Document.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Distribution list name"
+                },
+                {
+                    "name": "members",
+                    "description": "Members of the distribution list"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users/roles used for access control and distribution.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Group name"
+                },
+                {
+                    "name": "type",
+                    "description": "Group type/role"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Individual user in the system.",
+            "attributes": [
+                {
+                    "name": "userid",
+                    "description": "User identifier"
+                },
+                {
+                    "name": "name",
+                    "description": "User name"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a Document before applying changes.",
+            "attributes": [
+                {
+                    "name": "proposalid",
+                    "description": "Change proposal identifier"
+                },
+                {
+                    "name": "documentid",
+                    "description": "Related Document identifier"
+                },
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create a new Document in the system with initial attributes.",
+            "attributes": []
+        },
+        {
+            "name": "attachdocument",
+            "description": "Attach an object (Attachment) to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release a Document to make it available to Readers.",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review the content of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "approverelease",
+            "description": "Approve the Release of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override (AKS) a Document due to invalidity.",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated Document.",
+            "attributes": []
+        },
+        {
+            "name": "invalidatedocument",
+            "description": "Invalidate a Document (invalidate and archive).",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released Document into another language.",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "implementchangeproposal",
+            "description": "Implement a Change Proposal, producing a new Document version.",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a Document to recipients (email or distribution list).",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgedistribution",
+            "description": "Acknowledge the Distribution, optionally via workflow.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has a type."
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document distribution is defined by DistributionList."
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment linked to Document."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "AdditionalInfo linked to Document."
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Equipment linked to Document."
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has ChangeProposals."
+        },
+        {
+            "a": "distributionlist",
+            "b": "usergroup",
+            "description": "DistributionList includes UserGroups."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "Document is created by CreateDocument."
+        },
+        {
+            "a": "document",
+            "b": "attachdocument",
+            "description": "Attachment is added to Document."
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "Document is released."
+        },
+        {
+            "a": "document",
+            "b": "reviewdocument",
+            "description": "Document is reviewed."
+        },
+        {
+            "a": "document",
+            "b": "approverelease",
+            "description": "Document release approved."
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "Document validity extended."
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "Document override performed."
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "Document reactivated."
+        },
+        {
+            "a": "document",
+            "b": "invalidatedocument",
+            "description": "Document invalidated."
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "Document translated."
+        },
+        {
+            "a": "document",
+            "b": "createchangeproposal",
+            "description": "Change proposal created for Document."
+        },
+        {
+            "a": "document",
+            "b": "implementchangeproposal",
+            "description": "Change proposal implemented for Document."
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "Document distributed."
+        },
+        {
+            "a": "document",
+            "b": "acknowledgedistribution",
+            "description": "Distribution acknowledged for Document."
+        }
+    ]
+}

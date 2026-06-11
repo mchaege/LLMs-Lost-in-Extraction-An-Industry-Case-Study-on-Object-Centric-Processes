@@ -1,0 +1,180 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing documents in P&R Management.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Object representing attachments or additional information associated with a Document.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Actor interacting with documents in the release and management workflows.",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Grouping of Users for access control and distribution.",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of Users or User Groups maintained for document distribution / acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "document_template",
+            "description": "Template used when creating new documents.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal object for making changes to a Document.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "New document is created in the system by attaching a new information object.",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Information Object is attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document is distributed after approval.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Document is reviewed for technical and formal aspects.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Change Proposals are created for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Check and extend the validity period of a document.",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Process to invalidate or override a document and its attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Archived or invalidated documents are reactivated.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Invalidated or overridden documents are archived.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language.",
+            "attributes": []
+        },
+        {
+            "name": "create_new_version",
+            "description": "New version of a document is created.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution to Distribution Lists or User Groups.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document attached with Information Object"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document distributed to Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "document_template",
+            "description": "Document associated with Document Template"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Document created"
+        },
+        {
+            "a": "document",
+            "b": "attach_information_object",
+            "description": "Information Object attached to Document"
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Document released"
+        },
+        {
+            "a": "document",
+            "b": "review_document",
+            "description": "Document reviewed"
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Document translated"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Document validity extended"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Document override"
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Document reactivated"
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Document archived"
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Change Proposals created for Document"
+        },
+        {
+            "a": "document",
+            "b": "create_new_version",
+            "description": "New version created for Document"
+        },
+        {
+            "a": "document",
+            "b": "distribute_document",
+            "description": "Document distributed"
+        }
+    ]
+}

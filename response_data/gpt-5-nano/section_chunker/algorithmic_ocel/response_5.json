@@ -1,0 +1,406 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core object representing a P&R document in the system",
+            "attributes": [
+                {
+                    "name": "version",
+                    "description": "Current version number"
+                },
+                {
+                    "name": "status",
+                    "description": "Current state (e.g., editing, released, archived)"
+                },
+                {
+                    "name": "language",
+                    "description": "Document language"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Start of validity period"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "End of validity period"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Type of document (e.g., Policy, Guideline, Work Instruction)"
+                },
+                {
+                    "name": "template",
+                    "description": "Template applied when creating content"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Document type name"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation for type"
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Template used for documents",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                },
+                {
+                    "name": "path",
+                    "description": "Template path or reference"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment tied to a document",
+            "attributes": [
+                {
+                    "name": "release_cycle",
+                    "description": "Release cycle for attachment"
+                },
+                {
+                    "name": "archived",
+                    "description": "Archived flag"
+                },
+                {
+                    "name": "associated_document",
+                    "description": "Document this attachment belongs to"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document",
+            "attributes": [
+                {
+                    "name": "type",
+                    "description": "Type/category"
+                },
+                {
+                    "name": "content",
+                    "description": "Information content"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached as part of document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "type",
+                    "description": "Equipment type"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal for changes to a document",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Proposal status"
+                },
+                {
+                    "name": "author",
+                    "description": "Author of change proposal"
+                },
+                {
+                    "name": "created_on",
+                    "description": "Creation timestamp"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "Distribution list for a document",
+            "attributes": [
+                {
+                    "name": "groups",
+                    "description": "List of groups assigned"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Group name"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Individual user",
+            "attributes": [
+                {
+                    "name": "username",
+                    "description": "User identifier"
+                }
+            ]
+        },
+        {
+            "name": "translation",
+            "description": "Translation of a document into a language",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "Target language code"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creation of a new document",
+            "attributes": []
+        },
+        {
+            "name": "attachinformation",
+            "description": "Attachment of information to a document",
+            "attributes": []
+        },
+        {
+            "name": "editdocumentcontent",
+            "description": "Editing document content",
+            "attributes": []
+        },
+        {
+            "name": "converttopdf",
+            "description": "Automatic conversion to PDF after save",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release step in workflow",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review step in workflow",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronic signature of document",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translation of released documents",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend validity of document",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override / AKS process",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivation of invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archiving of invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribution of document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a change proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "reviewchangeproposal",
+            "description": "Review a change proposal",
+            "attributes": []
+        },
+        {
+            "name": "approvechangeproposal",
+            "description": "Approve a change proposal",
+            "attributes": []
+        },
+        {
+            "name": "createnewversion",
+            "description": "Create a new version of a document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has type"
+        },
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document has template"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has equipment"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document has distribution list"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document has change proposals"
+        },
+        {
+            "a": "document",
+            "b": "translation",
+            "description": "Document has translations"
+        },
+        {
+            "a": "distributionlist",
+            "b": "usergroup",
+            "description": "Distribution list contains user groups"
+        },
+        {
+            "a": "distributionlist",
+            "b": "user",
+            "description": "Distribution list contains users"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment belongs to Document"
+        },
+        {
+            "a": "additionalinfo",
+            "b": "document",
+            "description": "AdditionalInfo belongs to Document"
+        },
+        {
+            "a": "equipment",
+            "b": "document",
+            "description": "Equipment belongs to Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "document",
+            "description": "ChangeProposal relates to Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "createdocument",
+            "description": "Creation of a document"
+        },
+        {
+            "a": "document",
+            "b": "releasedocument",
+            "description": "Release of a document"
+        },
+        {
+            "a": "document",
+            "b": "reviewdocument",
+            "description": "Review of a document"
+        },
+        {
+            "a": "document",
+            "b": "translatedocument",
+            "description": "Translate a document"
+        },
+        {
+            "a": "document",
+            "b": "extendvalidity",
+            "description": "Extend validity of a document"
+        },
+        {
+            "a": "document",
+            "b": "overridedocument",
+            "description": "Override of a document"
+        },
+        {
+            "a": "document",
+            "b": "reactivatedocument",
+            "description": "Reactivate of a document"
+        },
+        {
+            "a": "document",
+            "b": "archivedocument",
+            "description": "Archive of a document"
+        },
+        {
+            "a": "document",
+            "b": "distributedocument",
+            "description": "Distribute a document"
+        },
+        {
+            "a": "document",
+            "b": "createchangeproposal",
+            "description": "Create change proposal for a document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "reviewchangeproposal",
+            "description": "Review change proposal"
+        },
+        {
+            "a": "changeproposal",
+            "b": "approvechangeproposal",
+            "description": "Approve change proposal"
+        },
+        {
+            "a": "attachment",
+            "b": "attachinformation",
+            "description": "Attach information to document"
+        },
+        {
+            "a": "additionalinfo",
+            "b": "attachinformation",
+            "description": "Attach additional info to document"
+        },
+        {
+            "a": "equipment",
+            "b": "attachinformation",
+            "description": "Attach equipment to document"
+        }
+    ]
+}

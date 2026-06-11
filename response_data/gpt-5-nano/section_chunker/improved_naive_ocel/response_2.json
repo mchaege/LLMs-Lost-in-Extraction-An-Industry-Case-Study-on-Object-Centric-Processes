@@ -1,0 +1,231 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central artifact managed in DHC VISION",
+            "attributes": [
+                {
+                    "name": "consecutive_number",
+                    "description": "Consecutive number for a document"
+                },
+                {
+                    "name": "references",
+                    "description": "References for linking to Master data, processes, etc."
+                },
+                {
+                    "name": "it_applications",
+                    "description": "Relevant IT applications"
+                },
+                {
+                    "name": "relevant_companies_or_areas_of_validity",
+                    "description": "Areas of validity or applicable companies"
+                },
+                {
+                    "name": "document_type",
+                    "description": "Link to the Document Type"
+                }
+            ]
+        },
+        {
+            "name": "document_type",
+            "description": "Classification of documents with associated templates and abbreviations",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation for this document type"
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "Template that can be selected for a Document Type",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment of a document; attachments are automatically released with the main document",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Information Object attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "additional_information",
+            "description": "Additional information that can be attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of users and groups for distribution and acknowledgement",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposal for changes to Documents",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attachment",
+            "description": "Attachment of a new information object to the Document",
+            "attributes": []
+        },
+        {
+            "name": "release",
+            "description": "Document release process",
+            "attributes": []
+        },
+        {
+            "name": "translate",
+            "description": "Translation of Released Documents",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend Validity of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override",
+            "description": "Override (AKS) for a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation",
+            "description": "Reactivation of an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "distribution",
+            "description": "Distribution of a Document via Email or Distribution List",
+            "attributes": []
+        },
+        {
+            "name": "acknowledgement",
+            "description": "Acknowledgement of a Document by distribution recipients",
+            "attributes": []
+        },
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Change Proposals management for a Document",
+            "attributes": []
+        },
+        {
+            "name": "signature",
+            "description": "Electronic signatures for workflow participants",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "document_type",
+            "description": "Document uses Document Type"
+        },
+        {
+            "a": "document_type",
+            "b": "document_template",
+            "description": "Document Type defines Templates"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Distribution"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Attachment of Information Object"
+        },
+        {
+            "a": "document",
+            "b": "additional_information",
+            "description": "Contains Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Contains Equipment"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Has Change Proposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachment event"
+        },
+        {
+            "a": "document",
+            "b": "release",
+            "description": "Release event"
+        },
+        {
+            "a": "document",
+            "b": "translate",
+            "description": "Translate event"
+        },
+        {
+            "a": "document",
+            "b": "extend_validity",
+            "description": "Extend Validity event"
+        },
+        {
+            "a": "document",
+            "b": "override",
+            "description": "Override event"
+        },
+        {
+            "a": "document",
+            "b": "reactivation",
+            "description": "Reactivation event"
+        },
+        {
+            "a": "document",
+            "b": "distribution",
+            "description": "Distribution event"
+        },
+        {
+            "a": "document",
+            "b": "acknowledgement",
+            "description": "Acknowledgement event"
+        },
+        {
+            "a": "document",
+            "b": "create_document",
+            "description": "Creation event"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Change Proposal event"
+        },
+        {
+            "a": "document",
+            "b": "signature",
+            "description": "Signature event"
+        }
+    ]
+}

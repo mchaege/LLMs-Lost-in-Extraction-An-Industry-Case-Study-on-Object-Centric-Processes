@@ -1,0 +1,526 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central artifact in P&R management; contains metadata and lifecycle information",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Document abbreviation"
+                },
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Document version number"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document"
+                },
+                {
+                    "name": "documenttype",
+                    "description": "Type of the document (DocumentType)"
+                },
+                {
+                    "name": "references",
+                    "description": "References to Master data or other documents"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "Related IT applications"
+                },
+                {
+                    "name": "relevantcompanies",
+                    "description": "Relevant companies"
+                },
+                {
+                    "name": "areasofvalidity",
+                    "description": "Areas of validity"
+                },
+                {
+                    "name": "releasedate",
+                    "description": "Release date of the current version"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Defines document types for categorization",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the document type"
+                },
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation of the document type"
+                },
+                {
+                    "name": "description",
+                    "description": "Description of the document type"
+                }
+            ]
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template used for documents; selectable at creation",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Template name"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment that is released with the main document; has its own release cycle",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Attachment name"
+                },
+                {
+                    "name": "content",
+                    "description": "Content or reference to the attachment"
+                },
+                {
+                    "name": "releasedate",
+                    "description": "Release date of the attachment"
+                },
+                {
+                    "name": "documentversion",
+                    "description": "Document version to which the attachment belongs"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information attached to a document",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the information item"
+                },
+                {
+                    "name": "content",
+                    "description": "Content or reference to the information item"
+                },
+                {
+                    "name": "equipmentrelated",
+                    "description": "Related equipment if any"
+                }
+            ]
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment attached to a document; has its own versioning",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Equipment name"
+                },
+                {
+                    "name": "version",
+                    "description": "Equipment version"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users used for access control",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Group name"
+                }
+            ]
+        },
+        {
+            "name": "readergroup",
+            "description": "Reader group used for access control",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Reader group name"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "Distribution lists used for workflow and acknowledgement",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Distribution list name"
+                }
+            ]
+        },
+        {
+            "name": "author",
+            "description": "Author role for a document; associated user",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "Author user identifier"
+                }
+            ]
+        },
+        {
+            "name": "coauthor",
+            "description": "Co-author role for a document; associated user",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "Co-author user identifier"
+                }
+            ]
+        },
+        {
+            "name": "reviewer",
+            "description": "Reviewer role for a document; associated user",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "Reviewer user identifier"
+                }
+            ]
+        },
+        {
+            "name": "releaser",
+            "description": "Releaser role for a document; associated user",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "Releaser user identifier"
+                }
+            ]
+        },
+        {
+            "name": "translator",
+            "description": "Translator role for a document; associated user",
+            "attributes": [
+                {
+                    "name": "user",
+                    "description": "Translator user identifier"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Creating a new document in the system",
+            "attributes": [
+                {
+                    "name": "templateused",
+                    "description": "Template used when creating the document"
+                }
+            ]
+        },
+        {
+            "name": "editdocument",
+            "description": "Editing the content or properties of a document",
+            "attributes": [
+                {
+                    "name": "editround",
+                    "description": "Editing round or version"
+                }
+            ]
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attach a new information object (Attachment, AdditionalInfo, or Equipment) to a document",
+            "attributes": [
+                {
+                    "name": "infotype",
+                    "description": "Type of information object (Attachment, AdditionalInfo, Equipment)"
+                }
+            ]
+        },
+        {
+            "name": "releasedocument",
+            "description": "Publish a document and mark its version as released",
+            "attributes": [
+                {
+                    "name": "releasestep",
+                    "description": "Step in the release process (Creator, Review, Release)"
+                }
+            ]
+        },
+        {
+            "name": "signdocument",
+            "description": "Electronically sign a document as part of the release process",
+            "attributes": [
+                {
+                    "name": "signer",
+                    "description": "User who signed"
+                }
+            ]
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate a released document into another language",
+            "attributes": [
+                {
+                    "name": "targetlanguage",
+                    "description": "Language into which the document is translated"
+                },
+                {
+                    "name": "sourcelanguage",
+                    "description": "Original language"
+                }
+            ]
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review the content and form of the document",
+            "attributes": [
+                {
+                    "name": "reviewround",
+                    "description": "Review round identifier"
+                }
+            ]
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend the validity period of a document",
+            "attributes": [
+                {
+                    "name": "newvaliduntil",
+                    "description": "New validity date"
+                },
+                {
+                    "name": "extendedperiod",
+                    "description": "Period of extended validity"
+                }
+            ]
+        },
+        {
+            "name": "override",
+            "description": "Override a document's validity or lifecycle (AKS)",
+            "attributes": [
+                {
+                    "name": "overridetype",
+                    "description": "Override type (AKS)"
+                }
+            ]
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate an invalidated document",
+            "attributes": [
+                {
+                    "name": "reason",
+                    "description": "Reason for reactivation"
+                }
+            ]
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute a document by email or by notification in the dashboard",
+            "attributes": [
+                {
+                    "name": "distributionlist",
+                    "description": "Distribution list used"
+                }
+            ]
+        },
+        {
+            "name": "acknowledgedocument",
+            "description": "Acknowledge the distribution/acknowledgement of a document",
+            "attributes": [
+                {
+                    "name": "encountered",
+                    "description": "Acknowledgement status"
+                }
+            ]
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create a change proposal for a document",
+            "attributes": [
+                {
+                    "name": "proposalid",
+                    "description": "Identifier of change proposal"
+                }
+            ]
+        },
+        {
+            "name": "managechangeproposal",
+            "description": "Manage a change proposal",
+            "attributes": [
+                {
+                    "name": "proposalstatus",
+                    "description": "Status of change proposal"
+                }
+            ]
+        },
+        {
+            "name": "checkchangeproposal",
+            "description": "Check/Review a change proposal",
+            "attributes": [
+                {
+                    "name": "checkstatus",
+                    "description": "Check status"
+                }
+            ]
+        },
+        {
+            "name": "linkdocumenttomasterdata",
+            "description": "Link document to master data or other documents",
+            "attributes": [
+                {
+                    "name": "linktype",
+                    "description": "Type of link"
+                }
+            ]
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has a type"
+        },
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "Document uses a template"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has attachments"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has additional information"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has equipment"
+        },
+        {
+            "a": "document",
+            "b": "author",
+            "description": "Document has author"
+        },
+        {
+            "a": "document",
+            "b": "coauthor",
+            "description": "Document has co-author"
+        },
+        {
+            "a": "document",
+            "b": "reviewer",
+            "description": "Document has reviewer"
+        },
+        {
+            "a": "document",
+            "b": "releaser",
+            "description": "Document has releaser"
+        },
+        {
+            "a": "document",
+            "b": "translator",
+            "description": "Document has translator"
+        },
+        {
+            "a": "document",
+            "b": "readergroup",
+            "description": "Document has reader group"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document has distribution list"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "createdocument",
+            "b": "document",
+            "description": "Creates a new document"
+        },
+        {
+            "a": "editdocument",
+            "b": "document",
+            "description": "Edits a document"
+        },
+        {
+            "a": "attachinformationobject",
+            "b": "document",
+            "description": "Attaches a information object to a document"
+        },
+        {
+            "a": "releasedocument",
+            "b": "document",
+            "description": "Releases a document"
+        },
+        {
+            "a": "signdocument",
+            "b": "document",
+            "description": "Signs a document"
+        },
+        {
+            "a": "translatedocument",
+            "b": "document",
+            "description": "Translates a released document"
+        },
+        {
+            "a": "reviewdocument",
+            "b": "document",
+            "description": "Reviews a document"
+        },
+        {
+            "a": "extendvalidity",
+            "b": "document",
+            "description": "Extends a document's validity"
+        },
+        {
+            "a": "override",
+            "b": "document",
+            "description": "Overrides a document"
+        },
+        {
+            "a": "reactivatedocument",
+            "b": "document",
+            "description": "Reactivates a document"
+        },
+        {
+            "a": "distributedocument",
+            "b": "document",
+            "description": "Distributes a document"
+        },
+        {
+            "a": "acknowledgedocument",
+            "b": "document",
+            "description": "Acknowledges a document"
+        },
+        {
+            "a": "createchangeproposal",
+            "b": "document",
+            "description": "Creates a change proposal for a document"
+        },
+        {
+            "a": "managechangeproposal",
+            "b": "document",
+            "description": "Manages a change proposal for a document"
+        },
+        {
+            "a": "checkchangeproposal",
+            "b": "document",
+            "description": "Checks a change proposal for a document"
+        },
+        {
+            "a": "linkdocumenttomasterdata",
+            "b": "document",
+            "description": "Links a document to master data"
+        }
+    ]
+}

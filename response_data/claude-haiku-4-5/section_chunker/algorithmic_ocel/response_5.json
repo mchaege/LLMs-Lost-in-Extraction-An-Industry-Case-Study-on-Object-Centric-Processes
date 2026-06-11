@@ -1,0 +1,550 @@
+{
+    "objs": [
+        {
+            "name": "policy",
+            "description": "Company-wide regulations and processes at strategic level",
+            "attributes": []
+        },
+        {
+            "name": "guideline",
+            "description": "Locally defined or process-related regulations and instructions",
+            "attributes": []
+        },
+        {
+            "name": "procedural_instruction",
+            "description": "Specific procedures describing process sequence and responsible persons",
+            "attributes": []
+        },
+        {
+            "name": "work_instruction",
+            "description": "Detailed steps and procedures for specific work tasks",
+            "attributes": []
+        },
+        {
+            "name": "additional_info",
+            "description": "Supplementary non-critical information attached to documents",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Controlled document component released with main document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposed amendment to existing document without affecting version history",
+            "attributes": []
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "Request to verify document validity and extend or revoke it",
+            "attributes": []
+        },
+        {
+            "name": "override_request",
+            "description": "Request to invalidate and archive a document",
+            "attributes": []
+        },
+        {
+            "name": "reactivation_request",
+            "description": "Request to reactivate previously invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "document_author",
+            "description": "User role with create and edit permissions on document",
+            "attributes": []
+        },
+        {
+            "name": "document_reviewer",
+            "description": "User role verifying technical and formal content correctness",
+            "attributes": []
+        },
+        {
+            "name": "document_releaser",
+            "description": "User role responsible for approving document distribution",
+            "attributes": []
+        },
+        {
+            "name": "document_reader",
+            "description": "User role with read-only access to released documents",
+            "attributes": []
+        },
+        {
+            "name": "translator",
+            "description": "User role translating released document content to other languages",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Attach new document object with selected type and template",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Modify document content using office component with TAG technology",
+            "attributes": []
+        },
+        {
+            "name": "maintain_metadata",
+            "description": "Update document attributes and properties in standardized categories",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "Complete workflow step with electronic signature by participant",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Check document content for technical and formal correctness",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Approve document for publication and distribution to readers",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Make released document visible to addressed readers",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Propose amendment to existing released document",
+            "attributes": []
+        },
+        {
+            "name": "implement_change_proposal",
+            "description": "Create new document version incorporating approved change proposal",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Confirm document validity and extend valid-until date by defined period",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Invalidate document and archive with revoked authorizations",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Restore previously archived document to valid status",
+            "attributes": []
+        },
+        {
+            "name": "distribute_by_email",
+            "description": "Send notification to users when new document version released",
+            "attributes": []
+        },
+        {
+            "name": "request_acknowledgement",
+            "description": "Require users to confirm receipt and understanding of document",
+            "attributes": []
+        },
+        {
+            "name": "confirm_acknowledgement",
+            "description": "User actively confirms acknowledgement of document version",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released document content to different language",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "policy",
+            "b": "attachment",
+            "description": "Policy can have controlled document components"
+        },
+        {
+            "a": "guideline",
+            "b": "attachment",
+            "description": "Guideline can have controlled document components"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "attachment",
+            "description": "Procedural instruction can have controlled document components"
+        },
+        {
+            "a": "work_instruction",
+            "b": "attachment",
+            "description": "Work instruction can have controlled document components"
+        },
+        {
+            "a": "policy",
+            "b": "additional_info",
+            "description": "Policy can have supplementary information"
+        },
+        {
+            "a": "guideline",
+            "b": "additional_info",
+            "description": "Guideline can have supplementary information"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "additional_info",
+            "description": "Procedural instruction can have supplementary information"
+        },
+        {
+            "a": "work_instruction",
+            "b": "additional_info",
+            "description": "Work instruction can have supplementary information"
+        },
+        {
+            "a": "policy",
+            "b": "change_proposal",
+            "description": "Change proposals belong to policy documents"
+        },
+        {
+            "a": "guideline",
+            "b": "change_proposal",
+            "description": "Change proposals belong to guideline documents"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "change_proposal",
+            "description": "Change proposals belong to procedural instruction documents"
+        },
+        {
+            "a": "work_instruction",
+            "b": "change_proposal",
+            "description": "Change proposals belong to work instruction documents"
+        },
+        {
+            "a": "policy",
+            "b": "validity_extension_request",
+            "description": "Validity extension requests are linked to documents"
+        },
+        {
+            "a": "guideline",
+            "b": "validity_extension_request",
+            "description": "Validity extension requests are linked to documents"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "validity_extension_request",
+            "description": "Validity extension requests are linked to documents"
+        },
+        {
+            "a": "work_instruction",
+            "b": "validity_extension_request",
+            "description": "Validity extension requests are linked to documents"
+        },
+        {
+            "a": "policy",
+            "b": "override_request",
+            "description": "Override requests are created for documents"
+        },
+        {
+            "a": "guideline",
+            "b": "override_request",
+            "description": "Override requests are created for documents"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "override_request",
+            "description": "Override requests are created for documents"
+        },
+        {
+            "a": "work_instruction",
+            "b": "override_request",
+            "description": "Override requests are created for documents"
+        },
+        {
+            "a": "policy",
+            "b": "reactivation_request",
+            "description": "Reactivation requests restore archived documents"
+        },
+        {
+            "a": "guideline",
+            "b": "reactivation_request",
+            "description": "Reactivation requests restore archived documents"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "reactivation_request",
+            "description": "Reactivation requests restore archived documents"
+        },
+        {
+            "a": "work_instruction",
+            "b": "reactivation_request",
+            "description": "Reactivation requests restore archived documents"
+        },
+        {
+            "a": "document_author",
+            "b": "policy",
+            "description": "Author creates and edits policy documents"
+        },
+        {
+            "a": "document_author",
+            "b": "guideline",
+            "description": "Author creates and edits guideline documents"
+        },
+        {
+            "a": "document_author",
+            "b": "procedural_instruction",
+            "description": "Author creates and edits procedural instruction documents"
+        },
+        {
+            "a": "document_author",
+            "b": "work_instruction",
+            "description": "Author creates and edits work instruction documents"
+        },
+        {
+            "a": "document_reviewer",
+            "b": "document_author",
+            "description": "Reviewer cannot be same person as author"
+        },
+        {
+            "a": "document_releaser",
+            "b": "document_reviewer",
+            "description": "Releaser makes final decision on document approval"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "policy",
+            "b": "create_document",
+            "description": "Documents are created by attaching new objects"
+        },
+        {
+            "a": "guideline",
+            "b": "create_document",
+            "description": "Documents are created by attaching new objects"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "create_document",
+            "description": "Documents are created by attaching new objects"
+        },
+        {
+            "a": "work_instruction",
+            "b": "create_document",
+            "description": "Documents are created by attaching new objects"
+        },
+        {
+            "a": "policy",
+            "b": "edit_document_content",
+            "description": "Document content is edited using office components"
+        },
+        {
+            "a": "guideline",
+            "b": "edit_document_content",
+            "description": "Document content is edited using office components"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "edit_document_content",
+            "description": "Document content is edited using office components"
+        },
+        {
+            "a": "work_instruction",
+            "b": "edit_document_content",
+            "description": "Document content is edited using office components"
+        },
+        {
+            "a": "policy",
+            "b": "maintain_metadata",
+            "description": "Document metadata and properties are maintained"
+        },
+        {
+            "a": "guideline",
+            "b": "maintain_metadata",
+            "description": "Document metadata and properties are maintained"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "maintain_metadata",
+            "description": "Document metadata and properties are maintained"
+        },
+        {
+            "a": "work_instruction",
+            "b": "maintain_metadata",
+            "description": "Document metadata and properties are maintained"
+        },
+        {
+            "a": "document_author",
+            "b": "sign_document",
+            "description": "Author signs document in first workflow step"
+        },
+        {
+            "a": "document_reviewer",
+            "b": "sign_document",
+            "description": "Reviewer signs document in review step"
+        },
+        {
+            "a": "document_releaser",
+            "b": "sign_document",
+            "description": "Releaser signs document in release step"
+        },
+        {
+            "a": "document_reviewer",
+            "b": "review_document",
+            "description": "Reviewer checks content for correctness"
+        },
+        {
+            "a": "document_releaser",
+            "b": "release_document",
+            "description": "Releaser approves document for distribution"
+        },
+        {
+            "a": "policy",
+            "b": "release_document",
+            "description": "Document is released by releaser"
+        },
+        {
+            "a": "guideline",
+            "b": "release_document",
+            "description": "Document is released by releaser"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "release_document",
+            "description": "Document is released by releaser"
+        },
+        {
+            "a": "work_instruction",
+            "b": "release_document",
+            "description": "Document is released by releaser"
+        },
+        {
+            "a": "policy",
+            "b": "publish_document",
+            "description": "Released document becomes visible to readers"
+        },
+        {
+            "a": "guideline",
+            "b": "publish_document",
+            "description": "Released document becomes visible to readers"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "publish_document",
+            "description": "Released document becomes visible to readers"
+        },
+        {
+            "a": "work_instruction",
+            "b": "publish_document",
+            "description": "Released document becomes visible to readers"
+        },
+        {
+            "a": "document_author",
+            "b": "create_change_proposal",
+            "description": "Authors create change proposals for documents"
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Change proposals are created as document objects"
+        },
+        {
+            "a": "change_proposal",
+            "b": "implement_change_proposal",
+            "description": "Change proposals trigger new document versions"
+        },
+        {
+            "a": "policy",
+            "b": "extend_validity",
+            "description": "Validity is extended for documents"
+        },
+        {
+            "a": "guideline",
+            "b": "extend_validity",
+            "description": "Validity is extended for documents"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "extend_validity",
+            "description": "Validity is extended for documents"
+        },
+        {
+            "a": "work_instruction",
+            "b": "extend_validity",
+            "description": "Validity is extended for documents"
+        },
+        {
+            "a": "validity_extension_request",
+            "b": "extend_validity",
+            "description": "Validity extension requests are processed"
+        },
+        {
+            "a": "policy",
+            "b": "override_document",
+            "description": "Documents are invalidated and archived"
+        },
+        {
+            "a": "guideline",
+            "b": "override_document",
+            "description": "Documents are invalidated and archived"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "override_document",
+            "description": "Documents are invalidated and archived"
+        },
+        {
+            "a": "work_instruction",
+            "b": "override_document",
+            "description": "Documents are invalidated and archived"
+        },
+        {
+            "a": "override_request",
+            "b": "override_document",
+            "description": "Override requests trigger document invalidation"
+        },
+        {
+            "a": "policy",
+            "b": "reactivate_document",
+            "description": "Archived documents are reactivated"
+        },
+        {
+            "a": "guideline",
+            "b": "reactivate_document",
+            "description": "Archived documents are reactivated"
+        },
+        {
+            "a": "procedural_instruction",
+            "b": "reactivate_document",
+            "description": "Archived documents are reactivated"
+        },
+        {
+            "a": "work_instruction",
+            "b": "reactivate_document",
+            "description": "Archived documents are reactivated"
+        },
+        {
+            "a": "reactivation_request",
+            "b": "reactivate_document",
+            "description": "Reactivation requests trigger document restoration"
+        },
+        {
+            "a": "document_reader",
+            "b": "distribute_by_email",
+            "description": "Readers receive email notifications"
+        },
+        {
+            "a": "document_reader",
+            "b": "request_acknowledgement",
+            "description": "Readers are requested to confirm receipt"
+        },
+        {
+            "a": "document_reader",
+            "b": "confirm_acknowledgement",
+            "description": "Readers confirm acknowledgement of documents"
+        },
+        {
+            "a": "translator",
+            "b": "translate_document",
+            "description": "Translators translate document content"
+        }
+    ]
+}

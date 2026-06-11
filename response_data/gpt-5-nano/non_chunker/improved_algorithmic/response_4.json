@@ -1,0 +1,260 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing a policy, guideline, or instruction.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Actor performing actions in the process.",
+            "attributes": []
+        },
+        {
+            "name": "informationobject",
+            "description": "General information object that can be attached to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "template",
+            "description": "Template used for creating new Documents.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinformation",
+            "description": "Additional information attached to a Document that is not part of the release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment attached to a Document; subject to its own versioning.",
+            "attributes": []
+        },
+        {
+            "name": "itapplication",
+            "description": "Master data representing an IT application.",
+            "attributes": []
+        },
+        {
+            "name": "organizationalunit",
+            "description": "Organizational unit referenced in distribution and governance.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_new_information_object",
+            "description": "Attachment of a new information object to a Document by a User.",
+            "attributes": []
+        },
+        {
+            "name": "initiate_release_process",
+            "description": "Start the 3-step release process for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "assign_authorizations",
+            "description": "Assign authorizations for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Complete the release step for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "Document is automatically published after release.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute Document to distribution lists and readers.",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Acknowledgement workflow for distribution.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Review content and formal aspects of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_document_version",
+            "description": "Create a new version of a released Document.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content into another language and check translation via workflow.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a released Document.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override (AKS) a released Document and archiving rules apply.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation process to re-validate previously invalidated Documents.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a document after defined period or override.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "Declare a released Document or its Attachments invalid.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document created with Template"
+        },
+        {
+            "a": "document",
+            "b": "organizationalunit",
+            "description": "Document linked to OrganizationalUnit"
+        },
+        {
+            "a": "document",
+            "b": "itapplication",
+            "description": "Document linked to ITApplication"
+        },
+        {
+            "a": "document",
+            "b": "additionalinformation",
+            "description": "Document has AdditionalInformation"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document has Equippment"
+        },
+        {
+            "a": "document",
+            "b": "informationobject",
+            "description": "Document related to InformationObject"
+        },
+        {
+            "a": "informationobject",
+            "b": "document",
+            "description": "InformationObject attached to Document"
+        },
+        {
+            "a": "template",
+            "b": "document",
+            "description": "Template used by Document creation"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Attach New Information Object"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Initiate Release Process"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Assign Authorizations"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Release Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Publish Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Sign Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Distribute Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Acknowledge Distribution"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create Change Proposal"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Review Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Create Document Version"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Translate Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Extend Validity"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Override Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Reactivate Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Archive Document"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Invalidate Document"
+        }
+    ]
+}

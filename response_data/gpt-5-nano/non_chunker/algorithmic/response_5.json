@@ -1,0 +1,318 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Central document in P&R Management; can be of type Policy, Guidelines, Procedural Instructions, or Work Instruction.",
+            "attributes": [
+                {
+                    "name": "documenttype",
+                    "description": "Type of the document (Policy, Guidelines, Procedural Instruction, Work Instruction)."
+                },
+                {
+                    "name": "version",
+                    "description": "Current version number of the document."
+                },
+                {
+                    "name": "validfrom",
+                    "description": "Date from which the document version is valid."
+                },
+                {
+                    "name": "validuntil",
+                    "description": "Date until which the document version remains valid."
+                },
+                {
+                    "name": "references",
+                    "description": "References or links to other documents or master data."
+                },
+                {
+                    "name": "itapplications",
+                    "description": "Related IT applications."
+                },
+                {
+                    "name": "areasofvalidity",
+                    "description": "Areas or businesses where the document is valid."
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document in the lifecycle."
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Person interacting with documents; participates as author, reviewer, releaser, translator, reader.",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "Role of the user in the document workflow (e.g., Reader, Author, Reviewer, Releaser, Translator)."
+                }
+            ]
+        },
+        {
+            "name": "template",
+            "description": "Document template used when creating a new Document.",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to modify a document; can be created and managed for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Attachment with non-release-critical information related to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Attachment that is released with the main document and may affect its version.",
+            "attributes": []
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of users or groups to be informed about the document release.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new Document by a User, with a chosen Document Type and optional Template.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Modify content or properties of an existing Document.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Initiate and complete the release workflow for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "review_document",
+            "description": "Perform technical or formal review of a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_additionalinfo",
+            "description": "Attach AdditionalInfo to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attach Equipment to a Document.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a Change Proposal for a Document.",
+            "attributes": []
+        },
+        {
+            "name": "apply_change_proposal",
+            "description": "Apply a Change Proposal to produce a new Document version.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate a released Document into another language and release.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute a Document via email or distribution acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a released Document.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Invalidate a released Document and its Attachments.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an invalidated Document and its Attachments.",
+            "attributes": []
+        },
+        {
+            "name": "create_version",
+            "description": "Create a new version of a Document during editing.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "template",
+            "description": "Document can be created using a Template."
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document can have ChangeProposals."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document can have AdditionalInfo attached."
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document can have Equipment attached."
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Document is distributed to DistributionList."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Creates a Document."
+        },
+        {
+            "a": "create_document",
+            "b": "user",
+            "description": "Performer creates the Document."
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Edits a Document."
+        },
+        {
+            "a": "edit_document",
+            "b": "user",
+            "description": "Performer edits the Document."
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Releases the Document."
+        },
+        {
+            "a": "release_document",
+            "b": "user",
+            "description": "Performer signs off in release."
+        },
+        {
+            "a": "review_document",
+            "b": "document",
+            "description": "Review step for a Document."
+        },
+        {
+            "a": "review_document",
+            "b": "user",
+            "description": "Reviewer performs the check."
+        },
+        {
+            "a": "attach_additionalinfo",
+            "b": "document",
+            "description": "Attaches AdditionalInfo to Document."
+        },
+        {
+            "a": "attach_additionalinfo",
+            "b": "user",
+            "description": "User attaches AdditionalInfo."
+        },
+        {
+            "a": "attach_equipment",
+            "b": "document",
+            "description": "Attaches Equipment to Document."
+        },
+        {
+            "a": "attach_equipment",
+            "b": "user",
+            "description": "User attaches Equipment."
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Creates ChangeProposal for a Document."
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "user",
+            "description": "User creates ChangeProposal."
+        },
+        {
+            "a": "apply_change_proposal",
+            "b": "document",
+            "description": "Applies ChangeProposal to create new version."
+        },
+        {
+            "a": "apply_change_proposal",
+            "b": "user",
+            "description": "User applies the ChangeProposal."
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Translates a released Document."
+        },
+        {
+            "a": "translate_document",
+            "b": "user",
+            "description": "Translator performs translation."
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Distributes Document."
+        },
+        {
+            "a": "distribute_document",
+            "b": "user",
+            "description": "User distributes Document."
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Extends validity of a Document."
+        },
+        {
+            "a": "extend_validity",
+            "b": "user",
+            "description": "User processes validity extension."
+        },
+        {
+            "a": "override_document",
+            "b": "document",
+            "description": "Declares a Document invalid/overridden."
+        },
+        {
+            "a": "override_document",
+            "b": "user",
+            "description": "User initiates Override."
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Reactivates a previously invalidated Document."
+        },
+        {
+            "a": "reactivate_document",
+            "b": "user",
+            "description": "User initiates Reactivation."
+        },
+        {
+            "a": "create_version",
+            "b": "document",
+            "description": "Creates a new version of Document."
+        },
+        {
+            "a": "create_version",
+            "b": "user",
+            "description": "User creates new version."
+        }
+    ]
+}

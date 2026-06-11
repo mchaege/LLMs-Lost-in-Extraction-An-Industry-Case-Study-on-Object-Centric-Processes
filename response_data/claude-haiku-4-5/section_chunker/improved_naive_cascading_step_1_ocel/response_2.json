@@ -1,0 +1,299 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A controlled information object subject to document management lifecycle including creation, editing, review, release, distribution, and archiving with version control and audit trail.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Classification of document such as Policy, Guideline, Work Instruction, or Procedural Instruction"
+                },
+                {
+                    "name": "document_abbreviation",
+                    "description": "Standardized abbreviation code for the document type"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the document"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the document in its lifecycle"
+                },
+                {
+                    "name": "valid_from",
+                    "description": "Date when the document becomes valid"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date when the document expires or requires validity extension"
+                },
+                {
+                    "name": "period_of_extended_validity",
+                    "description": "Time period for which validity check is necessary"
+                },
+                {
+                    "name": "author",
+                    "description": "Primary creator and owner of the document"
+                },
+                {
+                    "name": "co_author",
+                    "description": "Additional person with change rights on the document"
+                },
+                {
+                    "name": "reviewer",
+                    "description": "Person responsible for technical and formal review of document content"
+                },
+                {
+                    "name": "releaser",
+                    "description": "Person responsible for approving and releasing the document"
+                },
+                {
+                    "name": "translator",
+                    "description": "Person responsible for translating document content to other languages"
+                },
+                {
+                    "name": "reader_group",
+                    "description": "User group assigned read authorization for the document"
+                },
+                {
+                    "name": "references",
+                    "description": "Links to other documents or master data"
+                },
+                {
+                    "name": "it_application",
+                    "description": "Information systems relevant to the document"
+                },
+                {
+                    "name": "company",
+                    "description": "Company or organizational entity for which document applies"
+                },
+                {
+                    "name": "area_of_validity",
+                    "description": "Scope of organizational units where document applies"
+                },
+                {
+                    "name": "client",
+                    "description": "Client or subsidiary in multi-client system where document is visible"
+                },
+                {
+                    "name": "archive_duration",
+                    "description": "Period for which document is retained before physical deletion"
+                },
+                {
+                    "name": "original_language",
+                    "description": "Primary language of the document content"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "A controlled document that is automatically released with the main document, subject to own versioning and versioning of the associated main document, requiring review and release according to dual control principle.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Current status of the attachment in the release process"
+                },
+                {
+                    "name": "version",
+                    "description": "Version number of the attachment"
+                },
+                {
+                    "name": "valid_until",
+                    "description": "Date when the attachment expires with the main document"
+                }
+            ]
+        },
+        {
+            "name": "additional_information",
+            "description": "A document supplement not subject to the release cycle of the main document, released directly via switches in properties without affecting main document versioning.",
+            "attributes": [
+                {
+                    "name": "published",
+                    "description": "Boolean indicator whether additional information is published"
+                }
+            ]
+        },
+        {
+            "name": "change_proposal",
+            "description": "A request to amend an existing document without affecting the content or version history of the current document version.",
+            "attributes": [
+                {
+                    "name": "author",
+                    "description": "Person who created the change proposal"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the change proposal"
+                },
+                {
+                    "name": "implementation_status",
+                    "description": "Whether the change proposal has been implemented or completed"
+                }
+            ]
+        },
+        {
+            "name": "validity_extension_request",
+            "description": "A system-generated request when a document reaches 30 days before validity expiration, requiring review and decision to extend validity, revise, or invalidate the document.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Reference to the document requiring validity check"
+                },
+                {
+                    "name": "requested_date",
+                    "description": "Date when the validity extension request was created"
+                }
+            ]
+        },
+        {
+            "name": "override_request",
+            "description": "A request to declare a document invalid and archive it when it no longer has validity and must be withdrawn from circulation.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Reference to the document being invalidated"
+                },
+                {
+                    "name": "applicant",
+                    "description": "Person who initiated the override request"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the override request"
+                }
+            ]
+        },
+        {
+            "name": "reactivation_request",
+            "description": "A request to restore a previously invalidated and archived document to valid status during the archiving period.",
+            "attributes": [
+                {
+                    "name": "document",
+                    "description": "Reference to the document being reactivated"
+                },
+                {
+                    "name": "initiator",
+                    "description": "Business Admin group member who created the reactivation request"
+                }
+            ]
+        },
+        {
+            "name": "distribution_list",
+            "description": "A list of user groups and persons assigned to receive document distribution through email notification or acknowledgement workflow.",
+            "attributes": [
+                {
+                    "name": "user_group",
+                    "description": "Group of users assigned for distribution"
+                },
+                {
+                    "name": "person",
+                    "description": "Individual person assigned for distribution"
+                },
+                {
+                    "name": "distribution_type",
+                    "description": "Type of distribution - by email notification or by acknowledgement"
+                }
+            ]
+        },
+        {
+            "name": "acknowledgement",
+            "description": "A workflow-supported confirmation by a user that they have reviewed a document released with acknowledgement requirement.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Whether the acknowledgement has been confirmed"
+                }
+            ]
+        },
+        {
+            "name": "user_group",
+            "description": "A collection of users with assigned roles and permissions in the document management system.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the user group"
+                },
+                {
+                    "name": "role",
+                    "description": "System role assigned to the user group"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "An individual person with assigned roles and authorizations in the document management system.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "Name of the user"
+                },
+                {
+                    "name": "role",
+                    "description": "System role assigned to the user"
+                },
+                {
+                    "name": "authorization",
+                    "description": "Access rights granted to the user"
+                }
+            ]
+        },
+        {
+            "name": "document_template",
+            "description": "A predefined format for a specific document type that can be selected when creating new documents and supports metadata integration through TAG technology.",
+            "attributes": [
+                {
+                    "name": "document_type",
+                    "description": "Type of document for which this template applies"
+                },
+                {
+                    "name": "source_format",
+                    "description": "Original file format such as MS Word, Excel, or PowerPoint"
+                }
+            ]
+        },
+        {
+            "name": "workflow_task",
+            "description": "An assigned task in the document approval workflow requiring user action and electronic signature.",
+            "attributes": [
+                {
+                    "name": "step",
+                    "description": "Workflow step such as Creator, Review, or Release"
+                },
+                {
+                    "name": "assigned_to",
+                    "description": "User or users assigned to complete the workflow task"
+                },
+                {
+                    "name": "status",
+                    "description": "Current status of the workflow task"
+                }
+            ]
+        },
+        {
+            "name": "electronic_signature",
+            "description": "A digital signature documenting completion and authorization of a workflow task by a participant.",
+            "attributes": [
+                {
+                    "name": "signer",
+                    "description": "Person who applied the signature"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "Date and time when signature was applied"
+                },
+                {
+                    "name": "workflow_step",
+                    "description": "Workflow step at which the signature was applied"
+                },
+                {
+                    "name": "decision",
+                    "description": "Approval or rejection decision recorded with the signature"
+                }
+            ]
+        }
+    ],
+    "evts": [],
+    "o2o": [],
+    "o2e": []
+}

@@ -1,0 +1,293 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact representing a policy, guideline or instruction document",
+            "attributes": [
+                {
+                    "name": "title",
+                    "description": "Document title"
+                },
+                {
+                    "name": "version",
+                    "description": "Current version number"
+                },
+                {
+                    "name": "language",
+                    "description": "Original language of the document"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document (e.g., Policy, Guideline, Procedural Instruction, Work Instruction)",
+            "attributes": []
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template for document content and metadata",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "System user participating in document management",
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "System role of user (e.g., Reader, Author, Reviewer, Releaser, Translator)"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information attached to a document",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Attachments that are equipment-related and affect the main document",
+            "attributes": []
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposal to change a document without changing the current version",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Create a new document in the system by a user selecting a document type",
+            "attributes": []
+        },
+        {
+            "name": "edit_document",
+            "description": "Edit a document by a user",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attach an information object to a document",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release a document with a workflow including authorizations",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released document content into another language",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend the validity period of a released document",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override (invalidate) a released document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivate an invalidated document",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archive a document",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Create a change proposal for a document",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribute document to recipients",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_distribution",
+            "description": "Recipients acknowledge distribution",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Automatically convert document to PDF on save",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "Document has Type"
+        },
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "Document uses Template"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document has Additional Information"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment Attachments"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Document Related Change Proposals"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "create_document",
+            "b": "document",
+            "description": "Document created"
+        },
+        {
+            "a": "create_document",
+            "b": "user",
+            "description": "Creator/Performer"
+        },
+        {
+            "a": "create_document",
+            "b": "documenttype",
+            "description": "Document Type chosen"
+        },
+        {
+            "a": "edit_document",
+            "b": "document",
+            "description": "Document edited"
+        },
+        {
+            "a": "edit_document",
+            "b": "user",
+            "description": "Editor"
+        },
+        {
+            "a": "attach_information_object",
+            "b": "document",
+            "description": "Target Document for attachment"
+        },
+        {
+            "a": "attach_information_object",
+            "b": "additionalinfo",
+            "description": "Information Object attached to Document"
+        },
+        {
+            "a": "attach_information_object",
+            "b": "equipment",
+            "description": "Equipment attached to Document"
+        },
+        {
+            "a": "release_document",
+            "b": "document",
+            "description": "Document released"
+        },
+        {
+            "a": "release_document",
+            "b": "user",
+            "description": "Releaser/Signer"
+        },
+        {
+            "a": "translate_document",
+            "b": "document",
+            "description": "Document translated"
+        },
+        {
+            "a": "translate_document",
+            "b": "user",
+            "description": "Translator"
+        },
+        {
+            "a": "extend_validity",
+            "b": "document",
+            "description": "Validity extended"
+        },
+        {
+            "a": "extend_validity",
+            "b": "user",
+            "description": "User participating in extension"
+        },
+        {
+            "a": "override_document",
+            "b": "document",
+            "description": "Document overridden/invalidated"
+        },
+        {
+            "a": "override_document",
+            "b": "user",
+            "description": "User participating in override"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "document",
+            "description": "Document reactivated"
+        },
+        {
+            "a": "reactivate_document",
+            "b": "user",
+            "description": "User participating in reactivation"
+        },
+        {
+            "a": "archive_document",
+            "b": "document",
+            "description": "Document archived"
+        },
+        {
+            "a": "archive_document",
+            "b": "user",
+            "description": "User participating in archiving"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "changeproposal",
+            "description": "Change proposal created"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "document",
+            "description": "Document associated with proposal"
+        },
+        {
+            "a": "create_change_proposal",
+            "b": "user",
+            "description": "Author creating change proposal"
+        },
+        {
+            "a": "distribute_document",
+            "b": "document",
+            "description": "Document distributed"
+        },
+        {
+            "a": "distribute_document",
+            "b": "user",
+            "description": "Distributors"
+        },
+        {
+            "a": "acknowledge_distribution",
+            "b": "document",
+            "description": "Document distribution acknowledged"
+        },
+        {
+            "a": "acknowledge_distribution",
+            "b": "user",
+            "description": "Recipients acknowledging distribution"
+        },
+        {
+            "a": "convert_document_to_pdf",
+            "b": "document",
+            "description": "PDF conversion of document"
+        }
+    ]
+}

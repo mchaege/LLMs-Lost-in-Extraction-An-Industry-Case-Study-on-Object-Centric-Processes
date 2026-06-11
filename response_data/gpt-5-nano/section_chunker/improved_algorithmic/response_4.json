@@ -1,0 +1,220 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core document in P&R Management with lifecycle and content",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "Supplementary information attached to a Document",
+            "attributes": []
+        },
+        {
+            "name": "attachment",
+            "description": "Attachment linked to a Document",
+            "attributes": []
+        },
+        {
+            "name": "equipment",
+            "description": "Equipment linked to a Document",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "Proposed changes to a Document",
+            "attributes": []
+        },
+        {
+            "name": "distribution_list",
+            "description": "List of users or groups for distribution/acknowledgement",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "Person or system user",
+            "attributes": []
+        },
+        {
+            "name": "user_group",
+            "description": "Group of users for permissions and distribution",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "create_document",
+            "description": "Creation of a new Document",
+            "attributes": []
+        },
+        {
+            "name": "attach_information_object",
+            "description": "Attachment of an Information Object to a Document",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Automatic conversion of a Document to PDF on save",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Release of a Document to readers with signatures",
+            "attributes": []
+        },
+        {
+            "name": "start_release_process",
+            "description": "Initiation of the 3-step release process",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of a Change Proposal for a Document",
+            "attributes": []
+        },
+        {
+            "name": "review_change_proposal",
+            "description": "Review of a Change Proposal by reviewers",
+            "attributes": []
+        },
+        {
+            "name": "approve_change_proposal",
+            "description": "Approval of a Change Proposal by releasers",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity",
+            "description": "Extend validity period of a Document",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "Override (AKS) a Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Reactivation of an invalidated Document",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of a Document and its attachments",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document",
+            "description": "Distribution of a Document via email or distribution list",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translation of a Released Document to another language",
+            "attributes": []
+        },
+        {
+            "name": "acknowledge_document",
+            "description": "Acknowledgement by distribution recipients",
+            "attributes": []
+        },
+        {
+            "name": "attach_equipment",
+            "description": "Attachment of Equipment to a Document",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachments"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document has Information Objects"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document has Change Proposals"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document uses Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "user_group",
+            "description": "Document assigned to User Group for permissions"
+        },
+        {
+            "a": "distribution_list",
+            "b": "user",
+            "description": "Distribution List contains Users"
+        },
+        {
+            "a": "change_proposal",
+            "b": "document",
+            "description": "Change Proposal belongs to a Document"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Information Object belongs to Document"
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document created/modified by User"
+        },
+        {
+            "a": "document",
+            "b": "user",
+            "description": "Document released by User"
+        },
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document has Information Object (Attachment type)"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Document has Attachment"
+        },
+        {
+            "a": "document",
+            "b": "equipment",
+            "description": "Document has Equipment"
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document has Change Proposals"
+        },
+        {
+            "a": "document",
+            "b": "distribution_list",
+            "description": "Document has Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "user_group",
+            "description": "Document assigned to User Group"
+        },
+        {
+            "a": "information_object",
+            "b": "document",
+            "description": "Information Object belongs to Document"
+        }
+    ]
+}

@@ -1,0 +1,370 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "A document in the Policies & Guidelines Management system for which levels (Policy, Guidelines, Procedural Instructions, Work Instructions) apply and which can be linked to master data and other documents.",
+            "attributes": []
+        },
+        {
+            "name": "information_object",
+            "description": "A new information object attached to a document to create or augment documents; attachments of new information objects during document creation.",
+            "attributes": []
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Additional information that can be added to a document and released directly without affecting the main document's release cycle.",
+            "attributes": []
+        },
+        {
+            "name": "equippment",
+            "description": "Attachments that are controlled documents and are subject to their own versioning but are released with the main document and archived with it.",
+            "attributes": []
+        },
+        {
+            "name": "change_proposal",
+            "description": "A proposal for changes to a document, created by users with author rights and managed within the Change proposals cockpit.",
+            "attributes": []
+        },
+        {
+            "name": "user",
+            "description": "People participating in workflows (authors, co-authors, readers, reviewers, releasers, translators) and groups used for authorizations.",
+            "attributes": []
+        }
+    ],
+    "evts": [
+        {
+            "name": "attach_information_object_to_document",
+            "description": "Attachment of a new Information Object to a Document by a user.",
+            "attributes": []
+        },
+        {
+            "name": "edit_document_content",
+            "description": "Content editing of the document using a local Office component and templates.",
+            "attributes": []
+        },
+        {
+            "name": "convert_document_to_pdf",
+            "description": "Document is saved and automatically converted to PDF; the current version is displayed.",
+            "attributes": []
+        },
+        {
+            "name": "release_document",
+            "description": "Document release process consisting of Creator, Review, Release steps.",
+            "attributes": []
+        },
+        {
+            "name": "sign_document",
+            "description": "All workflow participants complete their tasks with an electronic signature.",
+            "attributes": []
+        },
+        {
+            "name": "publish_document",
+            "description": "After release, the document is automatically published and visible to readers.",
+            "attributes": []
+        },
+        {
+            "name": "translate_document",
+            "description": "Translate released content of the system into another language.",
+            "attributes": []
+        },
+        {
+            "name": "check_translation",
+            "description": "Translation is checked and released with workflow support.",
+            "attributes": []
+        },
+        {
+            "name": "release_translation",
+            "description": "Approval process for translation with checking and releasing the translation.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_by_email",
+            "description": "Distribution by email informs assigned users and user groups.",
+            "attributes": []
+        },
+        {
+            "name": "distribute_document_for_acknowledgement",
+            "description": "Distribution for acknowledgement via email, requiring acknowledgement.",
+            "attributes": []
+        },
+        {
+            "name": "create_change_proposal",
+            "description": "Creation of Change Proposals for documents.",
+            "attributes": []
+        },
+        {
+            "name": "apply_change_proposal",
+            "description": "Applying a Change Proposal creates a new version of the document.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity_by_releasers",
+            "description": "Check and extend validity performed by releasers.",
+            "attributes": []
+        },
+        {
+            "name": "extend_validity_by_all_release_participants",
+            "description": "Check and extend validity performed by authors, reviewers and releasers.",
+            "attributes": []
+        },
+        {
+            "name": "override_document",
+            "description": "AKS process to declare a document out of force or invalid.",
+            "attributes": []
+        },
+        {
+            "name": "invalidate_document",
+            "description": "AKS check leading to invalidation and archiving of a document.",
+            "attributes": []
+        },
+        {
+            "name": "archive_document",
+            "description": "Archiving of a document during AKS or validity extension processes.",
+            "attributes": []
+        },
+        {
+            "name": "reactivate_document",
+            "description": "Process for reactivating previously invalidated documents and their attachments.",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "information_object",
+            "description": "Document attaches Information Object."
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Document attaches AdditionalInfo."
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Document attaches Equippment."
+        },
+        {
+            "a": "document",
+            "b": "change_proposal",
+            "description": "Document is linked to Change Proposal."
+        },
+        {
+            "a": "information_object",
+            "b": "attach_information_object_to_document",
+            "description": "Information Object participates in the attach event to a Document."
+        },
+        {
+            "a": "additionalinfo",
+            "b": "attach_information_object_to_document",
+            "description": "AdditionalInfo participates in the attach event to a Document."
+        },
+        {
+            "a": "equippment",
+            "b": "attach_information_object_to_document",
+            "description": "Equippment participates in the attach event to a Document."
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Change Proposal is created for a Document."
+        }
+    ],
+    "o2e": [
+        {
+            "a": "document",
+            "b": "attach_information_object_to_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "information_object",
+            "b": "attach_information_object_to_document",
+            "description": "Event touches Information Object."
+        },
+        {
+            "a": "user",
+            "b": "attach_information_object_to_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "edit_document_content",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "edit_document_content",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "convert_document_to_pdf",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "convert_document_to_pdf",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "release_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "release_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "sign_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "sign_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "publish_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "publish_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "translate_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "translate_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "check_translation",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "check_translation",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "release_translation",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "release_translation",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document_by_email",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "distribute_document_by_email",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "distribute_document_for_acknowledgement",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "distribute_document_for_acknowledgement",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "create_change_proposal",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "change_proposal",
+            "b": "create_change_proposal",
+            "description": "Event involves a Change Proposal as object."
+        },
+        {
+            "a": "document",
+            "b": "apply_change_proposal",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "change_proposal",
+            "b": "apply_change_proposal",
+            "description": "Event involves a Change Proposal as object."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity_by_releasers",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "extend_validity_by_releasers",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "extend_validity_by_all_release_participants",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "extend_validity_by_all_release_participants",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "override_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "override_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "invalidate_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "invalidate_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "archive_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "archive_document",
+            "description": "Event involves a User as performer."
+        },
+        {
+            "a": "document",
+            "b": "reactivate_document",
+            "description": "Event touches Document."
+        },
+        {
+            "a": "user",
+            "b": "reactivate_document",
+            "description": "Event involves a User as performer."
+        }
+    ]
+}

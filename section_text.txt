@@ -1,0 +1,166 @@
+Management of policies and guidelines
+Policies & Guidelines Management (P&R Management for short) enables the completely paperless management of documents, from creation and editing to release, distribution and archiving. Electronic signatures and the audit trail functionality make it possible to implement complex approval processes that also ensure complete traceability.
+In order to ensure clarity and evaluation options in document and P&R management, it is necessary to differentiate between different document types and levels.
+The following breakdown is an example of levels with corresponding document types. The names are also to be regarded as suggestions and may vary from company to company. It is possible to change or add to the document types in DHC VISION.
+Fig. 2 Document pyramid and its levels
+Level 1: Policy
+Policies contain company-wide regulations and processes at a strategic level (e.g. code of conduct, travel expenses policy, ICS policy, process and organizational structure, etc.).
+Level 2: Guidelines
+As part of an effective governance system, guidelines document regulations and instructions. In terms of DHC VISION, policies are used for company-wide regulations, whereas guidelines describe locally defined regulations or regulations relating to a business process.
+Level 3: Procedural instructions
+While a guideline defines the roles, objectives and framework, procedural instructions describe the specific procedures within this framework or, in relation to processes, the process sequence and their details and responsible persons in order to achieve the objective. In DHC VISION, procedural instructions can also be equated with process instructions from process management.
+Level 4: Work instructions
+In many cases, special work steps, e.g. test instructions with compliance with various criteria, must be carried out in sub-processes, the description of which would go beyond the scope of a procedural instruction and thus the focus on the essentials would be lost. In addition, these detailed steps are usually only relevant for a few departments. They should therefore be documented in work instructions. Work instructions can then be supplemented with additional forms and checklists.
+In addition to the differentiation between document levels and document types for better structuring and evaluation options, DHC VISION also supports the targeted storage of documents specific to the addressee of a document, which is described below.
+Document filing structure
+DHC VISION provides different variants of document filing structures. In addition to the central management of documents in the "Policies, guidelines and documents" view, the database integration also makes it possible to automatically link documents already in the system with processes, organizational units, risks and other documents and Master data (e.g. IT applications).
+Fig. 3 Central document storage in the "Policies, guidelines & documents" view
+Fig. 4 Process-specific filing of documents
+In order to be able to link documents to Master data or other documents, the attributes "References, IT applications, relevant companies or areas of validity" must be maintained via the document properties. More information on the attributes and document properties is provided in the following chapter "Create and Editor" section.
+Create and edit
+In order to be able to use all the advantages of electronic document management, the documents must be created in DHC VISION and their properties described. New documents are created in the system by Attachment of a new information object, with selection of the corresponding document type. One or more document templates can be defined for each document type, which can be selected when creating new objects. It is also possible to create a pure object cover. External files or documents can then be uploaded to this, or new documents can be generated based on the standard MS Office formats (Excel, Word, PowerPoint, etc.).
+Fig. 5 Attachment and selection of a document type and its template
+With the Attachment of new document objects in the system, the document type abbreviation and a cross-client, consecutive, 4-digit number for each type are included in the name by default. For example, the name of a directive is composed as follows:
+RL_0001_Example guideline 
+<abbreviation>_<number per type, cross-client>_<title>
+The document abbreviation and the assignment of the consecutive number can be adapted to different requirements. The type abbreviations for the most common document types are listed below:
+The document abbreviations are not language-independent, i.e. they cannot be translated and are therefore the same for all languages.
+Attachment of an object opens the properties editing of the document. Here, both standardized and customer-specific metadata can be maintained, either automatically or by the user. Attributes and metadata are grouped according to their purpose and thematized in so-called "categories". The following graphic shows an example of the "Master data" category for a document, with the associated maintainable attributes.
+Fig. 6 Maintaining the metadata of a document
+The content is then edited. DHC VISION supports editing with the help of an implemented editing client, which opens the document in the corresponding local Office component based on the existing source format. By using defined templates, certain metadata of the document can be automatically printed in the document with the help of integrated TAG technology (e.g. version, status, Scope(s), etc.).
+Fig. 7 Content editing of a template-based document in MS Word with display of the TAG technique
+Once the document has been saved, it is automatically and system-supported converted to PDF and the current version is displayed on the web.
+Fig. 8 Displaying the converted document as a PDF on the web
+Subsequent changes to the content or properties are possible at any time. Due to the versioning and the associated status network of the documents, it should be noted that changes to released documents result in the creation of a new editing version (for more information, see chapter "Versioning and revision").
+The assignment of authorizations and the assignment of participants in the release process is carried out via property editing in the "Control (release)" category:
+Fig. 9 Authorization assignment and allocation of WF participants in the document properties
+Group and person-related authorizations are assigned in this category. Authorizations for readers are assigned via a user group assignment in the "Reader" attribute. For the other attributes (author, co-author, reviewer, releaser (incl. translation)), personal authorizations are assigned. Details on authorizations and roles can be found in the chapter "Authorizations".
+In order to maintain the "dual control principle", the same person cannot be entered as author and reviewer.
+To describe documents in more detail with additional information or relevant Equippments, the document can be supplemented with objects of the type "Additional info" or "Attachment".
+Dealing with Attachments and Additional Information
+Additional information and Equippments can be added to each document. The author decides which of the two document types is added to a document when Attachment of a new information object to the document.
+Additional information
+This is a document attachment that is not subject to the release cycle of the main document and does not have its own release cycle. Additional information is released and published directly via switches in the properties. Due to their lack of criticality, they can be deleted again directly. The creation, modification and deletion of additional information has no effect on the main document, i.e. in no use case is a new version of the associated document created. Examples of additional information: Brief instructions, photos and screenshots, other additional information that does not require checking and release in accordance with the "dual control principle".
+Equippment
+Attachments are controlled documents, i.e. they are automatically released with the release of the main document. Their content has an effect on the associated version of the main document, which means that they should be viewed critically. The creation, modification or archiving of Attachments therefore triggers a new version of the associated main document. Equippments are subject to their own versioning, but pass through all the statuses of the release process of the main document. Released Attachments cannot be deleted. They are marked for archiving and archived with the release of the next version of the main document (= complete revocation of rights, except for the archive group).
+authorizations
+Dedicated control of documents is achieved by assigning authorizations. By defining authorization groups in the system and assigning them specifically to documents, read and change rights can be assigned to a group of users/persons for each document.
+Various roles are implemented in DHC VISION in order to provide individual users with the appropriate functions according to their area of application and at the same time to reduce the complexity of the overall system for the user. The following system roles (license roles in brackets) are available and described in more detail in the "Document management" solution:
+Document reader (READER)
+Readers can only view approved objects. For each object, you can decide again which reader may or may not view this object. In "Document Management", the system role (User Groups) "Reader - Document Management" is implemented as standard. All users in this group can view the documents and all dependent objects, such as Attachments. The users in this group can access the documents directly via the reader dashboard.
+Users in these groups can take note of documents. Acknowledgements are documented and clearly summarized for authors or other key roles of the document. Additional subgroups can be assigned to the reader groups, e.g. location-specific User Groups.
+Document author (AUTHOR)
+If users are assigned to the "Authors" User Groups by the technical administration, they are offered in the author or co-author selection list for the respective document. When assigned, each author receives read and write permissions on the document itself and all details, such as attachments, additional information and Change proposals.
+The Creator of a document is automatically confirmed in the "Author" field. However, this default value can be changed at any time and the authorizations passed on as a result. In addition to the actual author of a document, additional personal change rights can also be assigned via the "Co-authors" attribute. Co-authors have no relevance within the release workflow. Only the registered author signs the creation of the document in the first step of the workflow (additional information on workflow in the "Release").
+The following objects can also be created as authors:
+All document types such as policies, guidelines, procedural instructions, work instructions, etc.
+Change proposals for documents
+Document checker (AUTHOR)
+A reviewer basically checks the content of a document according to technical and formal aspects. As both requirements exceed the capabilities of a single reviewer, two reviewers are often used in the review step. In this case, one reviewer confirms the technical check and the other the formal check. If users are assigned to the "Reviewer" User Groups by the technical administration, they are offered in the reviewer selection list for the respective document. When assigned, each reviewer receives read and write permissions on the document itself and on all details, such as attachments, additional information and Change proposals.
+The following objects can be created as reviewers:
+Change proposals for documents
+Document approver (AUTHOR)
+A releaser is responsible for the document itself and its content. He decides whether a document is distributed to readers in this form and must be acted upon in accordance with the requirements in the document. If users are assigned to the "releaser" user group by the technical administration, they are offered in the releaser's selection list on the respective document. When assigned, each releaser receives read and write permissions on the document itself and all details, such as attachments, additional information and Change proposals.
+The following objects can be created as releasers:
+Change proposals for documents
+Translator (AUTHOR)
+A translator can translate all released content of the DHC VISION system into another language. They cannot create new objects independently.
+release
+After document creation, attribute and document content maintenance, as well as the definition of document control, the approval process can be initiated. Processing is workflow-supported in the system. The 3-step release process, consisting of the steps "Creator - Review - Release", is started by one of the co-authors or by the author themselves.
+In the first workflow step of "Creator", only the registered author signs and not the entire co-author team. For the "Review" and subsequent "Release", the reviewers and releasers maintained in the attributes are assigned. In order to maintain the "dual control principle", the same person cannot be entered as author and reviewer.
+The following diagram provides an overview of the approval process:
+Fig. 10 "Document release with signature" process flow
+One or more users can be entered for the check and release. For the check, all assigned participants must have completed their task positively so that the release can be triggered. For the release, it is sufficient if only one of the assigned users completes their task positively to finally release the document. In the event of a rejection during review or release with multiple users, the workflow is canceled for all subsequent participants immediately after the first rejection. Throughout the workflow process, the system informs the users involved of the status and existence of workflow tasks by means of e-mail notifications.
+All workflow participants complete their tasks with an electronic signature. The signatures of the individual participants are documented in the system for each released version and can be printed as document content.
+Fig. 11 Documentation of signatures in DHC VISION and in the document
+After release, the document is automatically published and is therefore visible to the readers addressed.
+Versioning and revision
+If a valid and released document is revised, a new version is automatically created in the editing status. All data from the previous version is retained, but can be adapted. If Attachments to the new version are no longer relevant, they can be archived. The actual archiving then takes place after the release of the current editing version.
+The following changes trigger a new document version:
+Changes to the document content
+Changes to attributes that generate content versions
+Changes to or archiving of existing Attachments
+Change of reference due to Creator of new Attachments
+Change proposals that are planned to amend the document
+Change proposals for existing documents can also be managed in DHC VISION. The handling of Change proposals is described below.
+Change proposals
+All employees who have author rights in the system can create Change proposals for a document without affecting the content or version history of the document. A Change proposal clearly belongs to a document and is displayed in the document. The function for creating Change proposals is activated from the release or "Validation" of the first version of a document. If the document is already being revised, Change proposals can also be printed in the document for information purposes.
+When a Change proposal is created, the author of the underlying document is informed by e-mail. If the Change proposal is scheduled for implementation, this creates a new version of the document in which the Note about an existing Change proposal can be printed.
+The author documents the editing of the assigned Change proposals directly in the Change proposal. As a result, the Creator of the proposal receives an e-mail notification. Completed Change proposals are no longer displayed in the document.
+Change proposals are created and managed in the Cockpit for a document in the "Change proposals" folder of the same name.
+Fig. 12 Management and display of Change proposals in the cockpit of a document
+Extend validity, suspension & reactivation
+Documents that are managed in versions are subject to a life cycle. This means that the documents must be reviewed for validity after a certain period of time. During this check, a decision must be made as to whether the document is still valid in its current version, whether it needs to be revised or whether it is invalid and needs to be invalidated. In the case of "invalidation", documents are not deleted but archived for a defined period of time. A special case of archived documents is reactivation, in which archived documents are reactivated. The following chapters provide details on the three processes of extending validity, "overriding" and reactivation.
+Process for "extending validity "
+The period for which a check of the extended validity is necessary can be defined for each document type. A period of 3 years is set for the document types in the DHC VISION standard. The count starts from the release of a document and is updated for each newly released version (= "Valid from" date + period of extended validity). The calculation of "Valid from" and the "Period of extended validity" results in the "Valid until" date.
+If a document reaches the period 30 days before the validity expires (= "valid until" date), a request for validity extension is created by the system. The request for validity extension is linked to the document to be checked and must be processed with workflow support. Two processes are available for processing:
+Process 1: Extend validity by releasers with information to authors, co-authors and reviewers
+Fig. 13 Process for the GüV by releasers
+The check is carried out by the releaser currently entered on the document. Authors, co-authors and reviewers only receive an information e-mail about a pending extension of validity and when the validity is extended.
+Process 2: Extend validity by author, reviewer and releaser with information to authors, co-authors and reviewers
+Fig. 14 GüV process with author, reviewer and releaser
+The check for extended validity is carried out by all users of the document involved in the release process. The author, co-authors and reviewers also receive an info email when the validity is extended after release by the author.
+By declaring the additional validity, the request for validity extension is deleted. The document remains valid in its current version. The validity, i.e. the "Valid until" date, is updated by the default value of 3 years. If there are Attachments to the document, these are also released and have the same validity as the main document.
+If the document needs to be revised, a new version is created by the author and the document is updated. The pending request for validity extension and the associated WF process are disregarded by the participants. With the release of the new version of the revised document, the process for validity extension is automatically terminated and the request for validity extension is deleted.
+If, when checking the validity extension, it is determined that the document has no additional validity and must be withdrawn from circulation, a request for "Override" can be created for the document. The process for AKS is described below.
+Process for "overriding "
+Released documents that have no additional validity and for this reason may no longer be available to users in the system must be invalidated. This involves declaring the documents and their attachments (if any) invalid and archiving them. Archiving is not a physical deletion, but merely the withdrawal of authorizations for the document. With the exception of a specific user group, the archive group, all authorizations are revoked at user group and person level. Users in the "Archive" group still have read access to the archived documents.
+The archive duration can be defined for each document type. A period of 10 years is set for the document types in the DHC VISION standard. After the archive period has expired, the documents are also physically deleted.
+To invalidate documents, users with write access can create a request for AKS for a selected document in the system. After Attachment of the request for AKS, the workflow for processing the request is started automatically. Two processes are available for "Override":
+Process 1: "Override" by releasers with information to authors, co-authors and reviewers
+Fig. 15 Process for AKS by releasers
+The AKS is carried out by the releaser currently entered on the document. Authors, co-authors and reviewers only receive an information email about the declaration of "Override".
+Process 2: Override by applicant (=initiator), reviewer and releaser
+Fig. 16 Process for "override" with Creator (request), reviewer, releaser
+The check for AKS is carried out in 3 steps. In the first step, the Creator of the request checks the request and the document. In the next two steps, the review and subsequent approval of the AKS is carried out by the reviewers and releasers maintained on the document.
+After the declaration of "Out of force", the request for "Out of force" is not deleted for documentation purposes. The last valid and approved version of the document is given the status "Out of force". Existing edited versions are deleted. The archive duration runs from the time of the "Override". All rights (except for the archive group) are revoked.
+If the "suspension" has been declared on the basis of the triennial validity extension check, the current validity extension process is terminated and the request for validity extension is deleted.
+During the archiving period, it may be necessary in rare cases to reactivate previously invalidated documents and their Attachments. The reactivation process is used for this purpose.
+Process for reactivation
+Reactivation is used to re-validate invalidated documents. To do this, a request for reactivation is created in the folder provided for this purpose and the corresponding document is selected for reactivation. Only the "Business Admin group" is permitted to create requests for reactivation. The workflow is then started automatically.
+Fig. 17 Process for reactivation with initiator
+The Creator of the request for reactivation (=initiator) is also the Editor of the workflow step. Once the reactivation has been confirmed, a new version of the document is created in the process. The metadata and properties maintained at the time of the AKS are retained in the new version upon reactivation. The authorizations are set according to the maintained attributes "reader, author, co-author, reviewer and releaser (incl. translation)". The User Groups and persons on the Distribution list are also confirmed from the "Invalidated" version ("Distribution list" see chapter "Distribution"). Finally, the Equippments archived with the document are also reactivated. This restores the original status, except for the version number and the status. The document can then be released in accordance with the defined release process.
+Distribution
+Distribution lists can be maintained for each document. Distribution is maintained by assigning User Groups or persons who are automatically informed about the release of the corresponding document. A distinction is made between two types of Distribution in the system:
+Distribution by e-mail
+Distribution for acknowledgement
+Fig. 18 Maintaining the Distribution list in the cockpit for the document
+All User Groups and persons assigned to the Distribution automatically receive read authorization for the corresponding documents to which they have been assigned.
+The two types of distribution will now be discussed in more detail.
+Distribution by e-mail
+With Distribution by e-mail, the directly assigned users and the users of the assigned User Groups are informed by e-mail notification when a new document version is released. No additional actions are required. A subsequent change to the "Distribution by info" attribute only has an effect on the existing User Groups and persons in relation to the email notification when the next version is released.
+Distribution for acknowledgement
+If a document's Distribution list has been maintained for acknowledgement prior to release, the persons entered and the users of the assigned User Groups are automatically requested by e-mail to actively confirm acknowledgement upon release. The hyperlink in the e-mail gives each recipient direct access to the relevant document. The acknowledgement is workflow-supported without a signature.
+Fig. 19 E-mail notification and confirmation of the workflow task
+The author team of the document receives an overview of all acknowledgements that have not yet been confirmed, as well as a notification as soon as all persons maintained in the Distribution have confirmed acknowledgement of the current version.
+Fig. 20 Proof of confirmed acknowledgements
+A subsequent change to the "Distribution for acknowledgement" attribute also only has an effect on the existing User Groups and persons with regard to the distribution of the workflow task when the next version is released.
+In addition to the stored functions of distribution by email or for acknowledgement, the maintenance of the distribution list also plays a central role for the distribution lists in the dashboard. More details in the following chapter.
+Dashboard and evaluations
+By defining the distribution groups in the distribution list per document, the user and role-specific dashboards are also filled with the necessary information. This means that for all users who are included in a group assigned to the Distribution, the corresponding document is assigned in the dashboard.
+Furthermore, role-specific evaluation reports and searches are available for the documents in the system. Different selection parameters and selection criteria are available for each report. These influence the evaluation results and filter the results lists according to the settings made. This enables a targeted evaluation and search function according to specific objects and criteria. Role-specific dashboards and evaluation options are described below.
+Dashboard reader
+All documents relevant to the user are listed in the "Document list" dashboard. (Prerequisite: The user is in one of the User Groups maintained on the Distribution list or directly in the Distribution list). When a document is selected from the list, detailed information such as existing Attachments and additional information, referenced documents and language versions are displayed in the footer. The display of the content of the additional information is authorization-dependent. Deeper navigation is possible via the additional information. This gives readers direct access to the documents and document-dependent details that are relevant to them.
+Fig. 21 Reader dashboard "Document list"
+Reader evaluations
+The following report is implemented for the Reader role:
+Status report: Documents & Instruction
+The report provides an evaluation of instructions stored in the system with additional information depending on the selected parameters.
+Author evaluations
+The following reports are implemented for the Reader role:
+Search for documents & instructions (author version)
+The report provides an evaluation of the documents saved in the system in the editing status (author version), with additional information depending on the selected parameters.
+Status report: Documents & Instruction
+The standard report provides an evaluation of documents stored in the system (with revision cycle), with additional information depending on the selected parameters. The status is displayed using a traffic light system. From 2 months before "valid until" the traffic light turns yellow, from one month before it turns red.
+Status report: Documents & Instruction (current status)
+The standard report "Document monitoring (current status)" provides an evaluation of documents stored in the system, with additional information depending on the selected parameters. Here you can search for the current status in order to determine which documents currently have which workflow status. There is a traffic light system for documents in the workflow, which is green if less than 5 days have passed since the last status change, yellow if less than 10 days have passed and red if more than 10 days have passed.
+Status report: for acknowledgement
+The report lists all acknowledgements, depending on the status.
+Translation
+The translation function in DHC VISION allows a language-dependent display of released documents. The translation can only be carried out for content and documents whose original language version is in the "Released" state. The translated version must be checked and released with workflow support, just like the original. Only once the language version has been released is the document visible to authorized readers in the corresponding login language. Before translation, the document is visible in the original language.
+The approval process for the translation is as follows:
+Fig. 22 Approval process for translated documents
+The assignment of participants for checking and releasing the translation is carried out in the properties dialog of the document, analogous to the assignment of the release process with signature (see: Chapter "Authorizations").
+Multi-client system
+For each document in a multi-client system, you can specify in which clients the corresponding document is visible or not.
+However, a document cannot be changed in a client. If you want to make a local addition to a document in a client, you must create a new document in the client, describe the change or extension there and create a reference to the original document. The extended local document must be released using the processes described above.

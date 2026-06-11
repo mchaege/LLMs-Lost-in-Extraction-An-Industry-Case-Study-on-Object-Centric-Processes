@@ -1,0 +1,361 @@
+{
+    "objs": [
+        {
+            "name": "document",
+            "description": "Core artifact that represents policies, guidelines, procedures and related materials.",
+            "attributes": [
+                {
+                    "name": "documenttype",
+                    "description": "Type of document (e.g., policy, guideline, work instruction)"
+                },
+                {
+                    "name": "references",
+                    "description": "Document references to other objects or master data"
+                },
+                {
+                    "name": "itapplications",
+                    "description": "Related IT applications"
+                },
+                {
+                    "name": "areasofvalidity",
+                    "description": "Areas or scopes where the document is valid"
+                },
+                {
+                    "name": "relevantcompanies",
+                    "description": "Companies relevant to the document"
+                }
+            ]
+        },
+        {
+            "name": "attachment",
+            "description": "Information object attached to a Document, may be external or internal.",
+            "attributes": [
+                {
+                    "name": "attachmenttype",
+                    "description": "Type of the attachment"
+                }
+            ]
+        },
+        {
+            "name": "additionalinfo",
+            "description": "Supplementary information describing a document.",
+            "attributes": [
+                {
+                    "name": "infotype",
+                    "description": "Type of additional information"
+                }
+            ]
+        },
+        {
+            "name": "equippment",
+            "description": "Equipment related to the document that does not follow the main release cycle.",
+            "attributes": [
+                {
+                    "name": "equipmenttype",
+                    "description": "Type of equipment"
+                }
+            ]
+        },
+        {
+            "name": "changeproposal",
+            "description": "Proposals to amend documents, managed within the system.",
+            "attributes": [
+                {
+                    "name": "status",
+                    "description": "Status of the proposal"
+                },
+                {
+                    "name": "createddate",
+                    "description": "Creation date"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "description": "Person using the system.",
+            "attributes": [
+                {
+                    "name": "name",
+                    "description": "User name"
+                },
+                {
+                    "name": "role",
+                    "description": "Role of the user (e.g. author, reviewer)"
+                }
+            ]
+        },
+        {
+            "name": "usergroup",
+            "description": "Group of users used for authorizations and distribution.",
+            "attributes": [
+                {
+                    "name": "groupname",
+                    "description": "Name of the user group"
+                }
+            ]
+        },
+        {
+            "name": "distributionlist",
+            "description": "List of recipients for distribution and acknowledgement.",
+            "attributes": [
+                {
+                    "name": "listname",
+                    "description": "Name of the distribution list"
+                }
+            ]
+        },
+        {
+            "name": "language",
+            "description": "Language objects used for translations and language-related metadata.",
+            "attributes": [
+                {
+                    "name": "code",
+                    "description": "Language code (e.g., EN, DE)"
+                }
+            ]
+        },
+        {
+            "name": "documenttemplate",
+            "description": "Template used by documents.",
+            "attributes": [
+                {
+                    "name": "templatename",
+                    "description": "Name of the template"
+                }
+            ]
+        },
+        {
+            "name": "documenttype",
+            "description": "Type of document.",
+            "attributes": [
+                {
+                    "name": "abbreviation",
+                    "description": "Abbreviation of the document type"
+                }
+            ]
+        },
+        {
+            "name": "version",
+            "description": "Version of a document.",
+            "attributes": [
+                {
+                    "name": "versionnumber",
+                    "description": "Version number"
+                },
+                {
+                    "name": "releasedate",
+                    "description": "Release date in the workflow"
+                }
+            ]
+        },
+        {
+            "name": "translation",
+            "description": "Translated version of a document.",
+            "attributes": [
+                {
+                    "name": "language",
+                    "description": "Language of translation"
+                },
+                {
+                    "name": "released",
+                    "description": "Release status of the translation"
+                }
+            ]
+        }
+    ],
+    "evts": [
+        {
+            "name": "createdocument",
+            "description": "Create Document and performer User",
+            "attributes": []
+        },
+        {
+            "name": "attachinformationobject",
+            "description": "Attach AdditionalInfo to Document",
+            "attributes": []
+        },
+        {
+            "name": "attachattachment",
+            "description": "Attach Attachment to Document",
+            "attributes": []
+        },
+        {
+            "name": "attachequippment",
+            "description": "Attach Equippment to Document",
+            "attributes": []
+        },
+        {
+            "name": "createchangeproposal",
+            "description": "Create ChangeProposal for Document",
+            "attributes": []
+        },
+        {
+            "name": "releasedocument",
+            "description": "Release Document (workflow)",
+            "attributes": []
+        },
+        {
+            "name": "reviewdocument",
+            "description": "Review Document",
+            "attributes": []
+        },
+        {
+            "name": "approvedocument",
+            "description": "Approve/Release step by reviewers",
+            "attributes": []
+        },
+        {
+            "name": "translatedocument",
+            "description": "Translate Document",
+            "attributes": []
+        },
+        {
+            "name": "extendvalidity",
+            "description": "Extend Validity of Document",
+            "attributes": []
+        },
+        {
+            "name": "overridedocument",
+            "description": "Override/AKS for Document",
+            "attributes": []
+        },
+        {
+            "name": "archivedocument",
+            "description": "Archive Document",
+            "attributes": []
+        },
+        {
+            "name": "reactivatedocument",
+            "description": "Reactivate Document",
+            "attributes": []
+        },
+        {
+            "name": "distributedocument",
+            "description": "Distribute Document to DistributionList",
+            "attributes": []
+        },
+        {
+            "name": "notifyuser",
+            "description": "Notify Users",
+            "attributes": []
+        },
+        {
+            "name": "signdocument",
+            "description": "Sign Document",
+            "attributes": []
+        },
+        {
+            "name": "createversion",
+            "description": "Create New Version",
+            "attributes": []
+        },
+        {
+            "name": "createtranslation",
+            "description": "Create Translation",
+            "attributes": []
+        }
+    ],
+    "o2o": [
+        {
+            "a": "document",
+            "b": "documenttemplate",
+            "description": "Document uses DocumentTemplate"
+        },
+        {
+            "a": "document",
+            "b": "documenttype",
+            "description": "DocumentType of Document"
+        },
+        {
+            "a": "document",
+            "b": "language",
+            "description": "Original Language of Document"
+        },
+        {
+            "a": "document",
+            "b": "version",
+            "description": "Current Version"
+        },
+        {
+            "a": "document",
+            "b": "authorgroup",
+            "description": "Assigned Author Group"
+        },
+        {
+            "a": "document",
+            "b": "readergroup",
+            "description": "Assigned Reader Group"
+        },
+        {
+            "a": "document",
+            "b": "distributionlist",
+            "description": "Distribution List"
+        },
+        {
+            "a": "document",
+            "b": "attachment",
+            "description": "Attachments of Document"
+        },
+        {
+            "a": "document",
+            "b": "additionalinfo",
+            "description": "Additional Information of Document"
+        },
+        {
+            "a": "document",
+            "b": "equippment",
+            "description": "Equippments of Document"
+        },
+        {
+            "a": "document",
+            "b": "changeproposal",
+            "description": "Change Proposals belonging to Document"
+        },
+        {
+            "a": "changeproposal",
+            "b": "document",
+            "description": "Belongs to Document"
+        },
+        {
+            "a": "translation",
+            "b": "document",
+            "description": "Translation belongs to Document"
+        },
+        {
+            "a": "translation",
+            "b": "language",
+            "description": "Translation language"
+        },
+        {
+            "a": "version",
+            "b": "document",
+            "description": "Version of Document"
+        },
+        {
+            "a": "attachment",
+            "b": "document",
+            "description": "Attachment attached to Document"
+        },
+        {
+            "a": "additionalinfo",
+            "b": "document",
+            "description": "AdditionalInfo for Document"
+        },
+        {
+            "a": "equippment",
+            "b": "document",
+            "description": "Equippment for Document"
+        },
+        {
+            "a": "distributionlist",
+            "b": "document",
+            "description": "Document Distribution"
+        },
+        {
+            "a": "documenttemplate",
+            "b": "document",
+            "description": "Document uses Template"
+        }
+    ],
+    "o2e": []
+}
